@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crispster — Contact Us, Stores & Catering | Find Your Nearest Kitchen</title>
+  <meta name="description" content="Find Crispster fried chicken takeaway locations, opening hours, contact details, catering inquiries, and interactive store map.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       GLOBAL NAVBAR (Identical across all pages)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <!-- Logo -->
+      <a href="index.html" class="nav-brand" aria-label="Crispster Homepage">
+        <img src="images/logo.svg" alt="Crispster Premium Fried Chicken Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <!-- Home Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="index.html" class="nav-link dropdown-toggle" aria-expanded="false">
+            <span>Home</span> <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="dropdown-item">
+              <div class="dropdown-item-title"><i class="fa-solid fa-drumstick-bite"></i> Home 1 (Classic Crisp)</div>
+              <div class="dropdown-item-desc">Flagship takeaway &amp; family feasts</div>
+            </a>
+            <a href="home-2.html" class="dropdown-item">
+              <div class="dropdown-item-title"><i class="fa-solid fa-fire"></i> Home 2 (Late-Night Flame)</div>
+              <div class="dropdown-item-desc">After-hours craves &amp; fiery wings</div>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <!-- Nav Controls: Theme, Direction, Cart icon before CTA, Order CTA -->
+      <div class="nav-controls">
+        <button type="button" class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button type="button" class="btn-icon-only direction-toggle-btn" aria-label="Toggle RTL/LTR direction" title="Toggle Direction">
+          <span style="font-weight: 800; font-size: 0.8rem;">RTL</span>
+        </button>
+
+        <a href="cart.html" class="cart-toggle-btn" aria-label="View takeaway bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Bag</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </a>
+
+        <a href="checkout.html" class="btn btn-hot btn-sm nav-order-btn">
+          <i class="fa-solid fa-bolt"></i> Order Now
+        </a>
+
+        <button type="button" class="mobile-menu-btn" aria-label="Open mobile menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-drawer-overlay"></div>
+
+    <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-drawer" aria-label="Mobile Menu">
+    <div class="mobile-drawer-header">
+      <img src="images/logo.svg" alt="Crispster Logo" class="drawer-logo-img">
+      <button type="button" class="drawer-close-btn" aria-label="Close mobile menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-nav-link">Home 1 (Classic Crisp)</a>
+      <a href="home-2.html" class="mobile-nav-link">Home 2 (Late-Night Flame)</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="menu.html" class="mobile-nav-link">Menu</a>
+      <a href="offers.html" class="mobile-nav-link">Offers</a>
+      <a href="blog.html" class="mobile-nav-link">Blog</a>
+      <a href="contact.html" class="mobile-nav-link active">Contact</a>
+    </div>
+
+    <div class="mobile-drawer-controls">
+      <div class="drawer-icon-row">
+        <button type="button" class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button type="button" class="btn-icon-only direction-toggle-btn" aria-label="Toggle RTL/LTR direction" title="Toggle Direction">
+          <span style="font-weight: 800; font-size: 0.8rem;">RTL</span>
+        </button>
+
+        <a href="cart.html" class="cart-toggle-btn" aria-label="View takeaway bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Bag</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </a>
+      </div>
+
+      <a href="checkout.html" class="btn btn-hot btn-sm nav-order-btn" style="width: 100%; justify-content: center; display: inline-flex;">
+        <i class="fa-solid fa-bolt"></i> Order Now
+      </a>
+    </div>
+  </aside>
+
+  <!-- Takeaway Bag Drawer (Simulated Frontend Cart) -->
+  <div class="cart-drawer-backdrop"></div>
+  <aside class="cart-drawer" aria-label="Takeaway Bag">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <i class="fa-solid fa-bag-shopping" style="color: var(--color-hot-orange);"></i>
+        <span>Takeaway Bag</span>
+      </div>
+      <button type="button" class="cart-drawer-close" aria-label="Close bag">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cart-items-container">
+      <!-- Populated dynamically via main.js -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <form class="cart-promo-box">
+        <input type="text" class="cart-promo-input" placeholder="Promo code (e.g. CRISP50)" aria-label="Promo Code">
+        <button type="submit" class="btn btn-outline btn-sm">Apply</button>
+      </form>
+
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <span class="cart-subtotal-val">$0.00</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>Estimated Express Pickup</span>
+        <span style="color: var(--color-success); font-weight: 700;">12-15 Mins</span>
+      </div>
+      <div class="cart-summary-line total">
+        <span>Total Due</span>
+        <span class="total-amount">$0.00</span>
+      </div>
+
+      <a href="checkout.html" class="btn btn-hot cart-checkout-btn">
+        <i class="fa-solid fa-bag-shopping"></i> Proceed To Checkout
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN PAGE CONTENT (8 Substantial Sections)
+       ======================================================================== -->
+  <main>
+    <!-- SECTION 1: CONTACT HERO SECTION -->
+    <section class="contact-hero-section">
+      <div class="container">
+        <div class="hero-content-plaque reveal-on-scroll">
+          <div class="section-subtitle-tag">
+            <i class="fa-solid fa-location-dot"></i> 3 Convenient Takeaway Hubs
+          </div>
+          <h1 class="section-title">
+            Hungry To <span class="highlight-orange">Connect With Us?</span>
+          </h1>
+          <p class="section-description">
+            Find your nearest Crispster store, check live kitchen operating hours, inquire about large catering orders, or dial our express takeaway hotline.
+          </p>
+
+          <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.75rem; flex-wrap: wrap;">
+            <a href="tel:5553742747" class="btn btn-primary">
+              <i class="fa-solid fa-phone"></i> Call Hotline: (555) 374-2747
+            </a>
+            <a href="#locations-section" class="btn btn-outline">
+              <i class="fa-solid fa-map-pin"></i> View Locations
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: STORE LOCATIONS GRID -->
+    <section class="section" id="locations-section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-subtitle-tag">
+            <i class="fa-solid fa-store"></i> Express Counter & Curbside
+          </div>
+          <h2 class="section-title">
+            Our Takeaway <span class="highlight-yellow">Locations</span>
+          </h2>
+          <p class="section-description">
+            Each Crispster hub is equipped with dedicated express pick-up bays, rapid warmers, and touchless curbside pickup.
+          </p>
+        </div>
+
+        <div class="locations-grid">
+          <!-- Location 1: Downtown Flagship -->
+          <div class="location-card flagship reveal-on-scroll">
+            <div class="location-status-badge">
+              <span class="status-beacon"></span>
+              <span>Open Now • Fryers Sizzling</span>
+            </div>
+            <h3 class="card-title" style="font-size: 1.4rem;">Downtown Flagship Hub</h3>
+            <div class="location-detail-row">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>428 Crispy Boulevard, Flavor District, NY 10012</span>
+            </div>
+            <div class="location-detail-row">
+              <i class="fa-solid fa-phone"></i>
+              <span>Direct: (555) 374-2741</span>
+            </div>
+            <div class="location-detail-row">
+              <i class="fa-solid fa-clock"></i>
+              <span>11:00 AM – 2:00 AM (Fri & Sat till 2:30 AM)</span>
+            </div>
+            <div class="location-detail-row">
+              <i class="fa-solid fa-car-side"></i>
+              <span>Dedicated Curbside Pickup Bay Available</span>
+            </div>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="margin-top: auto;">
+              <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+            </a>
+          </div>
+
+          <!-- Location 2: Westside Express -->
+          <div class="location-card reveal-on-scroll">
+            <div class="location-status-badge">
+              <span class="status-beacon"></span>
+              <span>Open Now • Rapid 12-Min Pickup</span>
+            </div>
+            <h3 class="card-title" style="font-size: 1.4rem;">Westside Express Counter</h3>
+            <div class="location-detail-row">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>815 Westside Avenue, Metro Plaza, NY 10024</span>
+            </div>
+            <div class="location-detail-row">
+              <i class="fa-solid fa-phone"></i>
+              <span>Direct: (555) 374-2742</span>
+            </div>
+            <div class="location-detail-row">
+              <i class="fa-solid fa-clock"></i>
+              <span>11:30 AM – 11:30 PM (Daily)</span>
+            </div>
+            <div class="location-detail-row">
+              <i class="fa-solid fa-person-walking"></i>
+              <span>Walk-up Express Collection Window</span>
+            </div>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="margin-top: auto;">
+              <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+            </a>
+          </div>
+
+          <!-- Location 3: Metro Food District -->
+          <div class="location-card reveal-on-scroll">
+            <div class="location-status-badge">
+              <span class="status-beacon"></span>
+              <span>Open Now • Catering Ready</span>
+            </div>
+            <h3 class="card-title" style="font-size: 1.4rem;">Metro Food Quarter Hub</h3>
+            <div class="location-detail-row">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>190 Central Market Street, Suite 4, NY 10001</span>
+            </div>
+            <div class="location-detail-row">
+              <i class="fa-solid fa-phone"></i>
+              <span>Direct: (555) 374-2743</span>
+            </div>
+            <div class="location-detail-row">
+              <i class="fa-solid fa-clock"></i>
+              <span>12:00 PM – 1:00 AM (Daily)</span>
+            </div>
+            <div class="location-detail-row">
+              <i class="fa-solid fa-truck"></i>
+              <span>Bulk Party & Catering Dispatch Hub</span>
+            </div>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="margin-top: auto;">
+              <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 & 4: INTERACTIVE CONTACT FORM & KITCHEN SCHEDULE (SPLIT SECTION) -->
+    <section class="section section-bg-secondary">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-subtitle-tag">
+            <i class="fa-solid fa-envelope-open-text"></i> Message Our Kitchen
+          </div>
+          <h2 class="section-title">
+            Send Us A Note or <span class="highlight-orange">Inquire For Catering</span>
+          </h2>
+          <p class="section-description">
+            Have questions regarding ingredients, custom event catering, or feedback on your latest takeaway? Fill out the form below.
+          </p>
+        </div>
+
+        <div class="contact-split-grid">
+          <!-- SECTION 4: INTERACTIVE CONTACT FORM WITH REALTIME VALIDATION -->
+          <div class="contact-form-box reveal-on-scroll">
+            <h3 style="font-size: 1.6rem; margin-bottom: 1.5rem;">
+              <i class="fa-solid fa-paper-plane" style="color: var(--color-hot-orange);"></i> Send A Direct Message
+            </h3>
+
+            <form id="crispster-contact-form" novalidate>
+              <div class="form-group-row">
+                <!-- Name Field -->
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Full Name <span class="req">*</span></label>
+                  <input type="text" id="contact-name" class="form-control" placeholder="e.g. Alex Johnson" pattern="[A-Za-z\s'-]{2,}" maxlength="60" title="Please enter letters only (at least 2 characters)" required>
+                  <span class="form-error-msg" id="name-error"></span>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Email Address <span class="req">*</span></label>
+                  <input type="email" id="contact-email" class="form-control" placeholder="alex@example.com" required>
+                  <span class="form-error-msg" id="email-error"></span>
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <!-- Phone Field -->
+                <div class="form-group">
+                  <label for="contact-phone" class="form-label">Phone Number <span class="req">*</span></label>
+                  <input type="tel" id="contact-phone" class="form-control" placeholder="e.g. 5550000000" inputmode="numeric" pattern="[0-9]{7,15}" maxlength="15" title="Please enter numbers only (7 to 15 digits)" required>
+                  <span class="form-error-msg" id="phone-error"></span>
+                </div>
+
+                <!-- Inquiry Subject -->
+                <div class="form-group">
+                  <label for="contact-subject" class="form-label">Inquiry Reason</label>
+                  <select id="contact-subject" class="form-control">
+                    <option value="Takeaway Order Feedback">Takeaway Order Feedback</option>
+                    <option value="Party & Event Catering">Party & Event Catering</option>
+                    <option value="Ingredient & Allergen Inquiry">Ingredient & Allergen Inquiry</option>
+                    <option value="Franchise & Career Opportunity">Franchise & Career Opportunity</option>
+                    <option value="Other General Question">Other General Question</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Optional Order ID -->
+              <div class="form-group">
+                <label for="contact-order-id" class="form-label">Order Number (Optional)</label>
+                <input type="text" id="contact-order-id" class="form-control" placeholder="e.g. CRISP-849102">
+              </div>
+
+              <!-- Message Field with Live Char Count -->
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message Details <span class="req">*</span></label>
+                <textarea id="contact-message" class="form-control" placeholder="Tell us how we can assist you..." maxlength="500" required></textarea>
+                <div class="char-counter" id="message-char-count">0 / 500 characters</div>
+                <span class="form-error-msg" id="message-error"></span>
+              </div>
+
+              <button type="submit" class="btn btn-hot" style="width: 100%;">
+                <i class="fa-solid fa-paper-plane"></i> Submit Inquiry Now
+              </button>
+            </form>
+          </div>
+
+          <!-- SECTION 3: KITCHEN HOURS & LIVE SCHEDULE -->
+          <div class="schedule-info-box reveal-on-scroll">
+            <div>
+              <div class="hero-top-badge" style="background: rgba(16, 185, 129, 0.15); color: #047857; margin-bottom: 0.75rem;">
+                <i class="fa-solid fa-circle-check"></i> Kitchen Operating Schedule
+              </div>
+              <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">When Our Fryers Run</h3>
+              <p style="font-size: 0.92rem; color: var(--text-secondary);">
+                All 3 Crispster takeaway kitchens operate standard hours with late-night extended service on weekends.
+              </p>
+            </div>
+
+            <table class="schedule-table">
+              <tbody>
+                <tr>
+                  <td>Monday:</td>
+                  <td>11:00 AM – 11:30 PM</td>
+                </tr>
+                <tr>
+                  <td>Tuesday (Student Perk):</td>
+                  <td>11:00 AM – 11:30 PM</td>
+                </tr>
+                <tr>
+                  <td>Wednesday:</td>
+                  <td>11:00 AM – 11:30 PM</td>
+                </tr>
+                <tr>
+                  <td>Thursday:</td>
+                  <td>11:00 AM – 11:30 PM</td>
+                </tr>
+                <tr>
+                  <td>Friday (Late Night Crave):</td>
+                  <td>11:00 AM – 2:00 AM</td>
+                </tr>
+                <tr>
+                  <td>Saturday (Game Night):</td>
+                  <td>11:00 AM – 2:00 AM</td>
+                </tr>
+                <tr>
+                  <td>Sunday (Family Feast Day):</td>
+                  <td>12:00 PM – 11:00 PM</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="background: var(--bg-secondary); border-radius: var(--radius-md); padding: 1.25rem; border: 1px dashed var(--border-medium);">
+              <div style="font-weight: 800; font-size: 0.95rem; margin-bottom: 0.25rem; color: var(--color-hot-orange);">
+                <i class="fa-solid fa-bell"></i> Holiday Hours Note
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                We remain open on all major sports championship Sundays and New Year's Eve till 3:00 AM for bulk party orders.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: INTERACTIVE RESPONSIVE MAP VISUALIZER -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-subtitle-tag">
+            <i class="fa-solid fa-map-location-dot"></i> Interactive Map
+          </div>
+          <h2 class="section-title">
+            Locate Your <span class="highlight-yellow">Nearest Kitchen</span>
+          </h2>
+          <p class="section-description">
+            Centrally positioned across metropolitan hubs so you never have to travel more than 10 minutes for piping hot fried chicken.
+          </p>
+        </div>
+
+        <div class="map-container-wrap reveal-on-scroll">
+          <iframe 
+            class="map-embed-iframe"
+            title="Crispster Takeaway Store Locations Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976397304603!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus"
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <div class="map-floating-overlay-card">
+            <div style="font-weight: 800; font-size: 1rem; color: var(--color-hot-orange); margin-bottom: 0.25rem;">
+              <i class="fa-solid fa-store"></i> Downtown Flagship
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+              428 Crispy Blvd, NY 10012
+            </div>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%;">
+              Open in Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: HELP & FREQUENTLY ASKED QUESTIONS (FAQ ACCORDION) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-subtitle-tag">
+            <i class="fa-solid fa-circle-question"></i> Instant Answers
+          </div>
+          <h2 class="section-title">
+            Help & <span class="highlight-yellow">Store FAQs</span>
+          </h2>
+          <p class="section-description">
+            Quick information regarding curbside collection, contactless pickup, accepted payments, and advance party notice.
+          </p>
+        </div>
+
+        <div class="faq-accordion reveal-on-scroll">
+          <!-- Accordion 1 -->
+          <div class="faq-item">
+            <div class="faq-header">
+              <span>How does Crispster's Curbside Express Pickup work?</span>
+              <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+            </div>
+            <div class="faq-content">
+              <p class="faq-answer-text">
+                When placing your order online or by phone, select Curbside Pickup and note your vehicle make/color. Pull into our designated numbered bays outside our store, tap "I'm Here" on your phone confirmation, and a Crispster team member will bring your piping-hot thermal order directly to your window!
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion 2 -->
+          <div class="faq-item">
+            <div class="faq-header">
+              <span>What payment methods are accepted at counter pickup?</span>
+              <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+            </div>
+            <div class="faq-content">
+              <p class="faq-answer-text">
+                We accept all major debit & credit cards (Visa, MasterCard, American Express), Apple Pay, Google Pay, tap-to-pay mobile wallets, and cash at all 3 counter locations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion 3 -->
+          <div class="faq-item">
+            <div class="faq-header">
+              <span>How much advance notice is required for party catering orders?</span>
+              <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+            </div>
+            <div class="faq-content">
+              <p class="faq-answer-text">
+                For party boxes of 50 pieces or less, you can order directly through our standard takeaway line with just 30–45 minutes notice. For large corporate events or 100+ piece catering, we recommend giving us 24 hours advance notice via our contact form or catering hotline.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion 4 -->
+          <div class="faq-item">
+            <div class="faq-header">
+              <span>Can I customize the spiciness level of chicken pieces in a bucket?</span>
+              <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+            </div>
+            <div class="faq-content">
+              <p class="faq-answer-text">
+                Absolutely! You can choose Half Mild / Half Nashville Fire on any bucket of 8 pieces or larger, or try our interactive "Build Your Own Bucket" tool on our Menu page to select your exact preference.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: FINAL TAKEAWAY / EXPRESS HOTLINE CTA -->
+    <section class="cta-banner-section">
+      <div class="container cta-banner-box">
+        <div class="reveal-on-scroll">
+          <h2 class="cta-banner-headline">
+            Ready For Pickup? <br>
+            <span>Dial or Order Online!</span>
+          </h2>
+          <p class="cta-banner-desc">
+            Call our central takeaway hotline or build your custom bag on our website. Your golden chicken will be hot, crunchy, and waiting for you.
+          </p>
+          <div class="cta-banner-actions">
+            <a href="tel:5553742747" class="btn btn-primary">
+              <i class="fa-solid fa-phone"></i> Call (555) 374-2747
+            </a>
+            <a href="menu.html" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #FFF;">
+              <i class="fa-solid fa-drumstick-bite"></i> Order Online
+            </a>
+          </div>
+        </div>
+
+        <div class="cta-banner-perk-box reveal-on-scroll">
+          <div class="cta-perk-row">
+            <div class="cta-perk-icon"><i class="fa-solid fa-car"></i></div>
+            <div>
+              <strong style="display: block; font-size: 1.05rem;">Curbside Pickup Dedicated Bays</strong>
+              <span style="font-size: 0.85rem; color: #A1A1AA;">Drive up, tap your horn or phone, grab and go</span>
+            </div>
+          </div>
+          <div class="cta-perk-row">
+            <div class="cta-perk-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <strong style="display: block; font-size: 1.05rem;">Sealed For Freshness</strong>
+              <span style="font-size: 0.85rem; color: #A1A1AA;">Tamper-proof safety tape on every takeaway order</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       GLOBAL FOOTER (Identical across all pages)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand-info">
+          <a href="index.html" aria-label="Crispster Homepage">
+            <img src="images/logo.svg" alt="Crispster Logo" class="footer-logo-img">
+          </a>
+          <p class="footer-brand-desc">
+            Crispster is a premier fried chicken takeaway brand dedicated to the art of the perfect crunch. 24-hour marinated poultry, secret herb coatings, and mouthwatering homemade glazes.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <!-- Navigation Links -->
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Home 1 (Classic)</a></li>
+            <li><a href="home-2.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Home 2 (Late Night)</a></li>
+            <li><a href="about.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="menu.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Full Menu</a></li>
+            <li><a href="offers.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Special Offers</a></li>
+            <li><a href="blog.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Crunch Blog</a></li>
+            <li><a href="contact.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Contact &amp; Stores</a></li>
+          </ul>
+        </div>
+
+        <!-- Takeaway Links -->
+        <div>
+          <h4 class="footer-title">Takeaway Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="cart.html" class="footer-link"><i class="fa-solid fa-bag-shopping"></i> View Cart</a></li>
+            <li><a href="checkout.html" class="footer-link"><i class="fa-solid fa-credit-card"></i> Express Checkout</a></li>
+            <li><a href="maintenance.html" class="footer-link"><i class="fa-solid fa-wrench"></i> Maintenance Status</a></li>
+            <li><a href="404.html" class="footer-link"><i class="fa-solid fa-triangle-exclamation"></i> 404 Error Page</a></li>
+          </ul>
+        </div>
+
+        <!-- Store & Hours -->
+        <div>
+          <h4 class="footer-title">Kitchen Hours</h4>
+          <div class="footer-hours-item">
+            <span>Monday – Thursday:</span>
+            <span>11:00 AM – 11:30 PM</span>
+          </div>
+          <div class="footer-hours-item">
+            <span>Friday & Saturday:</span>
+            <span>11:00 AM – 2:00 AM</span>
+          </div>
+          <div class="footer-hours-item">
+            <span>Sunday:</span>
+            <span>12:00 PM – 11:00 PM</span>
+          </div>
+
+          <div style="margin-top: 1.25rem;">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>428 Crispy Boulevard, Flavor District, NY 10012</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>(555) 374-2747 (CRISPOST)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 Crispster Fried Chicken Takeaway. All Rights Reserved.
+        </div>
+        <div class="footer-bottom-badges">
+          <span class="footer-bottom-badge"><i class="fa-solid fa-shield-halved"></i> 100% Halal Certified</span>
+          <span class="footer-bottom-badge"><i class="fa-solid fa-seedling"></i> Zero Trans Fats</span>
+          <span class="footer-bottom-badge"><i class="fa-solid fa-fire"></i> 15-Min Fresh Guarantee</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to top of page">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Core JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
+

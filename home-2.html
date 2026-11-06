@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Late-Night Flame Lab &amp; Custom Sizzle — Crispster Fried Chicken</title>
+  <meta name="description" content="Welcome to Crispster's Late-Night Flame Lab. Build your custom crunch box, experience the ASMR crunch soundboard, spin the wing roulette, and feast on after-dark ghost pepper specials.">
+  
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cabinet+Grotesk:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Global Core Styles, Base Home Styles & Dedicated Home-2 Interactive Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/home-2.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       GLOBAL NAVBAR (With Home Dropdown & Cart Before CTA)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <!-- Logo -->
+      <a href="index.html" class="nav-brand" aria-label="Crispster Homepage">
+        <img src="images/logo.svg" alt="Crispster Premium Fried Chicken Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <!-- Home Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="home-2.html" class="nav-link dropdown-toggle active" aria-expanded="false">
+            <span>Home</span> <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="dropdown-item">
+              <div class="dropdown-item-title"><i class="fa-solid fa-drumstick-bite"></i> Home 1 (Classic Crisp)</div>
+              <div class="dropdown-item-desc">Flagship takeaway &amp; family feasts</div>
+            </a>
+            <a href="home-2.html" class="dropdown-item active">
+              <div class="dropdown-item-title"><i class="fa-solid fa-fire"></i> Home 2 (Late-Night Flame)</div>
+              <div class="dropdown-item-desc">After-hours craves &amp; fiery wings</div>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Controls: Theme, Direction, Cart icon before CTA, Order CTA -->
+      <div class="nav-controls">
+        <button type="button" class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button type="button" class="btn-icon-only direction-toggle-btn" aria-label="Toggle RTL/LTR direction" title="Toggle Direction">
+          <span style="font-weight: 800; font-size: 0.8rem;">RTL</span>
+        </button>
+
+        <a href="cart.html" class="cart-toggle-btn" aria-label="View takeaway cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Bag</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </a>
+
+        <a href="checkout.html" class="btn btn-hot btn-sm nav-order-btn">
+          <i class="fa-solid fa-bolt"></i> Order Now
+        </a>
+
+        <button type="button" class="mobile-menu-btn" aria-label="Open mobile menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-drawer-overlay"></div>
+
+    <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-drawer" aria-label="Mobile Menu">
+    <div class="mobile-drawer-header">
+      <img src="images/logo.svg" alt="Crispster Logo" class="drawer-logo-img">
+      <button type="button" class="drawer-close-btn" aria-label="Close mobile menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-nav-link">Home 1 (Classic Crisp)</a>
+      <a href="home-2.html" class="mobile-nav-link active">Home 2 (Late-Night Flame)</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="menu.html" class="mobile-nav-link">Menu</a>
+      <a href="offers.html" class="mobile-nav-link">Offers</a>
+      <a href="blog.html" class="mobile-nav-link">Blog</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <div class="mobile-drawer-controls">
+      <div class="drawer-icon-row">
+        <button type="button" class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button type="button" class="btn-icon-only direction-toggle-btn" aria-label="Toggle RTL/LTR direction" title="Toggle Direction">
+          <span style="font-weight: 800; font-size: 0.8rem;">RTL</span>
+        </button>
+
+        <a href="cart.html" class="cart-toggle-btn" aria-label="View takeaway bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Bag</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </a>
+      </div>
+
+      <a href="checkout.html" class="btn btn-hot btn-sm nav-order-btn" style="width: 100%; justify-content: center; display: inline-flex;">
+        <i class="fa-solid fa-bolt"></i> Order Now
+      </a>
+    </div>
+  </aside>
+
+  <!-- Takeaway Bag Drawer -->
+  <div class="cart-drawer-backdrop"></div>
+  <aside class="cart-drawer" aria-label="Takeaway Bag">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <i class="fa-solid fa-bag-shopping" style="color: var(--color-hot-orange);"></i>
+        <span>Takeaway Bag</span>
+      </div>
+      <button type="button" class="cart-drawer-close" aria-label="Close bag">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cart-items-container">
+      <!-- Populated dynamically via main.js -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <form class="cart-promo-box">
+        <input type="text" class="cart-promo-input" placeholder="Promo code (e.g. CRISP50)" aria-label="Promo Code">
+        <button type="submit" class="btn btn-outline btn-sm">Apply</button>
+      </form>
+
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <span class="cart-subtotal-val">$0.00</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>Estimated Express Pickup</span>
+        <span style="color: var(--color-success); font-weight: 700;">12-15 Mins</span>
+      </div>
+      <div class="cart-summary-line total">
+        <span>Total Due</span>
+        <span class="total-amount">$0.00</span>
+      </div>
+
+      <a href="checkout.html" class="btn btn-hot cart-checkout-btn">
+        <i class="fa-solid fa-bag-shopping"></i> Proceed To Checkout
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN PAGE CONTENT (8 Unique, High-Interactivity Content Sections)
+       ======================================================================== -->
+  <main>
+    <!-- SECTION 1: INTERACTIVE FLAME HERO & LIVE HEAT SIMULATOR -->
+    <section class="flame-hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content reveal-on-scroll">
+          <div class="hero-top-badge" style="border-color: var(--color-hot-orange); color: #FF5F00;">
+            <i class="fa-solid fa-fire-burner"></i> Late-Night Flame Lab • Sizzling Till 2:00 AM
+          </div>
+          <h1 class="hero-headline">
+            Midnight Craves. <br>
+            <span class="text-gradient-crunch">Shattering Sizzle.</span>
+          </h1>
+          <p class="hero-lead">
+            Step into Crispster's After-Hours Kitchen. Choose your exact Scoville heat, synthesize the crunch, and customize your personal feast box on the fly.
+          </p>
+
+          <!-- Interactive Heat Level Selector Directly in Hero -->
+          <div class="heat-selector-panel" aria-label="Interactive Heat Level Selector">
+            <div class="heat-selector-title">
+              <span><i class="fa-solid fa-pepper-hot" style="color: var(--color-hot-orange);"></i> Select Your Desired Heat Level:</span>
+              <span id="hero-heat-badge" style="padding: 2px 8px; border-radius: var(--radius-full); border: 1px solid #FF5F00; font-size: 0.75rem; font-weight: 800; color: var(--color-hot-orange);">Blistering Heat • 45,000 SHU</span>
+            </div>
+
+            <div class="heat-btns-grid">
+              <button type="button" class="heat-btn" data-level="mild">
+                <span class="heat-btn-level">1. Mild</span>
+                <span class="heat-btn-shu">250 SHU</span>
+              </button>
+              <button type="button" class="heat-btn" data-level="chipotle">
+                <span class="heat-btn-level">2. Chipotle</span>
+                <span class="heat-btn-shu">2,500 SHU</span>
+              </button>
+              <button type="button" class="heat-btn active" data-level="nashville">
+                <span class="heat-btn-level">3. Nashville</span>
+                <span class="heat-btn-shu">45,000 SHU</span>
+              </button>
+              <button type="button" class="heat-btn" data-level="ghost">
+                <span class="heat-btn-level">4. Ghost</span>
+                <span class="heat-btn-shu">1,000,000 SHU</span>
+              </button>
+            </div>
+
+            <div class="heat-meter-bar-wrap">
+              <div class="heat-meter-progress" id="hero-heat-bar" style="width: 75%;"></div>
+            </div>
+
+            <div class="heat-flavor-note">
+              <strong id="hero-heat-name" style="color: var(--text-primary);">Nashville Fire Storm:</strong>
+              <span id="hero-heat-desc">Traditional brown-sugar cayenne lard dip dusted with habanero dry rub. Authentic Music City deep heat that sizzles.</span>
+            </div>
+          </div>
+
+          <div class="hero-cta-group" style="margin-top: var(--space-6);">
+            <a href="#custom-box-builder" class="btn btn-hot">
+              <i class="fa-solid fa-sliders"></i> Build Custom Box
+            </a>
+            <a href="#secret-drops" class="btn btn-outline">
+              <i class="fa-solid fa-user-secret"></i> Secret Midnight Drop
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual-wrap reveal-on-scroll">
+          <div class="hero-floating-badge-1 animate-float" style="border-color: var(--color-hot-orange);">
+            <div class="floating-badge-icon" style="background: linear-gradient(135deg, var(--color-hot-orange), var(--color-spicy-red));">
+              <i class="fa-solid fa-temperature-arrow-up"></i>
+            </div>
+            <div class="floating-badge-text">
+              <strong>Oil Calibrated</strong>
+              <span>Exactly 375°F Constant</span>
+            </div>
+          </div>
+
+          <div class="hero-main-img-card" style="border-color: var(--color-hot-orange); box-shadow: 0 0 50px rgba(255, 95, 0, 0.4);">
+            <img id="hero-heat-img" 
+                 src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=800&q=80" 
+                 alt="Selected Heat Level Fried Chicken Platter" 
+                 loading="eager"
+                 style="transition: opacity 0.2s ease;">
+          </div>
+
+          <div class="hero-floating-badge-2 animate-float" style="animation-delay: -2s; border-color: var(--color-primary-yellow);">
+            <div class="rating-stars">
+              <i class="fa-solid fa-bolt" style="color: var(--color-primary-yellow);"></i>
+            </div>
+            <div class="floating-badge-text">
+              <strong>Curbside Bay Status</strong>
+              <span>Bays #1–4 Illuminated</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE CUSTOM CRUNCH BOX BUILDER (STEP-BY-STEP) -->
+    <section class="section" id="custom-box-builder">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-subtitle-tag" style="background: rgba(255, 95, 0, 0.15); color: var(--color-hot-orange);">
+            <i class="fa-solid fa-cubes-stacked"></i> Live Kitchen Lab
+          </div>
+          <h2 class="section-title">
+            Build Your Own <span class="highlight-orange">Crunch Box</span>
+          </h2>
+          <p class="section-description">
+            Choose your chicken foundation, dredge spice, 2 signature dips, and side. Your box is dredged, seasoned, and boxed to order in 12 minutes flat.
+          </p>
+        </div>
+
+        <div class="builder-layout">
+          <!-- Step Controls -->
+          <form id="box-builder-form" onsubmit="event.preventDefault();">
+            <!-- Step 1: Base Chicken -->
+            <div class="builder-step-block reveal-on-scroll">
+              <div class="builder-step-header">
+                <span class="builder-step-num">1</span>
+                <div>
+                  <h3 style="font-size: 1.15rem; margin-bottom: 2px;">Choose Your Chicken Base</h3>
+                  <span style="font-size: 0.85rem; color: var(--text-muted);">Pick your favorite fresh buttermilk cut</span>
+                </div>
+              </div>
+
+              <div class="builder-options-grid">
+                <label class="choice-card">
+                  <input type="radio" name="builder-base" value="tenders" checked>
+                  <i class="fa-solid fa-drumstick-bite choice-card-icon"></i>
+                  <span class="choice-card-title">4x Jumbo Tenders</span>
+                  <span class="choice-card-sub">$12.99 • 680 Cal</span>
+                </label>
+
+                <label class="choice-card">
+                  <input type="radio" name="builder-base" value="bonein">
+                  <i class="fa-solid fa-bowl-food choice-card-icon"></i>
+                  <span class="choice-card-title">3-Pc Thigh &amp; Drums</span>
+                  <span class="choice-card-sub">$13.99 • 790 Cal</span>
+                </label>
+
+                <label class="choice-card">
+                  <input type="radio" name="builder-base" value="wings">
+                  <i class="fa-solid fa-fire choice-card-icon"></i>
+                  <span class="choice-card-title">8x Fiery Wings</span>
+                  <span class="choice-card-sub">$14.49 • 840 Cal</span>
+                </label>
+
+                <label class="choice-card">
+                  <input type="radio" name="builder-base" value="popcorn">
+                  <i class="fa-solid fa-cookie-bite choice-card-icon"></i>
+                  <span class="choice-card-title">Mega Popcorn Bites</span>
+                  <span class="choice-card-sub">$11.99 • 620 Cal</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 2: Dredge Seasoning -->
+            <div class="builder-step-block reveal-on-scroll">
+              <div class="builder-step-header">
+                <span class="builder-step-num">2</span>
+                <div>
+                  <h3 style="font-size: 1.15rem; margin-bottom: 2px;">Select Dredge &amp; Heat Rub</h3>
+                  <span style="font-size: 0.85rem; color: var(--text-muted);">Hand-dusted right out of the fryer bath</span>
+                </div>
+              </div>
+
+              <div class="builder-options-grid">
+                <label class="choice-card">
+                  <input type="radio" name="builder-spice" value="mild" checked>
+                  <i class="fa-solid fa-leaf choice-card-icon" style="color: #10B981;"></i>
+                  <span class="choice-card-title">Southern Mild</span>
+                  <span class="choice-card-sub">Herbs • Incl.</span>
+                </label>
+
+                <label class="choice-card">
+                  <input type="radio" name="builder-spice" value="chipotle">
+                  <i class="fa-solid fa-jar choice-card-icon" style="color: #FFD400;"></i>
+                  <span class="choice-card-title">Honey Chipotle</span>
+                  <span class="choice-card-sub">Sweet Smoke • +$0.50</span>
+                </label>
+
+                <label class="choice-card">
+                  <input type="radio" name="builder-spice" value="nashville">
+                  <i class="fa-solid fa-pepper-hot choice-card-icon" style="color: #FF5F00;"></i>
+                  <span class="choice-card-title">Nashville Fire</span>
+                  <span class="choice-card-sub">Cayenne Dust • +$0.75</span>
+                </label>
+
+                <label class="choice-card">
+                  <input type="radio" name="builder-spice" value="ghost">
+                  <i class="fa-solid fa-skull choice-card-icon" style="color: #E11D48;"></i>
+                  <span class="choice-card-title">Ghost Scorch</span>
+                  <span class="choice-card-sub">1M SHU • +$1.00</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 3: Pick 2 Dips -->
+            <div class="builder-step-block reveal-on-scroll">
+              <div class="builder-step-header">
+                <span class="builder-step-num">3</span>
+                <div>
+                  <h3 style="font-size: 1.15rem; margin-bottom: 2px;">Pick 2 Signature Dips</h3>
+                  <span style="font-size: 0.85rem; color: var(--text-muted);">Select up to 2 artisanal sauce pots</span>
+                </div>
+              </div>
+
+              <div class="builder-options-grid">
+                <label class="choice-card">
+                  <input type="checkbox" name="builder-dip" value="Herb Ranch" checked>
+                  <i class="fa-solid fa-bottle-droplet choice-card-icon"></i>
+                  <span class="choice-card-title">Buttermilk Ranch</span>
+                  <span class="choice-card-sub">Cooling Dill</span>
+                </label>
+
+                <label class="choice-card">
+                  <input type="checkbox" name="builder-dip" value="Ghost Mayo" checked>
+                  <i class="fa-solid fa-fire-burner choice-card-icon"></i>
+                  <span class="choice-card-title">Smoked Ghost Mayo</span>
+                  <span class="choice-card-sub">Fiery Aioli</span>
+                </label>
+
+                <label class="choice-card">
+                  <input type="checkbox" name="builder-dip" value="Hot Honey">
+                  <i class="fa-solid fa-spoon choice-card-icon"></i>
+                  <span class="choice-card-title">Clover Hot Honey</span>
+                  <span class="choice-card-sub">Sticky Warm</span>
+                </label>
+
+                <label class="choice-card">
+                  <input type="checkbox" name="builder-dip" value="Truffle Queso">
+                  <i class="fa-solid fa-cheese choice-card-icon"></i>
+                  <span class="choice-card-title">Truffle Queso</span>
+                  <span class="choice-card-sub">Sharp Cheddar</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 4: Pick Side -->
+            <div class="builder-step-block reveal-on-scroll">
+              <div class="builder-step-header">
+                <span class="builder-step-num">4</span>
+                <div>
+                  <h3 style="font-size: 1.15rem; margin-bottom: 2px;">Select Fresh Side</h3>
+                  <span style="font-size: 0.85rem; color: var(--text-muted);">Served piping hot in thermal sleeves</span>
+                </div>
+              </div>
+
+              <div class="builder-options-grid">
+                <label class="choice-card">
+                  <input type="radio" name="builder-side" value="fries" checked>
+                  <i class="fa-solid fa-fire choice-card-icon"></i>
+                  <span class="choice-card-title">Cajun Crinkle Fries</span>
+                  <span class="choice-card-sub">Crispy • Incl.</span>
+                </label>
+
+                <label class="choice-card">
+                  <input type="radio" name="builder-side" value="biscuit">
+                  <i class="fa-solid fa-bread-slice choice-card-icon"></i>
+                  <span class="choice-card-title">Flaky Biscuit (2)</span>
+                  <span class="choice-card-sub">Honey Butter • +$0.50</span>
+                </label>
+
+                <label class="choice-card">
+                  <input type="radio" name="builder-side" value="mac">
+                  <i class="fa-solid fa-cheese choice-card-icon"></i>
+                  <span class="choice-card-title">Loaded Mac &amp; Cheese</span>
+                  <span class="choice-card-sub">Triple Cheese • +$1.50</span>
+                </label>
+
+                <label class="choice-card">
+                  <input type="radio" name="builder-side" value="slaw">
+                  <i class="fa-solid fa-bowl-rice choice-card-icon"></i>
+                  <span class="choice-card-title">Apple Cider Slaw</span>
+                  <span class="choice-card-sub">Tangy Crisp • Incl.</span>
+                </label>
+              </div>
+            </div>
+          </form>
+
+          <!-- Live Sticky Receipt & Add to Cart -->
+          <aside class="builder-receipt-box reveal-on-scroll" aria-label="Custom Box Live Summary">
+            <h3 class="receipt-title">
+              <i class="fa-solid fa-receipt" style="color: var(--color-hot-orange);"></i>
+              <span>Your Custom Box Receipt</span>
+            </h3>
+
+            <div class="receipt-item-row">
+              <span class="receipt-item-label">Chicken Base:</span>
+              <span class="receipt-item-val" id="receipt-base-val">4x Jumbo Tenders</span>
+            </div>
+
+            <div class="receipt-item-row">
+              <span class="receipt-item-label">Dredge Rub:</span>
+              <span class="receipt-item-val" id="receipt-spice-val">Southern Mild</span>
+            </div>
+
+            <div class="receipt-item-row">
+              <span class="receipt-item-label">Dips (2 Included):</span>
+              <span class="receipt-item-val" id="receipt-dips-val">Ranch + Ghost Mayo</span>
+            </div>
+
+            <div class="receipt-item-row">
+              <span class="receipt-item-label">Hot Side:</span>
+              <span class="receipt-item-val" id="receipt-side-val">Cajun Crinkle Fries</span>
+            </div>
+
+            <div class="receipt-item-row">
+              <span class="receipt-item-label">Prep Timer:</span>
+              <span class="receipt-item-val" style="color: var(--color-success); font-weight: 800;">12 Minutes</span>
+            </div>
+
+            <div class="receipt-total-row">
+              <span style="font-weight: 800; font-size: 1.1rem;">Total Price:</span>
+              <span class="receipt-price" id="receipt-total-price">$12.99</span>
+            </div>
+
+            <button type="button" class="btn btn-hot" id="btn-add-custom-box" style="width: 100%; margin-top: var(--space-4);">
+              <i class="fa-solid fa-bag-shopping"></i> Add Custom Box To Bag
+            </button>
+
+            <div style="font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-top: var(--space-3);">
+              <i class="fa-solid fa-shield-halved"></i> Made to Order • Vented Thermo-Lock Box Included
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: ASMR CRUNCH SOUNDBOARD (WEB AUDIO SYNTHESIS) -->
+    <section class="section section-bg-secondary" id="asmr-soundboard">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-subtitle-tag" style="background: rgba(255, 212, 0, 0.15); color: var(--color-primary-yellow);">
+            <i class="fa-solid fa-headphones"></i> Acoustic Culinary Science
+          </div>
+          <h2 class="section-title">
+            The ASMR <span class="highlight-yellow">Crunch Soundboard</span>
+          </h2>
+          <p class="section-description">
+            Tap any tile below to trigger high-fidelity acoustic frequencies synthesized live in your browser. This is what true 375°F crunch sounds like.
+          </p>
+        </div>
+
+        <div class="soundboard-grid">
+          <!-- Tile 1 -->
+          <div class="soundboard-card reveal-on-scroll" data-sound="sizzle" tabindex="0" role="button" aria-label="Play 375 Degree Fryer Sizzle Sound">
+            <div class="sound-play-icon-box"><i class="fa-solid fa-volume-high"></i></div>
+            <div>
+              <h3 style="font-size: 1.15rem; margin-bottom: 4px;">1. The 375°F Fryer Sizzle</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">Vigorous bubbling frequency as cold buttermilk dredge encounters pure peanut oil.</p>
+            </div>
+            <div class="eq-visualizer">
+              <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+              <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+            </div>
+          </div>
+
+          <!-- Tile 2 -->
+          <div class="soundboard-card reveal-on-scroll" data-sound="crunch" tabindex="0" role="button" aria-label="Play First Bite Shatter Sound">
+            <div class="sound-play-icon-box"><i class="fa-solid fa-drumstick-bite"></i></div>
+            <div>
+              <h3 style="font-size: 1.15rem; margin-bottom: 4px;">2. The First Bite Shatter</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">120Hz acoustic crackle of microscopic starch blisters fracturing simultaneously.</p>
+            </div>
+            <div class="eq-visualizer">
+              <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+              <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+            </div>
+          </div>
+
+          <!-- Tile 3 -->
+          <div class="soundboard-card reveal-on-scroll" data-sound="drizzle" tabindex="0" role="button" aria-label="Play Hot Honey Drizzle Snap Sound">
+            <div class="sound-play-icon-box"><i class="fa-solid fa-jar"></i></div>
+            <div>
+              <h3 style="font-size: 1.15rem; margin-bottom: 4px;">3. Hot Honey Drizzle Snap</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">Viscous, bubbling clover habanero glaze cascading over corrugated golden batter.</p>
+            </div>
+            <div class="eq-visualizer">
+              <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+              <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+            </div>
+          </div>
+
+          <!-- Tile 4 -->
+          <div class="soundboard-card reveal-on-scroll" data-sound="shake" tabindex="0" role="button" aria-label="Play Double-Dredge Shake Sound">
+            <div class="sound-play-icon-box"><i class="fa-solid fa-shuffle"></i></div>
+            <div>
+              <h3 style="font-size: 1.15rem; margin-bottom: 4px;">4. The Double-Dredge Shake</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">Acoustic rustle of 12 hand-blended spices coating tenderized poultry meat.</p>
+            </div>
+            <div class="eq-visualizer">
+              <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+              <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SECRET MIDNIGHT DROPS (EXCLUSIVE AFTER-HOURS ITEMS) -->
+    <section class="section" id="secret-drops">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-subtitle-tag" style="background: rgba(225, 29, 72, 0.15); color: #E11D48;">
+            <i class="fa-solid fa-lock-open"></i> Vault Unlocked After 9:00 PM
+          </div>
+          <h2 class="section-title">
+            The Secret <span class="highlight-orange">Midnight Drops</span>
+          </h2>
+          <p class="section-description">
+            High-voltage crave creations engineered exclusively for the late-night hunger wave. Not featured on our daytime menu.
+          </p>
+        </div>
+
+        <div class="combos-grid">
+          <!-- Item 1 -->
+          <article class="combo-card reveal-on-scroll">
+            <div class="combo-img-wrap">
+              <span class="combo-badge-save" style="background: #E11D48;">Midnight Vault</span>
+              <img src="images/home 2/Midnight Waffle Crisp Sando.jpg" alt="Midnight Waffle Chicken Sandwich">
+            </div>
+            <div class="combo-content">
+              <div class="combo-tagline">Signature After-Hours Drop</div>
+              <h3 class="card-title">Midnight Waffle Crisp Sando</h3>
+              <p class="card-desc">Thick Belgian pearl sugar waffle folded around a jumbo ghost-glazed thigh, smoked bacon strips, and spicy maple drizzle.</p>
+              
+              <button type="button" class="btn btn-outline btn-sm btn-secret-notes" data-target="secret-notes-1" style="width: 100%; margin-block: var(--space-2);">
+                <i class="fa-solid fa-lightbulb"></i> Chef Secret Notes
+              </button>
+              
+              <div class="secret-recipe-drawer" id="secret-notes-1">
+                <strong>Kitchen Secret:</strong> Waffles are pressed with coarse pearl sugar that caramelizes instantly on contact. Finished with applewood bacon infused with cayenne dust.
+              </div>
+
+              <div class="card-footer" style="margin-top: var(--space-3);">
+                <div class="card-price"><span class="current-price">$14.99</span></div>
+                <button type="button" class="btn btn-hot btn-sm" data-action="add-to-cart" data-id="vault-1" data-name="Midnight Waffle Crisp Sando" data-price="14.99" data-img="images/home 2/Midnight Waffle Crisp Sando.jpg">
+                  <i class="fa-solid fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2 -->
+          <article class="combo-card reveal-on-scroll">
+            <div class="combo-img-wrap">
+              <span class="combo-badge-save" style="background: var(--color-hot-orange);">Loaded Skillet</span>
+              <img src="images/home 2/Ghost Mac & Tender Skillet.jpg" alt="Ghost Pepper Loaded Mac Skillet">
+            </div>
+            <div class="combo-content">
+              <div class="combo-tagline">Ultra Loaded Feeds</div>
+              <h3 class="card-title">Ghost Mac &amp; Tender Skillet</h3>
+              <p class="card-desc">Skillet bowl of bubbling four-cheese cavatappi macaroni crowned with 3 diced Nashville hot tenders, jalapeño queso, and herb crumble.</p>
+              
+              <button type="button" class="btn btn-outline btn-sm btn-secret-notes" data-target="secret-notes-2" style="width: 100%; margin-block: var(--space-2);">
+                <i class="fa-solid fa-lightbulb"></i> Chef Secret Notes
+              </button>
+              
+              <div class="secret-recipe-drawer" id="secret-notes-2">
+                <strong>Kitchen Secret:</strong> The macaroni cheese sauce uses 18-month aged sharp cheddar blended with evaporated milk and roasted habanero oil for pure creamy heat.
+              </div>
+
+              <div class="card-footer" style="margin-top: var(--space-3);">
+                <div class="card-price"><span class="current-price">$15.49</span></div>
+                <button type="button" class="btn btn-hot btn-sm" data-action="add-to-cart" data-id="vault-2" data-name="Ghost Mac & Tender Skillet" data-price="15.49" data-img="images/home 2/Ghost Mac & Tender Skillet.jpg">
+                  <i class="fa-solid fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3 -->
+          <article class="combo-card reveal-on-scroll">
+            <div class="combo-img-wrap">
+              <span class="combo-badge-save" style="background: var(--color-primary-yellow); color: #000;">Sweet Finish</span>
+              <img src="images/home 2/Cinnamon Sugar Biscuit Bombs.jpg" alt="Cinnamon Sugar Biscuit Bombs">
+            </div>
+            <div class="combo-content">
+              <div class="combo-tagline">Late Night Dessert Crave</div>
+              <h3 class="card-title">Cinnamon Sugar Biscuit Bombs</h3>
+              <p class="card-desc">6 bite-sized buttermilk biscuit dough pieces flash-fried to golden perfection, rolled in cinnamon sugar, and served with vanilla icing.</p>
+              
+              <button type="button" class="btn btn-outline btn-sm btn-secret-notes" data-target="secret-notes-3" style="width: 100%; margin-block: var(--space-2);">
+                <i class="fa-solid fa-lightbulb"></i> Chef Secret Notes
+              </button>
+              
+              <div class="secret-recipe-drawer" id="secret-notes-3">
+                <strong>Kitchen Secret:</strong> Rolled hot straight from peanut oil into Vietnamese Saigon cinnamon and raw demerara sugar crystals for an addictive crystalline bite.
+              </div>
+
+              <div class="card-footer" style="margin-top: var(--space-3);">
+                <div class="card-price"><span class="current-price">$7.99</span></div>
+                <button type="button" class="btn btn-hot btn-sm" data-action="add-to-cart" data-id="vault-3" data-name="Cinnamon Biscuit Bombs (6-Pk)" data-price="7.99" data-img="images/home 2/Cinnamon Sugar Biscuit Bombs.jpg">
+                  <i class="fa-solid fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: INTERACTIVE DIP & SAUCE MATRIX -->
+    <section class="section section-bg-secondary" id="sauce-matrix">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-subtitle-tag" style="background: rgba(255, 95, 0, 0.15); color: var(--color-hot-orange);">
+            <i class="fa-solid fa-flask"></i> Flavor Chemistry
+          </div>
+          <h2 class="section-title">
+            The Interactive <span class="highlight-orange">Sauce Matrix</span>
+          </h2>
+          <p class="section-description">
+            Explore our 6 proprietary scratch sauces. Click any sauce to reveal its measured Scoville rating, flavor balance, and recommended poultry match.
+          </p>
+        </div>
+
+        <div class="sauce-matrix-layout">
+          <!-- Sauce Selection Pills -->
+          <div class="sauce-pills-grid reveal-on-scroll">
+            <div class="sauce-pill-card active" data-sauce="ghost_mayo">
+              <i class="fa-solid fa-pepper-hot" style="font-size: 1.5rem; color: #E11D48;"></i>
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Smoked Ghost Mayo</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">95,000 SHU • Fiery Aioli</span>
+              </div>
+            </div>
+
+            <div class="sauce-pill-card" data-sauce="hot_honey">
+              <i class="fa-solid fa-jar" style="font-size: 1.5rem; color: #FFD400;"></i>
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Clover Hot Honey</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">12,000 SHU • Sticky Sweet</span>
+              </div>
+            </div>
+
+            <div class="sauce-pill-card" data-sauce="herb_ranch">
+              <i class="fa-solid fa-bottle-droplet" style="font-size: 1.5rem; color: #10B981;"></i>
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Cultured Buttermilk Ranch</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">0 SHU • Cooling Herb Dill</span>
+              </div>
+            </div>
+
+            <div class="sauce-pill-card" data-sauce="gochujang">
+              <i class="fa-solid fa-fire" style="font-size: 1.5rem; color: #FF5F00;"></i>
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Korean Sweet Gochujang</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">25,000 SHU • Fermented Umami</span>
+              </div>
+            </div>
+
+            <div class="sauce-pill-card" data-sauce="truffle_queso">
+              <i class="fa-solid fa-cheese" style="font-size: 1.5rem; color: #FFC300;"></i>
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Truffle Golden Queso</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">4,000 SHU • Aged Cheddar</span>
+              </div>
+            </div>
+
+            <div class="sauce-pill-card" data-sauce="carolina_gold">
+              <i class="fa-solid fa-spoon" style="font-size: 1.5rem; color: #F59E0B;"></i>
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Carolina Gold BBQ</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">8,000 SHU • Tangy Mustard</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sauce Live Data Display -->
+          <div class="sauce-detail-card reveal-on-scroll">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-3);">
+              <h3 id="sauce-detail-title" style="font-size: 1.4rem; color: var(--text-primary); margin: 0;">Smoked Ghost Pepper Mayo</h3>
+              <span id="sauce-detail-shu" style="background: rgba(225, 29, 72, 0.2); color: #E11D48; padding: 4px 10px; border-radius: var(--radius-full); font-weight: 800; font-size: 0.8rem;">95,000 SHU</span>
+            </div>
+
+            <div class="heat-meter-bar-wrap" style="height: 8px; margin-bottom: var(--space-4);">
+              <div id="sauce-detail-bar" style="height: 100%; width: 85%; background: linear-gradient(90deg, #FFD400, #FF5F00, #E11D48); border-radius: var(--radius-full); transition: width 0.3s ease;"></div>
+            </div>
+
+            <p id="sauce-detail-desc" style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: var(--space-3);">
+              Fermented ghost chilis blended with charred garlic, Spanish smoked paprika, and rich emulsified egg yolks. Intense slow-building burn that coats the palate.
+            </p>
+
+            <div class="flavor-tags-wrap" id="sauce-detail-tags">
+              <span class="flavor-tag">Smokey</span>
+              <span class="flavor-tag">Fiery Scorch</span>
+              <span class="flavor-tag">Creamy Aioli Base</span>
+            </div>
+
+            <div style="background: var(--surface-2); padding: var(--space-3) var(--space-4); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--primary-yellow); margin-bottom: var(--space-4);">
+              <i class="fa-solid fa-star"></i> <span id="sauce-detail-pairing">Pairs exquisitely with Jumbo Tenders &amp; Crispy Fries</span>
+            </div>
+
+            <button type="button" class="btn btn-hot btn-sm" onclick="alert('Added extra sauce pot to your order bag ($1.49)!');" style="width: 100%;">
+              <i class="fa-solid fa-plus"></i> Add Extra Sauce Pot (+$1.49)
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: MIDNIGHT WING ROULETTE (SPIN TO WIN PERK) -->
+    <section class="section">
+      <div class="container">
+        <div class="roulette-container reveal-on-scroll">
+          <!-- Wheel Graphic -->
+          <div class="wheel-outer-wrap">
+            <div class="wheel-indicator-arrow"></div>
+            <div class="wheel-disc" id="roulette-wheel-disc">
+              <div class="wheel-center-knob">
+                <i class="fa-solid fa-fire"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wheel Controls & Rewards -->
+          <div>
+            <div class="section-subtitle-tag" style="background: rgba(255, 212, 0, 0.2); color: var(--color-primary-yellow);">
+              <i class="fa-solid fa-dice"></i> Gamified Late Perk
+            </div>
+            <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 900; margin-block: var(--space-2) var(--space-3);">
+              Spin The Midnight <span class="highlight-yellow">Wing Roulette</span>
+            </h2>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-4);">
+              Taking the late shift or hanging with your crew? Spin our interactive wheel to unlock exclusive tonight-only discounts, complimentary truffle dips, or a free Nashville slider.
+            </p>
+
+            <button type="button" class="btn btn-hot" id="btn-spin-roulette">
+              <i class="fa-solid fa-rotate"></i> Spin For Late-Night Perk
+            </button>
+
+            <!-- Prize Reveal Display -->
+            <div class="roulette-prize-card" id="roulette-prize-card">
+              <div style="font-size: 0.75rem; color: var(--color-success); font-weight: 800; text-transform: uppercase;">
+                <i class="fa-solid fa-trophy"></i> Winner Unlocked!
+              </div>
+              <h4 id="roulette-prize-title" style="font-size: 1.25rem; font-weight: 900; color: var(--text-primary); margin-block: 4px;">
+                15% OFF TONIGHT'S CRAVE
+              </h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3);">
+                Use code <strong id="roulette-prize-code" style="color: var(--primary-yellow); font-family: monospace; font-size: 1.05rem;">MIDNIGHT15</strong> at checkout or in your bag.
+              </p>
+              <button type="button" class="btn btn-outline btn-sm" id="btn-copy-prize-code">
+                <i class="fa-solid fa-copy"></i> Copy Code
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: LIVE CURBSIDE PICKUP RADAR -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-subtitle-tag"><i class="fa-solid fa-car-side"></i> Zero Footprint Handover</div>
+          <h2 class="section-title">Live Curbside <span class="highlight-yellow">Pickup Radar</span></h2>
+          <p class="section-description">
+            Never wait in cold queues. Drive into an illuminated curbside bay and our team handovers your thermal sealed feast in under 60 seconds.
+          </p>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: var(--space-2); margin-bottom: var(--space-6);" class="reveal-on-scroll">
+          <button type="button" class="btn btn-outline btn-sm bay-tab-btn active" data-hub="hub-downtown">
+            <i class="fa-solid fa-location-dot"></i> Downtown Express Hub
+          </button>
+          <button type="button" class="btn btn-outline btn-sm bay-tab-btn" data-hub="hub-midtown">
+            <i class="fa-solid fa-location-dot"></i> Midtown Flagship
+          </button>
+        </div>
+
+        <!-- Downtown Hub Panel -->
+        <div class="bay-hub-panel reveal-on-scroll" id="hub-downtown">
+          <div class="builder-options-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="squad-result-item" style="border: 1.5px solid #10B981;">
+              <span style="font-size: 0.8rem; color: #10B981; font-weight: 800;"><i class="fa-solid fa-circle-check"></i> AVAILABLE NOW</span>
+              <h4 style="font-size: 1.2rem; margin-top: 4px;">Curbside Bay #1</h4>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Illuminated Sensor Lane</span>
+            </div>
+
+            <div class="squad-result-item" style="border: 1.5px solid #10B981;">
+              <span style="font-size: 0.8rem; color: #10B981; font-weight: 800;"><i class="fa-solid fa-circle-check"></i> AVAILABLE NOW</span>
+              <h4 style="font-size: 1.2rem; margin-top: 4px;">Curbside Bay #2</h4>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Illuminated Sensor Lane</span>
+            </div>
+
+            <div class="squad-result-item" style="border: 1.5px solid #F59E0B;">
+              <span style="font-size: 0.8rem; color: #F59E0B; font-weight: 800;"><i class="fa-solid fa-clock"></i> HANDOVER IN 40s</span>
+              <h4 style="font-size: 1.2rem; margin-top: 4px;">Curbside Bay #3</h4>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Queue Releasing Soon</span>
+            </div>
+
+            <div class="squad-result-item" style="border: 1.5px solid #10B981;">
+              <span style="font-size: 0.8rem; color: #10B981; font-weight: 800;"><i class="fa-solid fa-circle-check"></i> AVAILABLE NOW</span>
+              <h4 style="font-size: 1.2rem; margin-top: 4px;">Curbside Bay #4</h4>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Illuminated Sensor Lane</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Midtown Hub Panel -->
+        <div class="bay-hub-panel reveal-on-scroll" id="hub-midtown" style="display: none;">
+          <div class="builder-options-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="squad-result-item" style="border: 1.5px solid #10B981;">
+              <span style="font-size: 0.8rem; color: #10B981; font-weight: 800;"><i class="fa-solid fa-circle-check"></i> AVAILABLE NOW</span>
+              <h4 style="font-size: 1.2rem; margin-top: 4px;">Midtown Bay A</h4>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Front Drive Lane</span>
+            </div>
+            <div class="squad-result-item" style="border: 1.5px solid #10B981;">
+              <span style="font-size: 0.8rem; color: #10B981; font-weight: 800;"><i class="fa-solid fa-circle-check"></i> AVAILABLE NOW</span>
+              <h4 style="font-size: 1.2rem; margin-top: 4px;">Midtown Bay B</h4>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Front Drive Lane</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: HIGH-VOLTAGE FINAL ORDER CTA BANNER -->
+    <section class="cta-banner-section">
+      <div class="container cta-banner-box">
+        <div class="reveal-on-scroll">
+          <h2 class="cta-banner-headline">
+            Midnight Oil At 375°F. <br>
+            <span>Your Feast Lands In 12 Mins!</span>
+          </h2>
+          <p class="cta-banner-desc">
+            Place your order online for express curbside handover or counter collection. Every piece is battered fresh when your ticket drops.
+          </p>
+          <div class="cta-banner-actions">
+            <a href="cart.html" class="btn btn-primary">
+              <i class="fa-solid fa-bag-shopping"></i> Review Bag &amp; Checkout
+            </a>
+            <a href="tel:+18002747778" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #FFF;">
+              <i class="fa-solid fa-phone"></i> Late Dispatch: (800) 274-7778
+            </a>
+          </div>
+        </div>
+
+        <div class="cta-banner-perk-box reveal-on-scroll">
+          <div class="cta-perk-row">
+            <div class="cta-perk-icon"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+            <div>
+              <strong style="display: block; font-size: 1.05rem;">Thermo-Lock Fresh Packaging</strong>
+              <span style="font-size: 0.85rem; color: #A1A1AA;">Vented airflow prevents soggy batter on your drive home</span>
+            </div>
+          </div>
+          <div class="cta-perk-row">
+            <div class="cta-perk-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div>
+              <strong style="display: block; font-size: 1.05rem;">15-Minute Pickup Guarantee</strong>
+              <span style="font-size: 0.85rem; color: #A1A1AA;">Ready hot when you arrive or next side is on us</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       GLOBAL FOOTER (Identical Across All Pages)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand-info">
+          <a href="index.html" aria-label="Crispster Homepage">
+            <img src="images/logo.svg" alt="Crispster Logo" class="footer-logo-img">
+          </a>
+          <p class="footer-brand-desc">
+            Crispster is a premier fried chicken takeaway brand dedicated to the art of the perfect crunch. 24-hour marinated poultry, secret herb coatings, and mouthwatering homemade glazes.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Home 1 (Classic)</a></li>
+            <li><a href="home-2.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Home 2 (Late Night)</a></li>
+            <li><a href="about.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="menu.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Full Menu</a></li>
+            <li><a href="offers.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Special Offers</a></li>
+            <li><a href="blog.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Crunch Blog</a></li>
+            <li><a href="contact.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Contact &amp; Stores</a></li>
+          </ul>
+        </div>
+
+        <!-- Takeaway Links -->
+        <div>
+          <h4 class="footer-title">Takeaway Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="cart.html" class="footer-link"><i class="fa-solid fa-bag-shopping"></i> View Cart</a></li>
+            <li><a href="checkout.html" class="footer-link"><i class="fa-solid fa-credit-card"></i> Express Checkout</a></li>
+            <li><a href="maintenance.html" class="footer-link"><i class="fa-solid fa-wrench"></i> Maintenance Status</a></li>
+            <li><a href="404.html" class="footer-link"><i class="fa-solid fa-triangle-exclamation"></i> 404 Error Page</a></li>
+          </ul>
+        </div>
+
+        <!-- Store & Hours -->
+        <div>
+          <h4 class="footer-title">Kitchen Hours</h4>
+          <div class="footer-hours-item">
+            <span>Monday – Thursday:</span>
+            <span>11:00 AM – 11:30 PM</span>
+          </div>
+          <div class="footer-hours-item">
+            <span>Friday &amp; Saturday:</span>
+            <span>11:00 AM – 2:00 AM</span>
+          </div>
+          <div class="footer-hours-item">
+            <span>Sunday:</span>
+            <span>12:00 PM – 11:00 PM</span>
+          </div>
+
+          <div style="margin-top: 1.25rem;">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>428 Crispy Boulevard, Flavor District, NY 10012</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>(555) 374-2747 (CRISPOST)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 Crispster Fried Chicken Takeaway. All Rights Reserved.
+        </div>
+        <div class="footer-bottom-badges">
+          <span class="footer-bottom-badge"><i class="fa-solid fa-shield-halved"></i> 100% Halal Certified</span>
+          <span class="footer-bottom-badge"><i class="fa-solid fa-seedling"></i> Zero Trans Fats</span>
+          <span class="footer-bottom-badge"><i class="fa-solid fa-fire"></i> 15-Min Fresh Guarantee</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to top of page">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Core JavaScript & Dedicated Home-2 Interactive Engine -->
+  <script src="js/main.js"></script>
+  <script src="js/home-2.js"></script>
+</body>
+</html>

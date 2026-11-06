@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Chemistry of Crunch: Why 24 Hours in Buttermilk Changes Everything — Crispster</title>
+  <meta name="description" content="Discover the culinary science behind Crispster's iconic fried chicken: buttermilk brining, triple dredging, and flash frying at 375°F.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       GLOBAL NAVBAR
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand" aria-label="Crispster Homepage">
+        <img src="images/logo.svg" alt="Crispster Premium Fried Chicken Logo" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <div class="nav-item-dropdown">
+          <a href="index.html" class="nav-link dropdown-toggle" aria-expanded="false">
+            <span>Home</span> <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="dropdown-item">
+              <div class="dropdown-item-title"><i class="fa-solid fa-drumstick-bite"></i> Home 1 (Classic Crisp)</div>
+              <div class="dropdown-item-desc">Flagship takeaway & family feasts</div>
+            </a>
+            <a href="home-2.html" class="dropdown-item">
+              <div class="dropdown-item-title"><i class="fa-solid fa-fire"></i> Home 2 (Late-Night Flame)</div>
+              <div class="dropdown-item-desc">After-hours craves & fiery wings</div>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-controls">
+        <button type="button" class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button type="button" class="btn-icon-only direction-toggle-btn" aria-label="Toggle RTL/LTR direction" title="Toggle Direction">
+          <span style="font-weight: 800; font-size: 0.8rem;">RTL</span>
+        </button>
+
+        <a href="cart.html" class="cart-toggle-btn" aria-label="View takeaway cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Bag</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </a>
+
+        <a href="checkout.html" class="btn btn-hot btn-sm nav-order-btn">
+          <i class="fa-solid fa-bolt"></i> Order Now
+        </a>
+
+        <button type="button" class="mobile-menu-btn" aria-label="Open mobile menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-drawer-overlay"></div>
+
+    <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-drawer" aria-label="Mobile Menu">
+    <div class="mobile-drawer-header">
+      <img src="images/logo.svg" alt="Crispster Logo" class="drawer-logo-img">
+      <button type="button" class="drawer-close-btn" aria-label="Close mobile menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-nav-link">Home 1 (Classic Crisp)</a>
+      <a href="home-2.html" class="mobile-nav-link">Home 2 (Late-Night Flame)</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="menu.html" class="mobile-nav-link">Menu</a>
+      <a href="offers.html" class="mobile-nav-link">Offers</a>
+      <a href="blog.html" class="mobile-nav-link active">Blog</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <div class="mobile-drawer-controls">
+      <div class="drawer-icon-row">
+        <button type="button" class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button type="button" class="btn-icon-only direction-toggle-btn" aria-label="Toggle RTL/LTR direction" title="Toggle Direction">
+          <span style="font-weight: 800; font-size: 0.8rem;">RTL</span>
+        </button>
+
+        <a href="cart.html" class="cart-toggle-btn" aria-label="View takeaway bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Bag</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </a>
+      </div>
+
+      <a href="checkout.html" class="btn btn-hot btn-sm nav-order-btn" style="width: 100%; justify-content: center; display: inline-flex;">
+        <i class="fa-solid fa-bolt"></i> Order Now
+      </a>
+    </div>
+  </aside>
+
+  <!-- Takeaway Bag Drawer -->
+  <div class="cart-drawer-backdrop"></div>
+  <aside class="cart-drawer" aria-label="Takeaway Bag">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title"><i class="fa-solid fa-bag-shopping" style="color: var(--color-hot-orange);"></i><span>Takeaway Bag</span></div>
+      <button type="button" class="cart-drawer-close" aria-label="Close bag"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-items-container"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-line total"><span>Total Due</span><span class="total-amount">$0.00</span></div>
+      <a href="checkout.html" class="btn btn-hot cart-checkout-btn"><i class="fa-solid fa-bag-shopping"></i> Proceed To Checkout</a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN PAGE CONTENT (8 Substantial Sections)
+       ======================================================================== -->
+  <main>
+    <!-- SECTION 1: ARTICLE HERO -->
+    <section class="home-hero-section blog-detail-hero-section">
+      <div class="container" style="max-width: 900px;">
+        <div class="hero-content-plaque reveal-on-scroll">
+          <div class="section-subtitle-tag" id="articleCategoryTag" style="margin-inline: auto;"><i class="fa-solid fa-flask"></i> Culinary Chemistry</div>
+          <h1 class="section-title" id="articleHeroTitle" style="font-size: clamp(2.2rem, 4.5vw, 3.6rem);">The Chemistry of Crunch: Why 24 Hours in Buttermilk Changes Everything</h1>
+          
+          <div id="articleMeta" style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 1.25rem; font-size: 0.92rem; color: var(--text-muted); flex-wrap: wrap;">
+            <span id="articleMetaAuthor"><i class="fa-solid fa-user"></i> By Chef Marcus Vance</span>
+            <span id="articleMetaDate"><i class="fa-regular fa-calendar"></i> November 2, 2026</span>
+            <span id="articleMetaTime"><i class="fa-regular fa-clock"></i> 6 Min Read</span>
+            <span id="articleMetaComments"><i class="fa-solid fa-comments"></i> 24 Foodie Comments</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ARTICLE FEATURED IMAGE BANNER -->
+    <section class="section" style="padding-block: 0 2rem;">
+      <div class="container" style="max-width: 980px;">
+        <div style="border-radius: var(--radius-xl); overflow: hidden; border: 3px solid var(--color-primary-yellow); box-shadow: var(--shadow-lg);">
+          <img id="articleHeroImage" src="images/blog/blog1.jpg" 
+               alt="Crispster Triple Dredged Fried Chicken Platter" 
+               style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: IN-DEPTH ARTICLE BODY PROSE -->
+    <section class="section" style="padding-block: 1rem 3rem;">
+      <div class="container">
+        <article class="article-content" id="articleBody">
+          <p>
+            Fried chicken is often viewed as simple comfort food, but achieving that shatteringly crisp shell while preserving succulence right down to the bone is one of the most demanding technical feats in culinary chemistry.
+          </p>
+
+          <p>
+            At Crispster, we refuse to take shortcuts. In an era where commercial kitchens dredge chicken in tap water for twenty seconds and rely on heavy chemical coatings to mask stale poultry, we rely on a traditional 24-hour buttermilk fermentation technique combined with precision thermal physics.
+          </p>
+
+          <blockquote>
+            "The magic of cultured buttermilk isn't just flavor — it is a biochemical engine. Its natural lactic acid gently denatures tough collagen without turning poultry mushy, creating internal capillary channels that hold savory herbs."
+          </blockquote>
+
+          <h2>1. The Lactic Acid Engine: Gentle Tenderization</h2>
+          <p>
+            Vinegar or lemon juice contains harsh acetic and citric acids that can easily "cook" the exterior of raw poultry if left for more than two hours, resulting in a rubbery, stringy texture. Buttermilk, by contrast, contains lactic acid — a far gentler organic acid that tenderizes steadily over twenty-four hours without damaging delicate muscle fibers.
+          </p>
+          <p>
+            As the chicken rests in our refrigerated 38°F vats, the cultured enzymes break down tough connective tissues while allowing our 12 crushed botanicals (including smoked paprika, white pepper, dried thyme, celery seed, and garlic powder) to absorb deep into the meat.
+          </p>
+
+          <h2>2. The Triple Dredge: Constructing Microscopic Crunch Ridges</h2>
+          <p>
+            When food hits hot oil, surface moisture expands into steam. If a dredge is too thin or uniform, steam blows the batter right off the meat, creating an oily bubble. If it is too dense, you get heavy bread that tastes like dough.
+          </p>
+          <p>
+            Our line cooks employ a <strong>triple hand-dredge</strong> method:
+          </p>
+          <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; list-style: disc;">
+            <li style="margin-bottom: 0.5rem;"><strong>First Pass:</strong> A dusting in light seasoned starch to dry the outer skin.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Second Pass:</strong> A quick re-dip into buttermilk wash to create surface adhesion.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Third Pass:</strong> A vigorous toss and shake in coarse unbleached flour, creating thousands of tiny craggy micro-ridges.</li>
+          </ul>
+
+          <h2>3. The 375°F Thermal Seal</h2>
+          <p>
+            When those micro-ridges submerge into pure high-smoke vegetable oil at exactly 375°F, surface moisture instantly vaporizes into microscopic steam jets. This rapid outward steam pressure acts as a natural pressure valve — preventing oil from penetrating inward while frying the ridges into golden, crunchy glass.
+          </p>
+
+          <div class="why-card" style="background: var(--bg-card); border-left: 5px solid var(--color-hot-orange); margin-block: 2.5rem; padding: 1.75rem;">
+            <div style="font-weight: 800; font-size: 1.1rem; color: var(--color-hot-orange); margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-circle-info"></i> Key Takeaway for Home Cooks
+            </div>
+            <p style="font-size: 0.95rem; margin-bottom: 0;">
+              Never overcrowd your fryer or pot! Dropping too many cold chicken pieces at once plummets the oil temperature down to 310°F. At that low temperature, steam pressure collapses, oil rushes into the coating, and your chicken turns soggy and greasy.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 4: AUTHOR SPOTLIGHT -->
+    <section class="section section-bg-secondary" style="padding-block: 3rem;">
+      <div class="container" style="max-width: 820px;" id="articleAuthorSection">
+        <div class="why-card reveal-on-scroll" style="display: flex; flex-direction: row; align-items: center; gap: 2rem; flex-wrap: wrap;">
+          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=200&q=80" 
+               alt="Chef Marcus Vance" 
+               style="width: 90px; height: 90px; border-radius: var(--radius-full); object-fit: cover; border: 3px solid var(--color-primary-yellow);">
+          <div style="flex: 1; min-width: 240px;">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.25rem;">Written By Chef Marcus Vance</h3>
+            <div style="color: var(--color-hot-orange); font-size: 0.85rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem;">Executive Chef & Co-Founder</div>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 0;">
+              Marcus has over 15 years of experience in classical Southern frying and fine dining hospitality. He leads culinary R&D across all Crispster kitchens.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: MODERN SOCIAL SHARE & ENGAGEMENT STRIP -->
+    <section class="section" style="padding-block: 1rem 2rem;">
+      <div class="container" style="max-width: 860px;">
+        <div class="article-engagement-bar reveal-on-scroll">
+          <div class="engagement-actions-left">
+            <button type="button" class="crunch-react-btn" id="articleReactBtn" onclick="this.classList.toggle('reacted'); const c = this.querySelector('.crunch-count'); c.textContent = parseInt(c.textContent) + (this.classList.contains('reacted') ? 1 : -1); window.showToast('Crunch Crave Logged', 'Thanks for backing our culinary research!', 'fa-solid fa-fire');">
+              <i class="fa-solid fa-fire-flame-curved"></i>
+              <span class="crunch-count">142</span> Crunch Craves
+            </button>
+            <span style="font-size: 0.82rem; color: var(--text-muted);"><i class="fa-solid fa-chart-line"></i> 98% Found This Insightful</span>
+          </div>
+
+          <div class="engagement-share-right">
+            <span class="share-label-tag"><i class="fa-solid fa-share-nodes" style="color: var(--color-hot-orange);"></i> Share Secret:</span>
+            <button type="button" class="share-btn-copy" onclick="navigator.clipboard?.writeText(window.location.href); window.showToast('Link Copied', 'Article URL copied to clipboard!', 'fa-solid fa-copy');">
+              <i class="fa-regular fa-copy"></i> Copy Link
+            </button>
+            <div class="share-social-pills">
+              <a href="https://x.com/intent/tweet" target="_blank" rel="noopener noreferrer" class="share-social-icon x-tw" aria-label="Share on X" id="shareBtnX">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="https://www.facebook.com/sharer/sharer.php" target="_blank" rel="noopener noreferrer" class="share-social-icon fb" aria-label="Share on Facebook" id="shareBtnFb">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="https://api.whatsapp.com/send" target="_blank" rel="noopener noreferrer" class="share-social-icon wa" aria-label="Share on WhatsApp" id="shareBtnWa">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: PROFESSIONALLY REDESIGNED FOODIE DISCUSSIONS & COMMUNITY FORUM -->
+    <section class="section section-bg-secondary" id="foodie-discussions">
+      <div class="container discussions-wrapper">
+        <!-- Section Header Bar -->
+        <div class="discussions-top-bar reveal-on-scroll">
+          <div class="discussions-heading-group">
+            <div class="section-subtitle-tag" style="margin-bottom: 0.4rem;">
+              <i class="fa-solid fa-comments"></i> Crispster Culinary Forum
+            </div>
+            <h2>
+              Foodie Discussions <span class="discussions-count-pill" id="discussionsCountBadge">3</span>
+            </h2>
+          </div>
+
+          <div class="discussions-sort-filters" role="tablist" aria-label="Sort Comments">
+            <button type="button" class="sort-pill-btn active" data-filter="all">All Thoughts (<span id="filterAllCount">3</span>)</button>
+            <button type="button" class="sort-pill-btn" data-filter="chefs">Verified Chefs</button>
+            <button type="button" class="sort-pill-btn" data-filter="helpful">Most Helpful</button>
+          </div>
+        </div>
+
+        <!-- Discussions Stream (3 High-Detail Cards) -->
+        <div class="discussions-stream" id="discussionsStream">
+          
+          <!-- Comment 1: Brandon Miller -->
+          <article class="foodie-comment-card reveal-on-scroll" data-role="foodie" data-helpful="24">
+            <div class="comment-author-header">
+              <div class="comment-profile">
+                <div class="comment-avatar-wrap">
+                  <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80" alt="Brandon Miller" class="comment-avatar-img">
+                </div>
+                <div class="comment-author-meta">
+                  <div class="comment-author-row">
+                    <span class="comment-author-name">Brandon Miller</span>
+                    <span class="author-role-badge verified"><i class="fa-solid fa-circle-check"></i> Verified Foodie</span>
+                  </div>
+                  <span class="comment-post-time"><i class="fa-regular fa-clock"></i> 2 days ago • Takeaway Connoisseur</span>
+                </div>
+              </div>
+              <div class="comment-star-rating" title="5 out of 5 stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+
+            <div class="comment-body-content">
+              <p>
+                "Finally someone explained why Crispster chicken stays so insanely crunchy on the 20-minute drive home! I used to put my takeaway bag in a closed plastic bag and it always got soggy from trapped humidity. Now I keep the laser-cut thermal vents unobstructed, and the crunch remains completely intact."
+              </p>
+            </div>
+
+            <div class="comment-footer-bar">
+              <div class="comment-actions-group">
+                <button type="button" class="comment-interact-btn" onclick="this.classList.toggle('liked'); const c = this.querySelector('.like-num'); const val = parseInt(c.textContent) + (this.classList.contains('liked') ? 1 : -1); c.textContent = val; this.closest('.foodie-comment-card').setAttribute('data-helpful', val);">
+                  <i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="like-num">24</span>)
+                </button>
+                <button type="button" class="comment-interact-btn" onclick="replyToComment('Brandon Miller')">
+                  <i class="fa-regular fa-comment-dots"></i> Reply
+                </button>
+              </div>
+              <span style="font-size: 0.78rem; color: var(--text-muted);"><i class="fa-solid fa-shield-halved"></i> Verified Experience</span>
+            </div>
+          </article>
+
+          <!-- Comment 2: Chef Rachel Liu -->
+          <article class="foodie-comment-card reveal-on-scroll" data-role="chef" data-helpful="41">
+            <div class="comment-author-header">
+              <div class="comment-profile">
+                <div class="comment-avatar-wrap">
+                  <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&q=80" alt="Chef Rachel Liu" class="comment-avatar-img">
+                </div>
+                <div class="comment-author-meta">
+                  <div class="comment-author-row">
+                    <span class="comment-author-name">Chef Rachel Liu</span>
+                    <span class="author-role-badge chef"><i class="fa-solid fa-hat-chef"></i> Executive Chef</span>
+                  </div>
+                  <span class="comment-post-time"><i class="fa-regular fa-clock"></i> 4 days ago • Nashville Hot Specialist</span>
+                </div>
+              </div>
+              <div class="comment-star-rating" title="5 out of 5 stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+
+            <div class="comment-body-content">
+              <p>
+                "Spot on analysis of lactic acid versus acetic acid tenderization. Acetic acid (vinegar) tightens muscle fibers too aggressively if left over 4 hours, whereas cultured buttermilk lactic acid gently cleaves collagen bonds without mushiness. The 24-hour window is noticeable from the first bite — even the lean breast fillets stay moist without losing structural tension."
+              </p>
+            </div>
+
+            <div class="comment-footer-bar">
+              <div class="comment-actions-group">
+                <button type="button" class="comment-interact-btn" onclick="this.classList.toggle('liked'); const c = this.querySelector('.like-num'); const val = parseInt(c.textContent) + (this.classList.contains('liked') ? 1 : -1); c.textContent = val; this.closest('.foodie-comment-card').setAttribute('data-helpful', val);">
+                  <i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="like-num">41</span>)
+                </button>
+                <button type="button" class="comment-interact-btn" onclick="replyToComment('Chef Rachel Liu')">
+                  <i class="fa-regular fa-comment-dots"></i> Reply
+                </button>
+              </div>
+              <span style="font-size: 0.78rem; color: var(--text-muted);"><i class="fa-solid fa-award"></i> Featured Comment</span>
+            </div>
+          </article>
+
+          <!-- Comment 3: Dr. Aris Thorne -->
+          <article class="foodie-comment-card reveal-on-scroll" data-role="scientist" data-helpful="38">
+            <div class="comment-author-header">
+              <div class="comment-profile">
+                <div class="comment-avatar-wrap">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Dr. Aris Thorne" class="comment-avatar-img">
+                </div>
+                <div class="comment-author-meta">
+                  <div class="comment-author-row">
+                    <span class="comment-author-name">Dr. Aris Thorne</span>
+                    <span class="author-role-badge scientist"><i class="fa-solid fa-flask-vial"></i> Food Biophysicist</span>
+                  </div>
+                  <span class="comment-post-time"><i class="fa-regular fa-clock"></i> 6 days ago • Crust Mechanics Lab</span>
+                </div>
+              </div>
+              <div class="comment-star-rating" title="5 out of 5 stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+
+            <div class="comment-body-content">
+              <p>
+                "The scientific explanation of vapor velocity at 375°F is exactly right. Rapid steam evacuation forms an active outward thermodynamic barrier that physically repels oil absorption. Combining cornstarch amylose with medium-gluten flour creates microscopic air cells that register that signature 85-decibel acoustic crunch upon mastication."
+              </p>
+            </div>
+
+            <div class="comment-footer-bar">
+              <div class="comment-actions-group">
+                <button type="button" class="comment-interact-btn" onclick="this.classList.toggle('liked'); const c = this.querySelector('.like-num'); const val = parseInt(c.textContent) + (this.classList.contains('liked') ? 1 : -1); c.textContent = val; this.closest('.foodie-comment-card').setAttribute('data-helpful', val);">
+                  <i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="like-num">38</span>)
+                </button>
+                <button type="button" class="comment-interact-btn" onclick="replyToComment('Dr. Aris Thorne')">
+                  <i class="fa-regular fa-comment-dots"></i> Reply
+                </button>
+              </div>
+              <span style="font-size: 0.78rem; color: var(--text-muted);"><i class="fa-solid fa-check-double"></i> Peer Verified</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Redesigned High-End Comment Submission Form -->
+        <div class="culinary-form-card reveal-on-scroll">
+          <div class="form-header-group">
+            <div class="form-header-icon">
+              <i class="fa-solid fa-pen-nib"></i>
+            </div>
+            <div class="form-header-titles">
+              <h3>Join The Culinary Table</h3>
+              <p>Have observations on 24-hr brining, oil temperature dynamics, or crust acoustics? Share with our chef community.</p>
+            </div>
+          </div>
+
+          <form id="blogDiscussionForm" onsubmit="event.preventDefault(); handleNewCommentSubmit(this);">
+            <!-- Interactive Rating Picker -->
+            <div class="rating-picker-row">
+              <div class="rating-picker-label">
+                <i class="fa-solid fa-medal" style="color: var(--color-hot-orange);"></i> Rate This Culinary Insight:
+              </div>
+              <div class="stars-selector" id="commentStarsSelector" title="Click to rate">
+                <i class="fa-solid fa-star" data-val="1"></i>
+                <i class="fa-solid fa-star" data-val="2"></i>
+                <i class="fa-solid fa-star" data-val="3"></i>
+                <i class="fa-solid fa-star" data-val="4"></i>
+                <i class="fa-solid fa-star" data-val="5"></i>
+              </div>
+            </div>
+
+            <div class="form-inputs-pair">
+              <div class="input-with-icon">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="commentAuthorInput" class="form-control" placeholder="Your Name or Handle *" pattern="[A-Za-z\s'-]{2,}" maxlength="60" title="Please enter letters only (at least 2 characters)" required>
+              </div>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="commentEmailInput" class="form-control" placeholder="Email Address (Never Published) *" required>
+              </div>
+            </div>
+
+            <div class="textarea-wrap">
+              <textarea id="commentMessageInput" class="form-control" placeholder="Write your culinary thought, frying observation, or question for the chefs... *" rows="4" required></textarea>
+            </div>
+
+            <div class="form-footer-actions">
+              <button type="submit" class="btn btn-hot">
+                <i class="fa-solid fa-paper-plane"></i> Post Culinary Thought
+              </button>
+              <div class="form-privacy-note">
+                <i class="fa-solid fa-shield-halved"></i> Your email will remain confidential. Comments are moderated for constructive discussion.
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 8: FINAL ORDER CTA -->
+    <section class="cta-banner-section">
+      <div class="container cta-banner-box">
+        <div class="reveal-on-scroll">
+          <h2 class="cta-banner-headline">Taste The 24-Hour Difference. <br><span>Ready In 12 Mins!</span></h2>
+          <p class="cta-banner-desc">Enough reading about it — taste what happens when 24-hr buttermilk marinade meets a 375°F golden fry.</p>
+          <div class="cta-banner-actions">
+            <a href="menu.html" class="btn btn-primary"><i class="fa-solid fa-drumstick-bite"></i> Order Takeaway</a>
+            <a href="offers.html" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #FFF;"><i class="fa-solid fa-tags"></i> View Deals</a>
+          </div>
+        </div>
+        <div class="cta-banner-perk-box reveal-on-scroll">
+          <div class="cta-perk-row">
+            <div class="cta-perk-icon"><i class="fa-solid fa-stopwatch"></i></div>
+            <div><strong style="display: block;">12-Minute Express Pickup</strong><span style="font-size: 0.85rem; color: #A1A1AA;">Prepared fresh right upon order transmission</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       GLOBAL FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-info">
+          <a href="index.html" aria-label="Crispster Homepage"><img src="images/logo.svg" alt="Crispster Logo" class="footer-logo-img"></a>
+          <p class="footer-brand-desc">Crispster is a premier fried chicken takeaway brand dedicated to the art of the perfect crunch. 24-hour marinated poultry, secret herb coatings, and mouthwatering homemade glazes.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Home 1 (Classic)</a></li>
+            <li><a href="home-2.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Home 2 (Late Night)</a></li>
+            <li><a href="about.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="menu.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Full Menu</a></li>
+            <li><a href="offers.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Special Offers</a></li>
+            <li><a href="blog.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Crunch Blog</a></li>
+            <li><a href="contact.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Contact & Stores</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Takeaway Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="cart.html" class="footer-link"><i class="fa-solid fa-bag-shopping"></i> View Cart</a></li>
+            <li><a href="checkout.html" class="footer-link"><i class="fa-solid fa-credit-card"></i> Express Checkout</a></li>
+            <li><a href="maintenance.html" class="footer-link"><i class="fa-solid fa-wrench"></i> Maintenance Status</a></li>
+            <li><a href="404.html" class="footer-link"><i class="fa-solid fa-triangle-exclamation"></i> 404 Error Page</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kitchen Hours</h4>
+          <div class="footer-hours-item"><span>Mon – Thu:</span><span>11:00 AM – 11:30 PM</span></div>
+          <div class="footer-hours-item"><span>Fri & Sat:</span><span>11:00 AM – 2:00 AM</span></div>
+          <div class="footer-hours-item"><span>Sunday:</span><span>12:00 PM – 11:00 PM</span></div>
+          <div style="margin-top: 1.25rem;">
+            <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>428 Crispy Blvd, NY 10012</span></div>
+            <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>(555) 374-2747</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 Crispster Fried Chicken Takeaway. All Rights Reserved.</div>
+        <div class="footer-bottom-badges">
+          <span class="footer-bottom-badge"><i class="fa-solid fa-shield-halved"></i> 100% Halal Certified</span>
+          <span class="footer-bottom-badge"><i class="fa-solid fa-seedling"></i> Zero Trans Fats</span>
+          <span class="footer-bottom-badge"><i class="fa-solid fa-fire"></i> 15-Min Fresh Guarantee</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top of page"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="js/main.js"></script>
+  <script src="js/blog-detail.js"></script>
+  <script>
+    // Blog Detail Discussion Script
+    document.addEventListener('DOMContentLoaded', () => {
+      const stars = document.querySelectorAll('#commentStarsSelector i');
+      let currentRating = 5;
+
+      stars.forEach(star => {
+        star.addEventListener('click', () => {
+          currentRating = parseInt(star.getAttribute('data-val') || '5', 10);
+          updateStarsDisplay(currentRating);
+        });
+        star.addEventListener('mouseenter', () => {
+          const val = parseInt(star.getAttribute('data-val') || '5', 10);
+          updateStarsDisplay(val);
+        });
+      });
+
+      const selectorWrap = document.getElementById('commentStarsSelector');
+      if (selectorWrap) {
+        selectorWrap.addEventListener('mouseleave', () => {
+          updateStarsDisplay(currentRating);
+        });
+      }
+
+      function updateStarsDisplay(val) {
+        stars.forEach(s => {
+          const sVal = parseInt(s.getAttribute('data-val') || '1', 10);
+          if (sVal <= val) {
+            s.className = 'fa-solid fa-star';
+            s.style.color = 'var(--color-primary-yellow)';
+          } else {
+            s.className = 'fa-regular fa-star';
+            s.style.color = 'var(--text-muted)';
+          }
+        });
+      }
+
+      // Filter and sort comment stream
+      const filterBtns = document.querySelectorAll('.sort-pill-btn');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.getAttribute('data-filter') || 'all';
+          const stream = document.getElementById('discussionsStream');
+          if (!stream) return;
+          const cards = Array.from(stream.querySelectorAll('.foodie-comment-card'));
+
+          if (filter === 'all') {
+            cards.forEach(c => { c.style.display = ''; });
+          } else if (filter === 'chefs') {
+            cards.forEach(c => {
+              const isChef = c.getAttribute('data-role') === 'chef';
+              c.style.display = isChef ? '' : 'none';
+            });
+          } else if (filter === 'helpful') {
+            cards.forEach(c => { c.style.display = ''; });
+            cards.sort((a, b) => {
+              const hA = parseInt(a.getAttribute('data-helpful') || '0', 10);
+              const hB = parseInt(b.getAttribute('data-helpful') || '0', 10);
+              return hB - hA;
+            });
+            cards.forEach(c => stream.appendChild(c));
+          }
+        });
+      });
+    });
+
+    function replyToComment(author) {
+      const input = document.getElementById('commentMessageInput');
+      if (input) {
+        input.value = `@${author} `;
+        input.focus();
+        input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    function handleNewCommentSubmit(form) {
+      const nameInput = document.getElementById('commentAuthorInput');
+      const name = nameInput?.value.trim() || '';
+      const message = document.getElementById('commentMessageInput')?.value.trim();
+
+      if (!name || !/^[a-zA-Z\s'-]{2,}$/.test(name)) {
+        window.showToast?.('Invalid Name', 'Please enter letters only for your name (minimum 2 characters).', 'fa-solid fa-triangle-exclamation');
+        nameInput?.focus();
+        return;
+      }
+      if (!message) return;
+
+      const stream = document.getElementById('discussionsStream');
+      if (stream) {
+        const newCard = document.createElement('article');
+        newCard.className = 'foodie-comment-card';
+        newCard.setAttribute('data-role', 'foodie');
+        newCard.setAttribute('data-helpful', '1');
+        newCard.style.animation = 'fadeInUp 0.4s ease forwards';
+        newCard.innerHTML = `
+          <div class="comment-author-header">
+            <div class="comment-profile">
+              <div class="comment-avatar-wrap">
+                <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, var(--color-hot-orange), var(--color-primary-yellow)); color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; box-shadow: var(--shadow-xs);">
+                  ${name.charAt(0).toUpperCase()}
+                </div>
+              </div>
+              <div class="comment-author-meta">
+                <div class="comment-author-row">
+                  <span class="comment-author-name">${name}</span>
+                  <span class="author-role-badge verified"><i class="fa-solid fa-circle-check"></i> Verified Foodie</span>
+                </div>
+                <span class="comment-post-time"><i class="fa-regular fa-clock"></i> Just now • Verified Submission</span>
+              </div>
+            </div>
+            <div class="comment-star-rating" title="5 out of 5 stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <div class="comment-body-content">
+            <p>"${message.replace(/"/g, '&quot;')}"</p>
+          </div>
+          <div class="comment-footer-bar">
+            <div class="comment-actions-group">
+              <button type="button" class="comment-interact-btn liked" onclick="this.classList.toggle('liked'); const c = this.querySelector('.like-num'); const val = parseInt(c.textContent) + (this.classList.contains('liked') ? 1 : -1); c.textContent = val; this.closest('.foodie-comment-card').setAttribute('data-helpful', val);">
+                <i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="like-num">1</span>)
+              </button>
+            </div>
+            <span style="font-size: 0.78rem; color: #059669; font-weight: 700;"><i class="fa-solid fa-circle-check"></i> Published Live</span>
+          </div>
+        `;
+        stream.appendChild(newCard);
+        
+        const countBadge = document.getElementById('discussionsCountBadge');
+        if (countBadge) {
+          const current = parseInt(countBadge.textContent) || 3;
+          countBadge.textContent = current + 1;
+        }
+
+        const filterAllCount = document.getElementById('filterAllCount');
+        if (filterAllCount) {
+          const current = parseInt(filterAllCount.textContent) || 3;
+          filterAllCount.textContent = current + 1;
+        }
+
+        newCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      window.showToast?.('Culinary Thought Published', 'Thank you for contributing to the Crispster Foodie Forum!', 'fa-solid fa-circle-check');
+      form.reset();
+    }
+  </script>
+</body>
+</html>
+

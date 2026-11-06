@@ -1,0 +1,840 @@
+/* ==========================================================================
+   CRISPSTER — HOME 2 (LATE-NIGHT FLAME & SIZZLE LAB)
+   Dedicated Interactive Styles with Strict Alignment, Spacing & Visual Hierarchy
+   Optimized for High Contrast, Balanced Spacing & Flawless Light/Dark Theming
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Flame Hero Section & Heat Simulator
+   -------------------------------------------------------------------------- */
+.flame-hero-section {
+  position: relative;
+  padding-block: clamp(4rem, 6vw, 6rem);
+  background: linear-gradient(90deg, rgba(255, 253, 248, 0.95) 0%, rgba(255, 253, 248, 0.88) 45%, rgba(255, 253, 248, 0.35) 80%, rgba(255, 253, 248, 0.15) 100%),
+              url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat !important;
+  border-bottom: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+[data-theme="dark"] .flame-hero-section {
+  background: linear-gradient(90deg, rgba(16, 16, 19, 0.95) 0%, rgba(16, 16, 19, 0.88) 45%, rgba(16, 16, 19, 0.45) 80%, rgba(16, 16, 19, 0.20) 100%),
+              url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat !important;
+}
+
+.flame-hero-section .hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: clamp(2rem, 4vw, 3.5rem);
+}
+
+@media (max-width: 992px) {
+  .flame-hero-section .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+}
+
+/* Heat Selector Interactive Panel */
+.heat-selector-panel {
+  margin-top: var(--space-4);
+  background: var(--bg-card);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: clamp(1.25rem, 2vw, 1.5rem);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+}
+
+[dir="rtl"] .heat-selector-panel {
+  text-align: right;
+}
+
+.heat-selector-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.heat-btns-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-2);
+}
+
+@media (max-width: 520px) {
+  .heat-btns-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.heat-btn {
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-xs);
+}
+
+.heat-btn:hover {
+  border-color: var(--color-hot-orange);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+
+.heat-btn.active {
+  background: var(--color-hot-orange) !important;
+  border-color: var(--color-hot-orange) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(255, 95, 0, 0.35);
+  transform: translateY(-2px);
+}
+
+.heat-btn-level {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: inherit;
+}
+
+.heat-btn-shu {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.heat-btn.active .heat-btn-shu {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.heat-meter-bar-wrap {
+  margin-top: var(--space-3);
+  height: 6px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.heat-meter-progress {
+  height: 100%;
+  width: 75%;
+  background: linear-gradient(90deg, #10B981, #FFD400, #FF8C00, #E11D48);
+  border-radius: var(--radius-full);
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.heat-flavor-note {
+  margin-top: var(--space-3);
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--border-light);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.heat-flavor-note strong {
+  color: var(--text-primary);
+  font-weight: 800;
+}
+
+/* Hero Visual Composition Fixes */
+.flame-hero-section .hero-visual-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem;
+}
+
+.flame-hero-section .hero-main-img-card {
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(255, 95, 0, 0.25);
+  border: 3.5px solid var(--color-hot-orange);
+  background: var(--bg-card);
+}
+
+.flame-hero-section .hero-main-img-card img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-smooth), opacity 0.2s ease;
+}
+
+.flame-hero-section .hero-floating-badge-1 {
+  position: absolute;
+  top: 15px;
+  left: -15px;
+  background: var(--bg-card);
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-hot-orange);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 2;
+}
+
+.flame-hero-section .hero-floating-badge-2 {
+  position: absolute;
+  bottom: 20px;
+  right: -15px;
+  background: var(--bg-card);
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-primary-yellow);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 2;
+}
+
+[dir="rtl"] .flame-hero-section .hero-floating-badge-1 {
+  left: auto;
+  right: -15px;
+}
+
+[dir="rtl"] .flame-hero-section .hero-floating-badge-2 {
+  right: auto;
+  left: -15px;
+}
+
+@media (max-width: 640px) {
+  .flame-hero-section .hero-visual-wrap {
+    flex-direction: column;
+    padding: 0;
+  }
+  .flame-hero-section .hero-floating-badge-1,
+  .flame-hero-section .hero-floating-badge-2 {
+    position: static;
+    margin: var(--space-2) auto;
+    width: fit-content;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Step-by-Step Custom Crunch Box Builder
+   -------------------------------------------------------------------------- */
+.builder-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .builder-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.builder-step-block {
+  margin-bottom: var(--space-4);
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  background: var(--bg-card);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xs);
+}
+
+.builder-step-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px dashed var(--border-light);
+}
+
+.builder-step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-hot-orange);
+  color: #FFFFFF;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(255, 95, 0, 0.35);
+}
+
+.builder-options-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+}
+
+@media (max-width: 720px) {
+  .builder-options-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .builder-options-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Choice Cards — Clear Boundaries & Solid Background in ALL Modes */
+.choice-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.15rem 0.65rem;
+  min-height: 125px;
+  background: var(--bg-surface);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-xs);
+}
+
+.choice-card input[type="radio"],
+.choice-card input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.choice-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--color-hot-orange);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Active Selected Choice Card: Clean High-Visibility Highlight */
+.choice-card:has(> input:checked) {
+  border-color: var(--color-hot-orange) !important;
+  background: rgba(255, 95, 0, 0.12) !important;
+  box-shadow: 0 0 0 1.5px var(--color-hot-orange), 0 6px 18px rgba(255, 95, 0, 0.22);
+  transform: translateY(-2px);
+}
+
+.choice-card-icon {
+  font-size: 1.65rem;
+  margin-bottom: var(--space-2);
+  color: var(--color-primary-yellow);
+  display: block;
+}
+
+.choice-card:has(> input:checked) .choice-card-icon {
+  color: var(--color-hot-orange);
+}
+
+.choice-card-title {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.25;
+  display: block;
+}
+
+.choice-card-sub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 3px;
+  display: block;
+}
+
+/* Sticky Live Receipt Card */
+.builder-receipt-box {
+  position: sticky;
+  top: 96px;
+  background: var(--bg-card);
+  border: 2px solid var(--border-brand);
+  border-radius: var(--radius-xl);
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  box-shadow: var(--shadow-md);
+}
+
+.receipt-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1.5px dashed var(--border-medium);
+  color: var(--text-primary);
+}
+
+.receipt-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+  margin-bottom: var(--space-2);
+  color: var(--text-secondary);
+}
+
+.receipt-item-label {
+  font-weight: 600;
+}
+
+.receipt-item-val {
+  color: var(--text-primary);
+  font-weight: 700;
+  text-align: right;
+}
+
+[dir="rtl"] .receipt-item-val {
+  text-align: left;
+}
+
+[dir="rtl"] .builder-step-header {
+  text-align: right;
+}
+
+[dir="rtl"] .choice-card {
+  text-align: right;
+}
+
+[dir="rtl"] .soundboard-card {
+  text-align: right;
+}
+
+.receipt-total-row {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 2px solid var(--border-medium);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.receipt-price {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: var(--color-hot-orange);
+}
+
+/* --------------------------------------------------------------------------
+   3. ASMR Crunch Soundboard & EQ Visualizer
+   -------------------------------------------------------------------------- */
+.soundboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+@media (max-width: 992px) {
+  .soundboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .soundboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.soundboard-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-xs);
+}
+
+.soundboard-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-hot-orange);
+  box-shadow: var(--shadow-md);
+}
+
+.soundboard-card.playing {
+  border-color: var(--color-primary-yellow);
+  background: rgba(255, 212, 0, 0.08);
+}
+
+.sound-play-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 95, 0, 0.14);
+  color: var(--color-hot-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: var(--space-3);
+  transition: all var(--transition-fast);
+}
+
+.soundboard-card:hover .sound-play-icon-box {
+  background: var(--color-hot-orange);
+  color: #FFFFFF;
+  transform: scale(1.08);
+}
+
+.eq-visualizer {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 24px;
+  margin-top: var(--space-4);
+}
+
+.eq-bar {
+  flex: 1;
+  background: var(--border-medium);
+  border-radius: 2px;
+  height: 5px;
+  transition: height 0.15s ease;
+}
+
+.soundboard-card.playing .eq-bar:nth-child(1) { animation: eqPulse 0.4s infinite alternate; }
+.soundboard-card.playing .eq-bar:nth-child(2) { animation: eqPulse 0.6s infinite alternate 0.1s; }
+.soundboard-card.playing .eq-bar:nth-child(3) { animation: eqPulse 0.5s infinite alternate 0.2s; }
+.soundboard-card.playing .eq-bar:nth-child(4) { animation: eqPulse 0.7s infinite alternate 0.15s; }
+.soundboard-card.playing .eq-bar:nth-child(5) { animation: eqPulse 0.45s infinite alternate 0.25s; }
+.soundboard-card.playing .eq-bar:nth-child(6) { animation: eqPulse 0.55s infinite alternate 0.05s; }
+
+@keyframes eqPulse {
+  0% { height: 4px; background: var(--color-primary-yellow); }
+  100% { height: 22px; background: var(--color-hot-orange); }
+}
+
+/* --------------------------------------------------------------------------
+   4. Secret Midnight Drop Recipe Drawers
+   -------------------------------------------------------------------------- */
+.secret-recipe-drawer {
+  display: none;
+  margin-top: var(--space-2);
+  padding: 0.75rem 1rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-left: 3.5px solid var(--color-primary-yellow);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+[dir="rtl"] .secret-recipe-drawer {
+  border-left: 1px solid var(--border-light);
+  border-right: 3.5px solid var(--color-primary-yellow);
+}
+
+.secret-recipe-drawer.open {
+  display: block;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+/* --------------------------------------------------------------------------
+   5. Interactive Sauce Matrix
+   -------------------------------------------------------------------------- */
+.sauce-matrix-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+@media (max-width: 880px) {
+  .sauce-matrix-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sauce-pills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+@media (max-width: 520px) {
+  .sauce-pills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sauce-pill-card {
+  padding: 0.85rem 1rem;
+  background: var(--bg-card);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-xs);
+}
+
+.sauce-pill-card:hover,
+.sauce-pill-card.active {
+  border-color: var(--color-hot-orange);
+  background: rgba(255, 95, 0, 0.09);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
+}
+
+[dir="rtl"] .sauce-pill-card:hover,
+[dir="rtl"] .sauce-pill-card.active {
+  transform: translateX(-4px);
+}
+
+.sauce-detail-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-brand);
+  border-radius: var(--radius-xl);
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  box-shadow: var(--shadow-md);
+}
+
+.flavor-tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.flavor-tag {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   6. Midnight Wing Roulette (Spin To Win)
+   -------------------------------------------------------------------------- */
+.roulette-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  background: var(--bg-card);
+  border: 2px solid var(--border-brand);
+  border-radius: var(--radius-2xl);
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 880px) {
+  .roulette-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.wheel-outer-wrap {
+  position: relative;
+  width: min(280px, 85vw);
+  height: min(280px, 85vw);
+  margin: 0 auto;
+}
+
+.wheel-disc {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    #FF5F00 0deg 60deg,
+    #18181B 60deg 120deg,
+    #FFD400 120deg 180deg,
+    #3F3F46 180deg 240deg,
+    #FF8C00 240deg 300deg,
+    #27272A 300deg 360deg
+  );
+  border: 7px solid var(--bg-surface);
+  box-shadow: 0 0 25px rgba(255, 95, 0, 0.35);
+  transition: transform 3.5s cubic-bezier(0.15, 0.9, 0.25, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wheel-center-knob {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 3px solid var(--color-primary-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-yellow);
+  font-size: 1.3rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.wheel-indicator-arrow {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 22px solid var(--color-primary-yellow);
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.4));
+  z-index: 5;
+}
+
+.roulette-prize-card {
+  margin-top: var(--space-4);
+  padding: var(--space-4);
+  background: var(--bg-surface);
+  border: 1.5px dashed var(--color-primary-yellow);
+  border-radius: var(--radius-lg);
+  display: none;
+}
+
+.roulette-prize-card.visible {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* --------------------------------------------------------------------------
+   7. Late-Night Squad Feed Calculator
+   -------------------------------------------------------------------------- */
+.squad-calculator-box {
+  background: var(--bg-card);
+  border: 2px solid var(--border-brand);
+  border-radius: var(--radius-2xl);
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  box-shadow: var(--shadow-md);
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.slider-container {
+  margin-block: var(--space-4) var(--space-6);
+  text-align: center;
+}
+
+.slider-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 800;
+  margin-bottom: var(--space-3);
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+.squad-range-slider {
+  width: 100%;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface);
+  outline: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.squad-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-hot-orange);
+  border: 3px solid #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 95, 0, 0.5);
+  transition: transform var(--transition-fast);
+}
+
+.squad-range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.squad-results-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+@media (max-width: 768px) {
+  .squad-results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.squad-result-item {
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 1.15rem 0.85rem;
+  text-align: center;
+}
+
+.squad-result-num {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 900;
+  color: var(--color-hot-orange);
+  display: block;
+}
+
+.squad-result-lbl {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-top: 3px;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   8. Animation Helpers
+   -------------------------------------------------------------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

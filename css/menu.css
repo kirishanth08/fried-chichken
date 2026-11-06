@@ -1,0 +1,432 @@
+/* ==========================================================================
+   CRISPSTER — MENU PAGE STYLES (menu.css)
+   Clean Alignment, Structured Grids, Sticky Filters & Interactive BYOB
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Menu Hero & Filter Controls
+   -------------------------------------------------------------------------- */
+.menu-hero-section {
+  position: relative;
+  padding-block: clamp(4.5rem, 7vw, 6.5rem);
+  background: radial-gradient(ellipse at center, rgba(255, 253, 248, 0.93) 0%, rgba(255, 253, 248, 0.84) 60%, rgba(255, 253, 248, 0.35) 100%),
+              url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat !important;
+  text-align: center;
+  border-bottom: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+[data-theme="dark"] .menu-hero-section {
+  background: radial-gradient(ellipse at center, rgba(16, 16, 19, 0.93) 0%, rgba(16, 16, 19, 0.84) 60%, rgba(16, 16, 19, 0.40) 100%),
+              url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat !important;
+}
+
+.menu-search-wrapper {
+  max-width: 580px;
+  margin: clamp(1.5rem, 3vw, 2.25rem) auto 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.menu-search-input {
+  width: 100%;
+  background: var(--bg-card);
+  border: 2px solid var(--border-medium);
+  padding: 1rem 1.5rem 1rem 3.4rem;
+  border-radius: var(--radius-full);
+  font-size: 1rem;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-normal);
+  color: var(--text-primary);
+}
+
+.hero-content-plaque .menu-search-wrapper {
+  margin-block-start: 1.5rem;
+}
+
+.hero-content-plaque .menu-search-input {
+  background: #FFFFFF !important;
+  border: 2px solid rgba(255, 140, 0, 0.4) !important;
+  color: #111827 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+}
+
+.hero-content-plaque .menu-search-input::placeholder {
+  color: #6B7280;
+}
+
+.hero-content-plaque .menu-search-icon {
+  color: #EA580C !important;
+}
+
+[data-theme="dark"] .hero-content-plaque .menu-search-input {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 140, 0, 0.5) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .hero-content-plaque .menu-search-input::placeholder {
+  color: #9CA3AF;
+}
+
+[dir="rtl"] .menu-search-input {
+  padding: 1rem 3.4rem 1rem 1.5rem;
+}
+
+.menu-search-input:focus {
+  border-color: var(--color-hot-orange);
+  box-shadow: 0 0 0 4px rgba(255, 95, 0, 0.15);
+  background: var(--bg-card);
+}
+
+.menu-search-icon {
+  position: absolute;
+  top: 50%;
+  left: 1.35rem;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  pointer-events: none;
+}
+
+[dir="rtl"] .menu-search-icon {
+  left: auto;
+  right: 1.35rem;
+}
+
+/* --------------------------------------------------------------------------
+   2. Sticky Category Navigation Tabs
+   -------------------------------------------------------------------------- */
+.category-nav-bar {
+  position: sticky;
+  top: var(--header-height);
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-light);
+  padding-block: 1rem;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: top var(--transition-normal);
+}
+
+.site-header.scrolled ~ main .category-nav-bar {
+  top: var(--header-height-scrolled);
+}
+
+.category-scroll-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-block: 0.25rem;
+  scroll-snap-type: x mandatory;
+}
+
+.category-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.category-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 1.35rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-medium);
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+
+.category-pill-btn:hover {
+  border-color: var(--color-hot-orange);
+  color: var(--color-hot-orange);
+  transform: translateY(-1px);
+}
+
+.category-pill-btn.active {
+  background: linear-gradient(135deg, var(--color-primary-yellow), var(--color-golden-yellow));
+  color: #18181B;
+  border-color: var(--color-primary-yellow);
+  box-shadow: var(--shadow-yellow);
+}
+
+.category-count {
+  background: rgba(0, 0, 0, 0.12);
+  color: inherit;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+/* --------------------------------------------------------------------------
+   3. Menu Items Grid & Dietary Tags
+   -------------------------------------------------------------------------- */
+.menu-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.spice-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--color-spicy-red);
+}
+
+.spicy-flames {
+  letter-spacing: -2px;
+}
+
+/* --------------------------------------------------------------------------
+   4. Chef's Signature Recommendations
+   -------------------------------------------------------------------------- */
+.chef-signature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+.signature-card {
+  background: var(--bg-card);
+  border: 2px solid var(--color-primary-yellow);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.signature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.signature-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: linear-gradient(135deg, var(--color-primary-yellow), var(--color-hot-orange));
+  color: #18181B;
+  font-weight: 900;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  z-index: 3;
+  box-shadow: var(--shadow-xs);
+}
+
+[dir="rtl"] .signature-badge {
+  right: auto;
+  left: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   5. Interactive "Build Your Own Bucket" Selector
+   -------------------------------------------------------------------------- */
+.byob-container {
+  background: var(--bg-card);
+  border: 2px solid var(--border-brand);
+  border-radius: var(--radius-xl);
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 3.5vw, 2.75rem);
+  box-shadow: var(--shadow-md);
+}
+
+.byob-step-title {
+  font-size: 1.25rem;
+  margin-block-end: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.byob-step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: var(--color-hot-orange);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.byob-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1.25rem;
+  margin-block-end: clamp(2rem, 3.5vw, 2.75rem);
+}
+
+.byob-option-card {
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 1.35rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  background: var(--bg-secondary);
+  transition: all var(--transition-fast);
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.byob-option-card:hover {
+  border-color: var(--color-golden-yellow);
+  transform: translateY(-2px);
+}
+
+.byob-option-card.selected {
+  border-color: var(--color-hot-orange);
+  background: var(--bg-card-hover);
+  box-shadow: 0 0 0 3px rgba(255, 95, 0, 0.22);
+}
+
+.byob-opt-icon {
+  font-size: 1.85rem;
+  color: var(--color-hot-orange);
+  margin-block-end: 0.5rem;
+}
+
+.byob-opt-name {
+  font-weight: 800;
+  font-size: 0.95rem;
+  margin-block-end: 0.25rem;
+  line-height: 1.2;
+}
+
+.byob-opt-price {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.byob-summary-panel {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
+  border: 1.5px dashed var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.byob-summary-text h4 {
+  font-size: 1.35rem;
+  margin-block-end: 0.35rem;
+}
+
+.byob-summary-price {
+  font-family: var(--font-display);
+  font-size: 2.3rem;
+  color: var(--color-hot-orange);
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* --------------------------------------------------------------------------
+   6. Sauce Lab & Dip Extravaganza
+   -------------------------------------------------------------------------- */
+.sauce-lab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+.sauce-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.sauce-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-brand);
+  box-shadow: var(--shadow-md);
+}
+
+.sauce-jar-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-block-end: 1rem;
+}
+
+.sauce-heat-meter {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--color-spicy-red);
+  margin-block-start: auto;
+  padding-block-start: 0.75rem;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   7. Nutrition & Allergen Transparency
+   -------------------------------------------------------------------------- */
+.allergen-box {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: clamp(2rem, 4vw, 3rem);
+  box-shadow: var(--shadow-xs);
+}
+
+.allergen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.allergen-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.allergen-item i {
+  color: var(--color-golden-yellow);
+  font-size: 1.75rem;
+  margin-block-start: 0.2rem;
+  flex-shrink: 0;
+}

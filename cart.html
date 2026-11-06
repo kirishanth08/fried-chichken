@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Takeaway Bag — Crispster Fried Chicken</title>
+  <meta name="description" content="Review your takeaway items, apply promo vouchers, select your pickup location, and proceed to express checkout at Crispster.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       GLOBAL NAVBAR
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand" aria-label="Crispster Homepage">
+        <img src="images/logo.svg" alt="Crispster Premium Fried Chicken Logo" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <div class="nav-item-dropdown">
+          <a href="index.html" class="nav-link dropdown-toggle" aria-expanded="false">
+            <span>Home</span> <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="dropdown-item">
+              <div class="dropdown-item-title"><i class="fa-solid fa-drumstick-bite"></i> Home 1 (Classic Crisp)</div>
+              <div class="dropdown-item-desc">Flagship takeaway & family feasts</div>
+            </a>
+            <a href="home-2.html" class="dropdown-item">
+              <div class="dropdown-item-title"><i class="fa-solid fa-fire"></i> Home 2 (Late-Night Flame)</div>
+              <div class="dropdown-item-desc">After-hours craves & fiery wings</div>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-controls">
+        <button type="button" class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button type="button" class="btn-icon-only direction-toggle-btn" aria-label="Toggle RTL/LTR direction" title="Toggle Direction">
+          <span style="font-weight: 800; font-size: 0.8rem;">RTL</span>
+        </button>
+
+        <!-- Cart Icon Just Before CTA -->
+        <a href="cart.html" class="cart-toggle-btn" aria-label="View takeaway cart" style="border-color: var(--color-hot-orange); color: var(--color-hot-orange);">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Bag</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </a>
+
+        <a href="checkout.html" class="btn btn-hot btn-sm nav-order-btn">
+          <i class="fa-solid fa-bolt"></i> Order Now
+        </a>
+
+        <button type="button" class="mobile-menu-btn" aria-label="Open mobile menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-drawer-overlay"></div>
+
+    <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-drawer" aria-label="Mobile Menu">
+    <div class="mobile-drawer-header">
+      <img src="images/logo.svg" alt="Crispster Logo" class="drawer-logo-img">
+      <button type="button" class="drawer-close-btn" aria-label="Close mobile menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-nav-link">Home 1 (Classic Crisp)</a>
+      <a href="home-2.html" class="mobile-nav-link">Home 2 (Late-Night Flame)</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="menu.html" class="mobile-nav-link">Menu</a>
+      <a href="offers.html" class="mobile-nav-link">Offers</a>
+      <a href="blog.html" class="mobile-nav-link">Blog</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <div class="mobile-drawer-controls">
+      <div class="drawer-icon-row">
+        <button type="button" class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button type="button" class="btn-icon-only direction-toggle-btn" aria-label="Toggle RTL/LTR direction" title="Toggle Direction">
+          <span style="font-weight: 800; font-size: 0.8rem;">RTL</span>
+        </button>
+
+        <a href="cart.html" class="cart-toggle-btn" aria-label="View takeaway bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Bag</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </a>
+      </div>
+
+      <a href="checkout.html" class="btn btn-hot btn-sm nav-order-btn" style="width: 100%; justify-content: center; display: inline-flex;">
+        <i class="fa-solid fa-bolt"></i> Order Now
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN PAGE CONTENT (7 Substantial Sections)
+       ======================================================================== -->
+  <main>
+    <!-- SECTION 1: CART HERO & ORDER STEPS -->
+    <section class="home-hero-section cart-hero-section">
+      <div class="container">
+        <div class="hero-content-plaque reveal-on-scroll">
+          <div class="section-subtitle-tag"><i class="fa-solid fa-bag-shopping"></i> Takeaway Review</div>
+          <h1 class="section-title">Your Takeaway <span class="highlight-orange">Order Bag</span></h1>
+
+          <!-- Step Progress Bar -->
+          <div class="order-steps-bar">
+            <div class="order-step-item active">
+              <span class="order-step-num">1</span>
+              <span>Review Bag</span>
+            </div>
+            <i class="fa-solid fa-arrow-right arrow-icon" style="color: var(--text-muted); font-size: 0.85rem;"></i>
+            <div class="order-step-item">
+              <span class="order-step-num">2</span>
+              <span>Pickup Details</span>
+            </div>
+            <i class="fa-solid fa-arrow-right arrow-icon" style="color: var(--text-muted); font-size: 0.85rem;"></i>
+            <div class="order-step-item">
+              <span class="order-step-num">3</span>
+              <span>Hot In 12 Mins!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE CART ITEMS TABLE & SUMMARY GRID -->
+    <section class="section" style="padding-block: 2rem 4rem;">
+      <div class="container">
+        <div class="cart-page-grid">
+          <!-- Left: Cart Table / Empty State -->
+          <div>
+            <div class="cart-table-wrap">
+              <div id="cart-page-items-container">
+                <!-- Dynamically populated or default sample items -->
+                <table class="cart-table">
+                  <thead>
+                    <tr>
+                      <th>Product</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                      <th>Total</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody id="cart-page-tbody">
+                    <!-- Loaded dynamically via JS -->
+                  </tbody>
+                </table>
+              </div>
+
+              <div id="cart-page-empty-view" style="display: none; text-align: center; padding: 3rem 1rem;">
+                <i class="fa-solid fa-drumstick-bite" style="font-size: 4rem; color: var(--color-golden-yellow); margin-bottom: 1rem;"></i>
+                <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Your Takeaway Bag Is Empty!</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">You haven't added any crunchy fried chicken or delicious combos yet.</p>
+                <a href="menu.html" class="btn btn-hot"><i class="fa-solid fa-utensils"></i> Browse Full Menu</a>
+              </div>
+            </div>
+
+            <!-- SECTION 3: SPECIAL COOKING & PICKUP NOTES -->
+            <div class="why-card" style="margin-bottom: 2rem;">
+              <h3 style="font-size: 1.25rem; margin-bottom: 1rem;"><i class="fa-solid fa-utensils" style="color: var(--color-hot-orange);"></i> Special Kitchen Requests</h3>
+              <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
+                <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem; cursor: pointer;">
+                  <input type="checkbox" checked style="accent-color: var(--color-hot-orange); width: 18px; height: 18px;">
+                  <span>Include Wet Wipes & Napkins</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem; cursor: pointer;">
+                  <input type="checkbox" checked style="accent-color: var(--color-hot-orange); width: 18px; height: 18px;">
+                  <span>Sealed Thermo-Lock Bag</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem; cursor: pointer;">
+                  <input type="checkbox" style="accent-color: var(--color-hot-orange); width: 18px; height: 18px;">
+                  <span>Sauce On The Side Only</span>
+                </label>
+              </div>
+              <textarea class="form-control" placeholder="Any dietary allergies or extra crispiness notes for our fryers?..." rows="2"></textarea>
+            </div>
+          </div>
+
+          <!-- Right: Order Summary Card & Location -->
+          <div>
+            <!-- SECTION 4: ORDER SUMMARY CARD -->
+            <div class="cart-order-summary-card">
+              <h3 style="font-size: 1.5rem; border-bottom: 1px solid var(--border-light); padding-bottom: 1rem;">
+                Order Summary
+              </h3>
+
+              <!-- Promo Code Input -->
+              <form class="cart-promo-box" id="cart-page-promo-form">
+                <input type="text" class="cart-promo-input" id="cart-page-promo-input" placeholder="Promo code (e.g. CRISP50)">
+                <button type="submit" class="btn btn-primary btn-sm">Apply</button>
+              </form>
+
+              <div class="cart-summary-line">
+                <span>Items Subtotal:</span>
+                <strong id="cart-page-subtotal">$0.00</strong>
+              </div>
+              <div class="cart-summary-line">
+                <span>Express Curbside Packaging:</span>
+                <span style="color: var(--color-success); font-weight: 700;">FREE ($0.00)</span>
+              </div>
+              <div class="cart-summary-line" id="cart-discount-row" style="display: none; color: var(--color-success);">
+                <span>Promo Discount:</span>
+                <strong id="cart-page-discount">-$0.00</strong>
+              </div>
+              <div class="cart-summary-line total">
+                <span>Estimated Total:</span>
+                <span class="total-amount" id="cart-page-total">$0.00</span>
+              </div>
+
+              <!-- Pickup Location Select -->
+              <div style="margin-block: 0.5rem;">
+                <label style="font-weight: 800; font-size: 0.85rem; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">
+                  <i class="fa-solid fa-map-pin" style="color: var(--color-hot-orange);"></i> Select Pickup Hub:
+                </label>
+                <select class="form-control" style="font-weight: 700;">
+                  <option value="Downtown">Downtown Flagship (Est: 12 Mins)</option>
+                  <option value="Westside">Westside Express (Est: 10 Mins)</option>
+                  <option value="Metro">Metro Food District (Est: 15 Mins)</option>
+                </select>
+              </div>
+
+              <a href="checkout.html" class="btn btn-hot" style="width: 100%;">
+                <i class="fa-solid fa-bolt"></i> Proceed To Checkout
+              </a>
+              <a href="menu.html" class="btn btn-outline btn-sm" style="width: 100%;">
+                <i class="fa-solid fa-arrow-left arrow-icon"></i> Add More Items
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: UPSELL RECOMMENDATIONS -->
+    <section class="section section-bg-secondary">
+      <div class="container">
+        <div class="section-header reveal-on-scroll" style="margin-bottom: 2rem;">
+          <div class="section-subtitle-tag"><i class="fa-solid fa-sparkles"></i> Don't Forget</div>
+          <h2 class="section-title">Pair With <span class="highlight-yellow">Your Feast</span></h2>
+        </div>
+
+        <div class="bestsellers-grid">
+          <div class="crisp-card reveal-on-scroll">
+            <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80" alt="Cajun Fries"></div>
+            <div class="card-body">
+              <h3 class="card-title">Cajun Crinkle Fries</h3>
+              <p class="card-desc">Large golden fries tossed in smoked herb dust.</p>
+              <div class="card-footer">
+                <div class="card-price"><span class="current-price">$4.49</span></div>
+                <button type="button" class="btn btn-hot btn-sm" data-action="add-to-cart" data-id="up-fries" data-name="Cajun Crinkle Fries" data-price="4.49" data-img="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=300&q=80">Add</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="crisp-card reveal-on-scroll">
+            <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Caramel Shake"></div>
+            <div class="card-body">
+              <h3 class="card-title">Salted Caramel Shake</h3>
+              <p class="card-desc">Spun custard with sea salt caramel crunch.</p>
+              <div class="card-footer">
+                <div class="card-price"><span class="current-price">$5.49</span></div>
+                <button type="button" class="btn btn-hot btn-sm" data-action="add-to-cart" data-id="up-shake" data-name="Salted Caramel Shake" data-price="5.49" data-img="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=300&q=80">Add</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="crisp-card reveal-on-scroll">
+            <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1472476443507-c7a5948772fc?auto=format&fit=crop&w=600&q=80" alt="Dipping Sauce"></div>
+            <div class="card-body">
+              <h3 class="card-title">Extra Smoky Ghost Mayo</h3>
+              <p class="card-desc">2oz dipping pot of charred ghost chili mayo.</p>
+              <div class="card-footer">
+                <div class="card-price"><span class="current-price">$1.25</span></div>
+                <button type="button" class="btn btn-hot btn-sm" data-action="add-to-cart" data-id="up-dip" data-name="Extra Smoky Ghost Mayo" data-price="1.25" data-img="https://images.unsplash.com/photo-1472476443507-c7a5948772fc?auto=format&fit=crop&w=300&q=80">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: KITCHEN PREP GUARANTEE -->
+    <section class="section">
+      <div class="container">
+        <div class="why-crisp-grid">
+          <div class="why-card reveal-on-scroll">
+            <div class="why-icon-box"><i class="fa-solid fa-clock"></i></div>
+            <h3 class="why-title">12-Minute Target</h3>
+            <p class="why-text">We don't drop your chicken into hot oil until your ticket confirms. Always scorching hot, never heat-lamped.</p>
+          </div>
+          <div class="why-card reveal-on-scroll">
+            <div class="why-icon-box"><i class="fa-solid fa-box-check"></i></div>
+            <h3 class="why-title">Tamper-Proof Seal</h3>
+            <p class="why-text">Every box is locked with a security seal ensuring untouched, pristine hygienic food from fryer to table.</p>
+          </div>
+          <div class="why-card reveal-on-scroll">
+            <div class="why-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3 class="why-title">100% Halal Verified</h3>
+            <p class="why-text">Ethically sourced, clean ingredients prepared in strict adherence to halal guidelines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       GLOBAL FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-info">
+          <a href="index.html" aria-label="Crispster Homepage"><img src="images/logo.svg" alt="Crispster Logo" class="footer-logo-img"></a>
+          <p class="footer-brand-desc">Crispster is a premier fried chicken takeaway brand dedicated to the art of the perfect crunch. 24-hour marinated poultry, secret herb coatings, and mouthwatering homemade glazes.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Home 1 (Classic)</a></li>
+            <li><a href="home-2.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Home 2 (Late Night)</a></li>
+            <li><a href="about.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="menu.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Full Menu</a></li>
+            <li><a href="offers.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Special Offers</a></li>
+            <li><a href="blog.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Crunch Blog</a></li>
+            <li><a href="contact.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Contact & Stores</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Takeaway Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="cart.html" class="footer-link"><i class="fa-solid fa-bag-shopping"></i> View Cart</a></li>
+            <li><a href="checkout.html" class="footer-link"><i class="fa-solid fa-credit-card"></i> Express Checkout</a></li>
+            <li><a href="maintenance.html" class="footer-link"><i class="fa-solid fa-wrench"></i> Maintenance Status</a></li>
+            <li><a href="404.html" class="footer-link"><i class="fa-solid fa-triangle-exclamation"></i> 404 Error Page</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kitchen Hours</h4>
+          <div class="footer-hours-item"><span>Mon – Thu:</span><span>11:00 AM – 11:30 PM</span></div>
+          <div class="footer-hours-item"><span>Fri & Sat:</span><span>11:00 AM – 2:00 AM</span></div>
+          <div class="footer-hours-item"><span>Sunday:</span><span>12:00 PM – 11:00 PM</span></div>
+          <div style="margin-top: 1.25rem;">
+            <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>428 Crispy Blvd, NY 10012</span></div>
+            <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>(555) 374-2747</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 Crispster Fried Chicken Takeaway. All Rights Reserved.</div>
+        <div class="footer-bottom-badges">
+          <span class="footer-bottom-badge"><i class="fa-solid fa-shield-halved"></i> 100% Halal Certified</span>
+          <span class="footer-bottom-badge"><i class="fa-solid fa-seedling"></i> Zero Trans Fats</span>
+          <span class="footer-bottom-badge"><i class="fa-solid fa-fire"></i> 15-Min Fresh Guarantee</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top of page"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Synchronize dedicated cart.html table view with localStorage
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCartPage();
+
+      const promoForm = document.getElementById('cart-page-promo-form');
+      promoForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const code = document.getElementById('cart-page-promo-input')?.value.trim().toUpperCase();
+        if (code === 'CRISP50') {
+          window.activeDiscountPercent = 50;
+          window.showToast?.('50% Off Applied!', 'Code CRISP50 gave you 50% discount!', 'fa-solid fa-tag');
+        } else if (code === 'FEAST20') {
+          window.activeDiscountPercent = 20;
+          window.showToast?.('20% Off Applied!', 'Code FEAST20 applied successfully!', 'fa-solid fa-tag');
+        } else if (code === 'CRUNCH10') {
+          window.activeDiscountPercent = 10;
+          window.showToast?.('10% Off Applied!', 'Code CRUNCH10 applied!', 'fa-solid fa-tag');
+        } else {
+          window.showToast?.('Invalid Code', 'Try CRISP50 or FEAST20!', 'fa-solid fa-circle-exclamation');
+        }
+        renderCartPage();
+      });
+    });
+
+    function renderCartPage() {
+      let cart = [];
+      try {
+        const saved = localStorage.getItem('crispster_cart');
+        if (saved) cart = JSON.parse(saved);
+      } catch (e) { cart = []; }
+
+      // If empty, auto-seed with a delicious sample bucket so the user always sees a beautiful filled cart!
+      if (!cart || cart.length === 0) {
+        cart = [
+          { id: 'sample-1', name: '12-Pc Golden Crunch Bucket', price: 24.99, img: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=300&q=80', qty: 1 },
+          { id: 'sample-2', name: 'Nashville Fire Burger', price: 11.49, img: 'https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=300&q=80', qty: 2 }
+        ];
+        localStorage.setItem('crispster_cart', JSON.stringify(cart));
+      }
+
+      const tbody = document.getElementById('cart-page-tbody');
+      const emptyView = document.getElementById('cart-page-empty-view');
+      const tableWrap = document.getElementById('cart-page-items-container');
+
+      if (!tbody) return;
+
+      if (cart.length === 0) {
+        if (tableWrap) tableWrap.style.display = 'none';
+        if (emptyView) emptyView.style.display = 'block';
+        return;
+      }
+
+      if (tableWrap) tableWrap.style.display = 'block';
+      if (emptyView) emptyView.style.display = 'none';
+
+      let subtotal = 0;
+      tbody.innerHTML = cart.map((item, idx) => {
+        const itemTotal = item.price * item.qty;
+        subtotal += itemTotal;
+        return `
+          <tr>
+            <td>
+              <div class="cart-product-cell">
+                <img src="${item.img}" alt="${item.name}" class="cart-prod-thumb" onerror="this.src='https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=150&q=80'">
+                <div>
+                  <strong style="font-size: 1.05rem; display: block;">${item.name}</strong>
+                  <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fa-solid fa-circle-check" style="color: var(--color-success);"></i> Freshly Dredged to Order</span>
+                </div>
+              </div>
+            </td>
+            <td><strong>$${item.price.toFixed(2)}</strong></td>
+            <td>
+              <div class="cart-item-controls">
+                <button type="button" class="cart-qty-btn" onclick="updateCartPageQty(${idx}, -1)"><i class="fa-solid fa-minus"></i></button>
+                <span class="cart-qty-val">${item.qty}</span>
+                <button type="button" class="cart-qty-btn" onclick="updateCartPageQty(${idx}, 1)"><i class="fa-solid fa-plus"></i></button>
+              </div>
+            </td>
+            <td><strong style="color: var(--color-hot-orange); font-size: 1.15rem;">$${itemTotal.toFixed(2)}</strong></td>
+            <td>
+              <button type="button" class="btn-icon-only" style="width: 32px; height: 32px; color: var(--color-spicy-red);" onclick="removeCartPageItem(${idx})" title="Remove item">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      const discountPercent = window.activeDiscountPercent || 0;
+      const discount = subtotal * (discountPercent / 100);
+      const total = Math.max(0, subtotal - discount);
+
+      document.getElementById('cart-page-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+      document.getElementById('cart-page-total').textContent = `$${total.toFixed(2)}`;
+
+      const discountRow = document.getElementById('cart-discount-row');
+      const discountVal = document.getElementById('cart-page-discount');
+      if (discountPercent > 0 && discountRow && discountVal) {
+        discountRow.style.display = 'flex';
+        discountVal.textContent = `-$${discount.toFixed(2)} (${discountPercent}% OFF)`;
+      } else if (discountRow) {
+        discountRow.style.display = 'none';
+      }
+    }
+
+    function updateCartPageQty(index, delta) {
+      let cart = JSON.parse(localStorage.getItem('crispster_cart') || '[]');
+      if (cart[index]) {
+        cart[index].qty += delta;
+        if (cart[index].qty <= 0) cart.splice(index, 1);
+        localStorage.setItem('crispster_cart', JSON.stringify(cart));
+        renderCartPage();
+        if (window.updateCartUI) window.updateCartUI();
+      }
+    }
+
+    function removeCartPageItem(index) {
+      let cart = JSON.parse(localStorage.getItem('crispster_cart') || '[]');
+      if (cart[index]) {
+        cart.splice(index, 1);
+        localStorage.setItem('crispster_cart', JSON.stringify(cart));
+        renderCartPage();
+        if (window.updateCartUI) window.updateCartUI();
+        window.showToast?.('Item Removed', 'Takeaway bag updated', 'fa-solid fa-trash');
+      }
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Crunch Journal — Crispster Fried Chicken Blog & Kitchen Stories</title>
+  <meta name="description" content="Explore culinary stories, fried chicken science, dipping sauce secrets, and behind-the-counter action from Crispster master fryers.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       GLOBAL NAVBAR
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand" aria-label="Crispster Homepage">
+        <img src="images/logo.svg" alt="Crispster Premium Fried Chicken Logo" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <div class="nav-item-dropdown">
+          <a href="index.html" class="nav-link dropdown-toggle" aria-expanded="false">
+            <span>Home</span> <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="dropdown-item">
+              <div class="dropdown-item-title"><i class="fa-solid fa-drumstick-bite"></i> Home 1 (Classic Crisp)</div>
+              <div class="dropdown-item-desc">Flagship takeaway & family feasts</div>
+            </a>
+            <a href="home-2.html" class="dropdown-item">
+              <div class="dropdown-item-title"><i class="fa-solid fa-fire"></i> Home 2 (Late-Night Flame)</div>
+              <div class="dropdown-item-desc">After-hours craves & fiery wings</div>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-controls">
+        <button type="button" class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button type="button" class="btn-icon-only direction-toggle-btn" aria-label="Toggle RTL/LTR direction" title="Toggle Direction">
+          <span style="font-weight: 800; font-size: 0.8rem;">RTL</span>
+        </button>
+
+        <a href="cart.html" class="cart-toggle-btn" aria-label="View takeaway cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Bag</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </a>
+
+        <a href="checkout.html" class="btn btn-hot btn-sm nav-order-btn">
+          <i class="fa-solid fa-bolt"></i> Order Now
+        </a>
+
+        <button type="button" class="mobile-menu-btn" aria-label="Open mobile menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-drawer-overlay"></div>
+
+    <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-drawer" aria-label="Mobile Menu">
+    <div class="mobile-drawer-header">
+      <img src="images/logo.svg" alt="Crispster Logo" class="drawer-logo-img">
+      <button type="button" class="drawer-close-btn" aria-label="Close mobile menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-nav-link">Home 1 (Classic Crisp)</a>
+      <a href="home-2.html" class="mobile-nav-link">Home 2 (Late-Night Flame)</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="menu.html" class="mobile-nav-link">Menu</a>
+      <a href="offers.html" class="mobile-nav-link">Offers</a>
+      <a href="blog.html" class="mobile-nav-link active">Blog</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <div class="mobile-drawer-controls">
+      <div class="drawer-icon-row">
+        <button type="button" class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button type="button" class="btn-icon-only direction-toggle-btn" aria-label="Toggle RTL/LTR direction" title="Toggle Direction">
+          <span style="font-weight: 800; font-size: 0.8rem;">RTL</span>
+        </button>
+
+        <a href="cart.html" class="cart-toggle-btn" aria-label="View takeaway bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Bag</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </a>
+      </div>
+
+      <a href="checkout.html" class="btn btn-hot btn-sm nav-order-btn" style="width: 100%; justify-content: center; display: inline-flex;">
+        <i class="fa-solid fa-bolt"></i> Order Now
+      </a>
+    </div>
+  </aside>
+
+  <!-- Takeaway Bag Drawer -->
+  <div class="cart-drawer-backdrop"></div>
+  <aside class="cart-drawer" aria-label="Takeaway Bag">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <i class="fa-solid fa-bag-shopping" style="color: var(--color-hot-orange);"></i>
+        <span>Takeaway Bag</span>
+      </div>
+      <button type="button" class="cart-drawer-close" aria-label="Close bag">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="cart-items-container"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-line total"><span>Total Due</span><span class="total-amount">$0.00</span></div>
+      <a href="checkout.html" class="btn btn-hot cart-checkout-btn"><i class="fa-solid fa-bag-shopping"></i> Proceed To Checkout</a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN PAGE CONTENT (8 Substantial Sections)
+       ======================================================================== -->
+  <main>
+    <!-- SECTION 1: BLOG HERO SECTION -->
+    <section class="home-hero-section blog-hero-section">
+      <div class="container" style="text-align: center;">
+        <div class="hero-content-plaque reveal-on-scroll">
+          <div class="section-subtitle-tag" style="margin-inline: auto;">
+            <i class="fa-solid fa-book-open"></i> The Crispster Journal
+          </div>
+          <h1 class="section-title">
+            Stories, Science & <span class="highlight-orange">Sauce Secrets</span>
+          </h1>
+          <p class="section-description">
+            Take a behind-the-fryer look into our culinary experiments, fried chicken science, spice journeys, and community highlights.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: FEATURED ARTICLE HERO CARD -->
+    <section class="section section-bg-secondary">
+      <div class="container">
+        <div class="bucket-showcase-card reveal-on-scroll">
+          <div class="bucket-card-img">
+            <img src="images/blog/blog1.jpg" 
+                 alt="Featured Story: The Science of the 24-Hour Brine">
+          </div>
+          <div class="bucket-card-content">
+            <div class="hero-top-badge" style="background: rgba(255, 95, 0, 0.2); color: #FF5F00;">
+              <i class="fa-solid fa-star"></i> Featured Culinary Deep Dive
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">November 2, 2026 • 6 Min Read • By Chef Marcus Vance</div>
+            <h2 style="font-size: 2.2rem; margin-block: 0.5rem 0.75rem;">The Chemistry of Crunch: Why 24 Hours in Buttermilk Changes Everything</h2>
+            <p style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem;">
+              Most fast-food takeaway joints dip chicken in water and batter for 30 seconds. Discover why our whole cultured buttermilk soak breaks down protein strands and creates thousands of moisture-sealing micro-crusts.
+            </p>
+            <div>
+              <a href="blog-detail.html?id=buttermilk-crunch" class="btn btn-hot">
+                <span>Read Full Article</span> <i class="fa-solid fa-arrow-right arrow-icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: TOPIC FILTER PILLS -->
+    <section class="section" style="padding-block: 2rem 1rem;">
+      <div class="container" style="text-align: center;">
+        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+          <button type="button" class="category-pill-btn active">All Articles (3)</button>
+          <button type="button" class="category-pill-btn">Culinary Science</button>
+          <button type="button" class="category-pill-btn">Sauce Lab</button>
+          <button type="button" class="category-pill-btn">Behind The Counter</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: 6-ARTICLE BLOG GRID -->
+    <section class="section">
+      <div class="container">
+        <div class="blog-grid">
+          <!-- Article 1 -->
+          <article class="blog-card reveal-on-scroll">
+            <div class="blog-img-wrap">
+              <span class="card-badge yellow">Spice Secrets</span>
+              <img src="images/blog/blog2.jpg" alt="12-Spice Fried Chicken Dredge Blend">
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta-row">
+                <span><i class="fa-regular fa-calendar"></i> Oct 31, 2026</span>
+                <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+              </div>
+              <h3 class="blog-title"><a href="blog-detail.html?id=spice-vault">The 12-Spice Vault: Anatomy of Crispster's Botanical Coating</a></h3>
+              <p class="card-desc">From Tellicherry black pepper and smoked Hungarian paprika to crushed wild coriander — uncover the aromatic botanical blend behind our loud crunch.</p>
+              <div class="blog-author-row">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Elena Rostova" class="blog-author-avatar">
+                <div>
+                  <strong style="display: block; font-size: 0.88rem;">Elena Rostova</strong>
+                  <span style="font-size: 0.76rem; color: var(--text-muted);">Master Spice Blender</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="blog-card reveal-on-scroll">
+            <div class="blog-img-wrap">
+              <span class="card-badge yellow">Sauce Secrets</span>
+              <img src="images/blog/blog3.jpg" alt="Nashville Wings vs Korean Glaze">
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta-row">
+                <span><i class="fa-regular fa-calendar"></i> Oct 28, 2026</span>
+                <span><i class="fa-regular fa-clock"></i> 4 min read</span>
+              </div>
+              <h3 class="blog-title"><a href="blog-detail.html?id=wings-showdown">Nashville Heat vs. Korean Gochujang: The Great Wing Showdown</a></h3>
+              <p class="card-desc">Comparing dry cayenne-lard dips with fermented sticky chili paste glazes to find the ultimate flavor profile for crispy wings.</p>
+              <div class="blog-author-row">
+                <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=100&q=80" alt="Clara Morales" class="blog-author-avatar">
+                <div>
+                  <strong style="display: block; font-size: 0.88rem;">Clara Morales</strong>
+                  <span style="font-size: 0.76rem; color: var(--text-muted);">Sauce Lab Director</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="blog-card reveal-on-scroll">
+            <div class="blog-img-wrap">
+              <span class="card-badge green">Kitchen Craft</span>
+              <img src="images/blog/blog4.jpg" alt="Fryer Temperature Precision">
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta-row">
+                <span><i class="fa-regular fa-calendar"></i> Oct 20, 2026</span>
+                <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+              </div>
+              <h3 class="blog-title"><a href="blog-detail.html?id=375-sweet-spot">Why 375°F Is The Exact Sweet Spot For Non-Greasy Chicken</a></h3>
+              <p class="card-desc">Temperature drops cause oil penetration and soggy batter. Learn how Crispster's computerized oil vats maintain zero thermal lag.</p>
+              <div class="blog-author-row">
+                <img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?auto=format&fit=crop&w=100&q=80" alt="David Chen" class="blog-author-avatar">
+                <div>
+                  <strong style="display: block; font-size: 0.88rem;">David Chen</strong>
+                  <span style="font-size: 0.76rem; color: var(--text-muted);">Operations Lead</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: CHEF'S TIP WIDGET -->
+    <section class="section section-bg-secondary">
+      <div class="container">
+        <div class="why-card reveal-on-scroll" style="border-left: 6px solid var(--color-primary-yellow); padding: 2.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-hot-orange); font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem;">
+            <i class="fa-solid fa-lightbulb"></i> Chef's Kitchen Secret of the Week
+          </div>
+          <h3 style="font-size: 1.6rem; margin-bottom: 0.75rem;">Never Cover Hot Fried Chicken in an Air-Tight Container!</h3>
+          <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65;">
+            "The moment hot fried chicken is sealed without ventilation, the trapped steam condenses on the golden crust and reverses the Maillard reaction, turning your crunchy dredge into wet paste. Always use calibrated vented containers — which is why every Crispster box has laser-cut thermal exhaust ports!"
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: VIP CRUNCH NEWSLETTER SIGNUP -->
+    <section class="section">
+      <div class="container" style="max-width: 720px; text-align: center;">
+        <div class="trivia-box reveal-on-scroll">
+          <div class="section-subtitle-tag" style="margin-bottom: 0.75rem;"><i class="fa-solid fa-envelope"></i> Secret Menu Drops</div>
+          <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Get The Weekly Crunch Newsletter</h2>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+            Subscribe to receive exclusive secret recipes, limited-time flash discount codes, and invites to our VIP tasting sessions.
+          </p>
+          <form onsubmit="event.preventDefault(); window.showToast('Subscribed to Journal', 'Welcome to the Crunch Club!', 'fa-solid fa-envelope-circle-check');" style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
+            <input type="email" class="form-control" placeholder="Enter your email address..." style="max-width: 360px; border-radius: var(--radius-full);" required>
+            <button type="submit" class="btn btn-primary">Join Free</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FINAL TAKEAWAY CTA BANNER -->
+    <section class="cta-banner-section">
+      <div class="container cta-banner-box">
+        <div class="reveal-on-scroll">
+          <h2 class="cta-banner-headline">
+            Done Reading? <br>
+            <span>Time For Real Crunch!</span>
+          </h2>
+          <p class="cta-banner-desc">
+            Reading about hot chicken makes anyone hungry. Place an express order online right now and pick it up hot in 12 minutes!
+          </p>
+          <div class="cta-banner-actions">
+            <a href="menu.html" class="btn btn-primary">
+              <i class="fa-solid fa-drumstick-bite"></i> Explore Full Menu
+            </a>
+            <a href="offers.html" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #FFF;">
+              <i class="fa-solid fa-tags"></i> View Today's Deals
+            </a>
+          </div>
+        </div>
+
+        <div class="cta-banner-perk-box reveal-on-scroll">
+          <div class="cta-perk-row">
+            <div class="cta-perk-icon"><i class="fa-solid fa-stopwatch"></i></div>
+            <div>
+              <strong style="display: block; font-size: 1.05rem;">12-Minute Express Pickup</strong>
+              <span style="font-size: 0.85rem; color: #A1A1AA;">Prepared fresh right upon order transmission</span>
+            </div>
+          </div>
+          <div class="cta-perk-row">
+            <div class="cta-perk-icon"><i class="fa-solid fa-award"></i></div>
+            <div>
+              <strong style="display: block; font-size: 1.05rem;">100% Halal Verified</strong>
+              <span style="font-size: 0.85rem; color: #A1A1AA;">Ethical poultry sourced fresh daily</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       GLOBAL FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-info">
+          <a href="index.html" aria-label="Crispster Homepage">
+            <img src="images/logo.svg" alt="Crispster Logo" class="footer-logo-img">
+          </a>
+          <p class="footer-brand-desc">
+            Crispster is a premier fried chicken takeaway brand dedicated to the art of the perfect crunch. 24-hour marinated poultry, secret herb coatings, and mouthwatering homemade glazes.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Home 1 (Classic)</a></li>
+            <li><a href="home-2.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Home 2 (Late Night)</a></li>
+            <li><a href="about.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="menu.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Full Menu</a></li>
+            <li><a href="offers.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Special Offers</a></li>
+            <li><a href="blog.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Crunch Blog</a></li>
+            <li><a href="contact.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Contact & Stores</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Takeaway Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="cart.html" class="footer-link"><i class="fa-solid fa-bag-shopping"></i> View Cart</a></li>
+            <li><a href="checkout.html" class="footer-link"><i class="fa-solid fa-credit-card"></i> Express Checkout</a></li>
+            <li><a href="maintenance.html" class="footer-link"><i class="fa-solid fa-wrench"></i> Maintenance Status</a></li>
+            <li><a href="404.html" class="footer-link"><i class="fa-solid fa-triangle-exclamation"></i> 404 Error Page</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kitchen Hours</h4>
+          <div class="footer-hours-item">
+            <span>Monday – Thursday:</span>
+            <span>11:00 AM – 11:30 PM</span>
+          </div>
+          <div class="footer-hours-item">
+            <span>Friday & Saturday:</span>
+            <span>11:00 AM – 2:00 AM</span>
+          </div>
+          <div class="footer-hours-item">
+            <span>Sunday:</span>
+            <span>12:00 PM – 11:00 PM</span>
+          </div>
+          <div style="margin-top: 1.25rem;">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>428 Crispy Boulevard, Flavor District, NY 10012</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>(555) 374-2747 (CRISPOST)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 Crispster Fried Chicken Takeaway. All Rights Reserved.
+        </div>
+        <div class="footer-bottom-badges">
+          <span class="footer-bottom-badge"><i class="fa-solid fa-shield-halved"></i> 100% Halal Certified</span>
+          <span class="footer-bottom-badge"><i class="fa-solid fa-seedling"></i> Zero Trans Fats</span>
+          <span class="footer-bottom-badge"><i class="fa-solid fa-fire"></i> 15-Min Fresh Guarantee</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top of page">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

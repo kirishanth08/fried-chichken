@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crispster — Premium Fried Chicken Takeaway | Hot & Golden Crunch</title>
+  <meta name="description" content="Experience the loudest crunch in town. Crispster crafts premium, farm-fresh fried chicken marinated for 24 hours, triple-dredged, and fried to golden perfection.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       GLOBAL NAVBAR (Identical across all pages)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <!-- Logo -->
+      <a href="index.html" class="nav-brand" aria-label="Crispster Homepage">
+        <img src="images/logo.svg" alt="Crispster Premium Fried Chicken Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <!-- Home Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="index.html" class="nav-link dropdown-toggle active" aria-expanded="false">
+            <span>Home</span> <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="dropdown-item active">
+              <div class="dropdown-item-title"><i class="fa-solid fa-drumstick-bite"></i> Home 1 (Classic Crisp)</div>
+              <div class="dropdown-item-desc">Flagship takeaway &amp; family feasts</div>
+            </a>
+            <a href="home-2.html" class="dropdown-item">
+              <div class="dropdown-item-title"><i class="fa-solid fa-fire"></i> Home 2 (Late-Night Flame)</div>
+              <div class="dropdown-item-desc">After-hours craves &amp; fiery wings</div>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Controls: Theme, Direction, Cart icon before CTA, Order CTA -->
+      <div class="nav-controls">
+        <button type="button" class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button type="button" class="btn-icon-only direction-toggle-btn" aria-label="Toggle RTL/LTR direction" title="Toggle Direction">
+          <span style="font-weight: 800; font-size: 0.8rem;">RTL</span>
+        </button>
+
+        <a href="cart.html" class="cart-toggle-btn" aria-label="View takeaway bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Bag</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </a>
+
+        <a href="checkout.html" class="btn btn-hot btn-sm nav-order-btn">
+          <i class="fa-solid fa-bolt"></i> Order Now
+        </a>
+
+        <button type="button" class="mobile-menu-btn" aria-label="Open mobile menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-drawer-overlay"></div>
+
+    <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-drawer" aria-label="Mobile Menu">
+    <div class="mobile-drawer-header">
+      <img src="images/logo.svg" alt="Crispster Logo" class="drawer-logo-img">
+      <button type="button" class="drawer-close-btn" aria-label="Close mobile menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-nav-link active">Home 1 (Classic Crisp)</a>
+      <a href="home-2.html" class="mobile-nav-link">Home 2 (Late-Night Flame)</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="menu.html" class="mobile-nav-link">Menu</a>
+      <a href="offers.html" class="mobile-nav-link">Offers</a>
+      <a href="blog.html" class="mobile-nav-link">Blog</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <div class="mobile-drawer-controls">
+      <div class="drawer-icon-row">
+        <button type="button" class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button type="button" class="btn-icon-only direction-toggle-btn" aria-label="Toggle RTL/LTR direction" title="Toggle Direction">
+          <span style="font-weight: 800; font-size: 0.8rem;">RTL</span>
+        </button>
+
+        <a href="cart.html" class="cart-toggle-btn" aria-label="View takeaway bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Bag</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </a>
+      </div>
+
+      <a href="checkout.html" class="btn btn-hot btn-sm nav-order-btn" style="width: 100%; justify-content: center; display: inline-flex;">
+        <i class="fa-solid fa-bolt"></i> Order Now
+      </a>
+    </div>
+  </aside>
+
+  <!-- Takeaway Bag Drawer (Simulated Frontend Cart) -->
+  <div class="cart-drawer-backdrop"></div>
+  <aside class="cart-drawer" aria-label="Takeaway Bag">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <i class="fa-solid fa-bag-shopping" style="color: var(--color-hot-orange);"></i>
+        <span>Takeaway Bag</span>
+      </div>
+      <button type="button" class="cart-drawer-close" aria-label="Close bag">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cart-items-container">
+      <!-- Populated dynamically via main.js -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <form class="cart-promo-box">
+        <input type="text" class="cart-promo-input" placeholder="Promo code (e.g. CRISP50)" aria-label="Promo Code">
+        <button type="submit" class="btn btn-outline btn-sm">Apply</button>
+      </form>
+
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <span class="cart-subtotal-val">$0.00</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>Estimated Express Pickup</span>
+        <span style="color: var(--color-success); font-weight: 700;">12-15 Mins</span>
+      </div>
+      <div class="cart-summary-line total">
+        <span>Total Due</span>
+        <span class="total-amount">$0.00</span>
+      </div>
+
+      <a href="checkout.html" class="btn btn-hot cart-checkout-btn">
+        <i class="fa-solid fa-bag-shopping"></i> Proceed To Checkout
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN PAGE CONTENT (8 Substantial Content Sections)
+       ======================================================================== -->
+  <main>
+    <!-- SECTION 1: HERO SECTION -->
+    <section class="home-hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content reveal-on-scroll">
+          <div class="hero-top-badge">
+            <i class="fa-solid fa-fire"></i> Freshly Fried Every 15 Minutes
+          </div>
+          <h1 class="hero-headline">
+            Crunch So Loud, <br>
+            <span class="text-gradient-crunch">It Echoes.</span>
+          </h1>
+          <p class="hero-lead">
+            Welcome to Crispster — where 24-hour secret spice marinades meet triple-dredged golden crusts. Sizzling hot, unapologetically crispy, and packed with craveable heat.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="menu.html" class="btn btn-primary">
+              <i class="fa-solid fa-drumstick-bite"></i> Explore Full Menu
+            </a>
+            <button type="button" class="btn btn-outline open-cart-trigger">
+              <i class="fa-solid fa-bag-shopping"></i> View Takeaway Bag
+            </button>
+          </div>
+
+          <div class="hero-perks-row">
+            <div class="hero-perk-item">
+              <i class="fa-solid fa-award"></i> 100% Farm-Fresh Chicken
+            </div>
+            <div class="hero-perk-item">
+              <i class="fa-solid fa-pepper-hot"></i> 12 Signature Seasonings
+            </div>
+            <div class="hero-perk-item">
+              <i class="fa-solid fa-stopwatch"></i> Express 12-Min Pickup
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-wrap reveal-on-scroll">
+          <!-- Floating Badge 1 -->
+          <div class="hero-floating-badge-1 animate-float">
+            <div class="floating-badge-icon">
+              <i class="fa-solid fa-drumstick-bite"></i>
+            </div>
+            <div class="floating-badge-text">
+              <strong>24-Hour Marinade</strong>
+              <span>Infused with 12 Secret Spices</span>
+            </div>
+          </div>
+
+          <!-- Main Hero Image -->
+          <div class="hero-main-img-card">
+            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80" 
+                 alt="Crispster Signature Golden Fried Chicken Platter" 
+                 loading="eager">
+          </div>
+
+          <!-- Floating Badge 2 -->
+          <div class="hero-floating-badge-2 animate-float" style="animation-delay: -2s;">
+            <div class="rating-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <div class="floating-badge-text">
+              <strong>4.9 / 5.0 Rating</strong>
+              <span>18,400+ Crunch Fanatics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CRUNCH TICKER / BRAND USP MARQUEE -->
+    <div class="crunch-ticker-bar" aria-label="Brand Highlights Marquee">
+      <div class="ticker-track">
+        <span class="ticker-item"><i class="fa-solid fa-fire-flame-curved"></i> TRIPLE-DREDGED GOLDEN CRUST</span>
+        <span class="ticker-item"><i class="fa-solid fa-drumstick-bite"></i> 100% FRESH NEVER FROZEN</span>
+        <span class="ticker-item"><i class="fa-solid fa-bolt"></i> 12-MINUTE CURBSIDE PICKUP</span>
+        <span class="ticker-item"><i class="fa-solid fa-star"></i> 8 HOUSE-CRAFTED DIPPING SAUCES</span>
+        <span class="ticker-item"><i class="fa-solid fa-pepper-hot"></i> FROM MILD BUTTERMILK TO GHOST FIRE</span>
+        <span class="ticker-item"><i class="fa-solid fa-fire-flame-curved"></i> TRIPLE-DREDGED GOLDEN CRUST</span>
+        <span class="ticker-item"><i class="fa-solid fa-drumstick-bite"></i> 100% FRESH NEVER FROZEN</span>
+        <span class="ticker-item"><i class="fa-solid fa-bolt"></i> 12-MINUTE CURBSIDE PICKUP</span>
+        <span class="ticker-item"><i class="fa-solid fa-star"></i> 8 HOUSE-CRAFTED DIPPING SAUCES</span>
+      </div>
+    </div>
+
+    <!-- SECTION 3: BESTSELLERS SHOWCASE -->
+    <section class="section section-bg-secondary">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-subtitle-tag">
+            <i class="fa-solid fa-crown"></i> Customer Favorites
+          </div>
+          <h2 class="section-title">
+            The Crave List: <span class="highlight-orange">Crispster Bestsellers</span>
+          </h2>
+          <p class="section-description">
+            Our most requested, rave-reviewed chicken products fried fresh throughout the day.
+          </p>
+        </div>
+
+        <div class="bestsellers-grid">
+          <!-- Bestseller 1: Mega Crunch Bucket -->
+          <article class="crisp-card reveal-on-scroll">
+            <div class="card-img-wrap">
+              <span class="card-badge yellow">#1 Top Seller</span>
+              <img src="images/home 1/12-Pc Golden Crunch Bucket.jpg" 
+                   alt="Crispster 12-Piece Golden Crunch Bucket">
+            </div>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-rating"><i class="fa-solid fa-star"></i> 4.9 (1.2k)</span>
+                <span><i class="fa-solid fa-drumstick-bite"></i> 12 Pieces</span>
+              </div>
+              <h3 class="card-title">12-Pc Golden Crunch Bucket</h3>
+              <p class="card-desc">
+                12 pieces of drumsticks &amp; thighs in our signature herb-infused crispy crust, served with 3 signature house dips.
+              </p>
+              <div class="card-footer">
+                <div class="card-price">
+                  <span class="current-price">$24.99</span>
+                  <span class="old-price">$29.99</span>
+                </div>
+                <button type="button" class="btn btn-hot btn-sm" 
+                        data-action="add-to-cart" 
+                        data-id="bs-1" 
+                        data-name="12-Pc Golden Crunch Bucket" 
+                        data-price="24.99" 
+                        data-img="images/home 1/12-Pc Golden Crunch Bucket.jpg">
+                  <i class="fa-solid fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bestseller 2: Nashville Fire Burger -->
+          <article class="crisp-card reveal-on-scroll">
+            <div class="card-img-wrap">
+              <span class="card-badge">Extra Fiery</span>
+              <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80" 
+                   alt="Nashville Fire Burger with Pickles and Slaw">
+            </div>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-rating"><i class="fa-solid fa-star"></i> 4.8 (940)</span>
+                <span><i class="fa-solid fa-pepper-hot" style="color: var(--color-spicy-red);"></i> Ghost Level</span>
+              </div>
+              <h3 class="card-title">Nashville Fire Burger</h3>
+              <p class="card-desc">
+                Crispy chicken breast dunked in chili-cayenne oil, brioche bun, vinegar pickles, creamy garlic slaw, and chipotle mayo.
+              </p>
+              <div class="card-footer">
+                <div class="card-price">
+                  <span class="current-price">$11.49</span>
+                  <span class="old-price">$13.99</span>
+                </div>
+                <button type="button" class="btn btn-hot btn-sm" 
+                        data-action="add-to-cart" 
+                        data-id="bs-2" 
+                        data-name="Nashville Fire Burger" 
+                        data-price="11.49" 
+                        data-img="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=300&q=80">
+                  <i class="fa-solid fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bestseller 3: Honey Chipotle Wings -->
+          <article class="crisp-card reveal-on-scroll">
+            <div class="card-img-wrap">
+              <span class="card-badge yellow">Chef's Choice</span>
+              <img src="images/home 1/Honey Chipotle Wings (10 Pcs).jpg" 
+                   alt="Honey Chipotle Glazed Crispy Chicken Wings">
+            </div>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-rating"><i class="fa-solid fa-star"></i> 4.9 (810)</span>
+                <span><i class="fa-solid fa-fire"></i> Sweet & Spicy</span>
+              </div>
+              <h3 class="card-title">Honey Chipotle Wings (10 Pcs)</h3>
+              <p class="card-desc">
+                Jumbo crispy wings tossed in caramelized wild bee honey, chipotle peppers, and roasted toasted sesame seeds.
+              </p>
+              <div class="card-footer">
+                <div class="card-price">
+                  <span class="current-price">$14.99</span>
+                </div>
+                <button type="button" class="btn btn-hot btn-sm" 
+                        data-action="add-to-cart" 
+                        data-id="bs-3" 
+                        data-name="Honey Chipotle Wings (10 Pcs)" 
+                        data-price="14.99" 
+                        data-img="images/home 1/Honey Chipotle Wings (10 Pcs).jpg">
+                  <i class="fa-solid fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bestseller 4: Truffle Crunch Tenders -->
+          <article class="crisp-card reveal-on-scroll">
+            <div class="card-img-wrap">
+              <span class="card-badge green">Crispy Hand-Cut</span>
+              <img src="images/home 1/pexels-philippe-alamazani-508356-27497770.jpg" 
+                   alt="Golden Crispy Hand-Cut Chicken Tenders with Dip">
+            </div>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-rating"><i class="fa-solid fa-star"></i> 4.9 (1.5k)</span>
+                <span><i class="fa-solid fa-utensils"></i> 6 Giant Tenders</span>
+              </div>
+              <h3 class="card-title">Truffle Crunch Tenders (6 Pcs)</h3>
+              <p class="card-desc">
+                Whole-muscle breast tenderloins brined in buttermilk, double-crusted, paired with our signature black truffle ranch dip.
+              </p>
+              <div class="card-footer">
+                <div class="card-price">
+                  <span class="current-price">$12.99</span>
+                </div>
+                <button type="button" class="btn btn-hot btn-sm" 
+                        data-action="add-to-cart" 
+                        data-id="bs-4" 
+                        data-name="Truffle Crunch Tenders (6 Pcs)" 
+                        data-price="12.99" 
+                        data-img="images/home 1/pexels-philippe-alamazani-508356-27497770.jpg">
+                  <i class="fa-solid fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: SIGNATURE CHICKEN BUCKETS FEATURETTE -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-subtitle-tag">
+            <i class="fa-solid fa-box-open"></i> Sharing & Family Feasts
+          </div>
+          <h2 class="section-title">
+            Signature <span class="highlight-yellow">Chicken Buckets</span>
+          </h2>
+          <p class="section-description">
+            Built for game nights, family gatherings, and hungry crews. Packed in our vented thermo-lock boxes to stay piping hot and loudly crispy.
+          </p>
+        </div>
+
+        <!-- Featured Split Bucket Card: Crispster Grand Feast -->
+        <div class="bucket-showcase-card reveal-on-scroll">
+          <div class="bucket-card-img">
+            <img src="images/home 1/Crispster Grand Feast (20 Pcs).webp" 
+                 alt="Crispster Mega Family 20-Piece Feast Bucket with Sides and Sauces">
+          </div>
+          <div class="bucket-card-content">
+            <div class="hero-top-badge" style="background: rgba(255, 212, 0, 0.2); color: #9A3412;">
+              <i class="fa-solid fa-users"></i> Feeds 5–6 People
+            </div>
+            <h3 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Crispster Grand Feast (20 Pcs)</h3>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+              A royal spread of 10 drumsticks and 10 thighs, hand-dredged in our secret golden batter. Includes large seasoned crinkle-cut fries, warm buttered cornbread biscuits, creamy slaw, and 4 premium dipping pots.
+            </p>
+
+            <div class="bucket-includes-list">
+              <div class="bucket-includes-item"><i class="fa-solid fa-check"></i> 20 Pcs Crispy Chicken</div>
+              <div class="bucket-includes-item"><i class="fa-solid fa-check"></i> 2 Large Crinkle Fries</div>
+              <div class="bucket-includes-item"><i class="fa-solid fa-check"></i> 4 Gourmet House Dips</div>
+              <div class="bucket-includes-item"><i class="fa-solid fa-check"></i> 1 Family House Slaw</div>
+            </div>
+
+            <div class="bucket-price-row">
+              <div class="bucket-price-tag">
+                $39.99 <small>$48.00</small>
+              </div>
+              <button type="button" class="btn btn-hot" 
+                      data-action="add-to-cart" 
+                      data-id="bucket-grand" 
+                      data-name="Crispster Grand Feast (20 Pcs)" 
+                      data-price="39.99" 
+                      data-img="images/home 1/Crispster Grand Feast (20 Pcs).webp">
+                <i class="fa-solid fa-bag-shopping"></i> Grab This Bucket
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Bucket Tiers -->
+        <div class="bucket-mini-grid">
+          <!-- Bucket Tier 1 -->
+          <article class="crisp-card reveal-on-scroll">
+            <div class="card-img-wrap">
+              <span class="card-badge yellow">Solo &amp; Duo</span>
+              <img src="images/home 1/Solo Crunch Box.jpg" 
+                   alt="Solo Crunch Box (4 Pcs) with Fries, Biscuit and Sauce">
+            </div>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-rating"><i class="fa-solid fa-star"></i> 4.8 (520)</span>
+                <span><i class="fa-solid fa-drumstick-bite"></i> 4 Pieces</span>
+              </div>
+              <h3 class="card-title">Solo Crunch Box (4 Pcs)</h3>
+              <p class="card-desc">4 pieces of golden chicken, regular seasoned fries, 1 biscuit, and 1 choice of sauce.</p>
+              <div class="card-footer">
+                <div class="card-price"><span class="current-price">$10.99</span></div>
+                <button type="button" class="btn btn-hot btn-sm" 
+                        data-action="add-to-cart" 
+                        data-id="bucket-solo" 
+                        data-name="Solo Crunch Box (4 Pcs)" 
+                        data-price="10.99" 
+                        data-img="images/home 1/Solo Crunch Box.jpg">
+                  <i class="fa-solid fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bucket Tier 2 -->
+          <article class="crisp-card reveal-on-scroll">
+            <div class="card-img-wrap">
+              <span class="card-badge">Party Pick</span>
+              <img src="images/home 1/Duo Flame Bucket (8 Pcs).webp" 
+                   alt="Duo Flame Bucket (8 Pcs) with Medium Fries and Drinks">
+            </div>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-rating"><i class="fa-solid fa-star"></i> 4.9 (890)</span>
+                <span><i class="fa-solid fa-drumstick-bite"></i> 8 Pieces</span>
+              </div>
+              <h3 class="card-title">Duo Flame Bucket (8 Pcs)</h3>
+              <p class="card-desc">8 hot &amp; spicy pieces, 2 medium fries, 2 signature drinks, and 2 chili ranch dips.</p>
+              <div class="card-footer">
+                <div class="card-price"><span class="current-price">$19.99</span></div>
+                <button type="button" class="btn btn-hot btn-sm" 
+                        data-action="add-to-cart" 
+                        data-id="bucket-duo" 
+                        data-name="Duo Flame Bucket (8 Pcs)" 
+                        data-price="19.99" 
+                        data-img="images/home 1/Duo Flame Bucket (8 Pcs).webp">
+                  <i class="fa-solid fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bucket Tier 3 -->
+          <article class="crisp-card reveal-on-scroll">
+            <div class="card-img-wrap">
+              <span class="card-badge green">Weekend Crave</span>
+              <img src="images/home 1/Tender & Wing Combo Bucket.webp" 
+                   alt="Tender &amp; Wing Combo Bucket with Jumbo Tenders and Glazed Wings">
+            </div>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-rating"><i class="fa-solid fa-star"></i> 4.9 (1.1k)</span>
+                <span><i class="fa-solid fa-fire"></i> 20 Pieces</span>
+              </div>
+              <h3 class="card-title">Tender &amp; Wing Combo Bucket</h3>
+              <p class="card-desc">8 Jumbo tenders + 12 glazed crispy wings, 2 large fries, and 4 signature dips.</p>
+              <div class="card-footer">
+                <div class="card-price"><span class="current-price">$34.99</span></div>
+                <button type="button" class="btn btn-hot btn-sm" 
+                        data-action="add-to-cart" 
+                        data-id="bucket-combo-3" 
+                        data-name="Tender &amp; Wing Combo Bucket" 
+                        data-price="34.99" 
+                        data-img="images/home 1/Tender & Wing Combo Bucket.webp">
+                  <i class="fa-solid fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: WHY CHOOSE CRISPSTER (THE SECRET TO THE CRUNCH) -->
+    <section class="section section-bg-secondary">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-subtitle-tag">
+            <i class="fa-solid fa-sparkles"></i> The Culinary Science
+          </div>
+          <h2 class="section-title">
+            The Secret To <span class="highlight-orange">Our Crunch</span>
+          </h2>
+          <p class="section-description">
+            We don't do soggy shortcuts. Here is why Crispster chicken hits differently every single bite.
+          </p>
+        </div>
+
+        <div class="why-values-grid">
+          <!-- Value 1 -->
+          <div class="why-value-card reveal-on-scroll">
+            <div class="why-value-icon">
+              <i class="fa-solid fa-feather-pointed"></i>
+            </div>
+            <h3 class="why-value-title">100% Farm-Fresh Never Frozen</h3>
+          </div>
+
+          <!-- Value 2 -->
+          <div class="why-value-card reveal-on-scroll">
+            <div class="why-value-icon">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <h3 class="why-value-title">24-Hour Herb Buttermilk Marinade</h3>
+          </div>
+
+          <!-- Value 3 -->
+          <div class="why-value-card reveal-on-scroll">
+            <div class="why-value-icon">
+              <i class="fa-solid fa-mortar-pestle"></i>
+            </div>
+            <h3 class="why-value-title">Triple-Dredged Golden Shell</h3>
+          </div>
+
+          <!-- Value 4 -->
+          <div class="why-value-card reveal-on-scroll">
+            <div class="why-value-icon">
+              <i class="fa-solid fa-fire-flame-curved"></i>
+            </div>
+            <h3 class="why-value-title">Precision Flash Frying</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: FEATURED COMBOS & LATE NIGHT CRAVES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-subtitle-tag">
+            <i class="fa-solid fa-layer-group"></i> Ultimate Pairings
+          </div>
+          <h2 class="section-title">
+            Featured <span class="highlight-yellow">Combos & Craves</span>
+          </h2>
+          <p class="section-description">
+            Bundled meals paired with crispy seasoned fries, signature dips, and ice-cold refreshments.
+          </p>
+        </div>
+
+        <div class="combos-grid">
+          <!-- Combo 1 -->
+          <div class="combo-card reveal-on-scroll">
+            <div class="combo-img-wrap">
+              <span class="combo-badge-save">Save $4.50</span>
+              <img src="images/home 1/The Crunch Titan Combo.webp" 
+                   alt="The Crunch Titan Combo Box">
+            </div>
+            <div class="combo-content">
+              <div class="combo-tagline">Meal For One Champion</div>
+              <h3 class="card-title">The Crunch Titan Combo</h3>
+              <p class="card-desc">
+                1 Crispster Signature Double Chicken Burger, 2 Jumbo Golden Tenders, Medium Cajun Fries, and a 20oz craft beverage.
+              </p>
+              <div class="combo-includes-chips">
+                <span class="combo-chip"><i class="fa-solid fa-burger"></i> Double Burger</span>
+                <span class="combo-chip"><i class="fa-solid fa-drumstick-bite"></i> 2 Tenders</span>
+                <span class="combo-chip"><i class="fa-solid fa-box"></i> Fries & Drink</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-price">
+                  <span class="current-price">$15.99</span>
+                  <span class="old-price">$20.49</span>
+                </div>
+                <button type="button" class="btn btn-hot btn-sm" 
+                        data-action="add-to-cart" 
+                        data-id="combo-titan" 
+                        data-name="The Crunch Titan Combo" 
+                        data-price="15.99" 
+                        data-img="images/home 1/The Crunch Titan Combo.webp">
+                  <i class="fa-solid fa-plus"></i> Order Combo
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Combo 2 -->
+          <div class="combo-card reveal-on-scroll">
+            <div class="combo-img-wrap">
+              <span class="combo-badge-save">Save $5.00</span>
+              <img src="images/home 1/Wing & Popcorn Crunch Duo.jpg" 
+                   alt="Popcorn Chicken and Wings Duo Pack">
+            </div>
+            <div class="combo-content">
+              <div class="combo-tagline">Snack & Share Bundle</div>
+              <h3 class="card-title">Wing & Popcorn Crunch Duo</h3>
+              <p class="card-desc">
+                8 Honey BBQ Wings, 1 Large Bowl of Seasoned Crispy Chicken Popcorn, Loaded Cheese Fries, and 2 Garlic Ranch dips.
+              </p>
+              <div class="combo-includes-chips">
+                <span class="combo-chip"><i class="fa-solid fa-fire"></i> 8 BBQ Wings</span>
+                <span class="combo-chip"><i class="fa-solid fa-bowl-food"></i> Popcorn Chicken</span>
+                <span class="combo-chip"><i class="fa-solid fa-cheese"></i> Loaded Fries</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-price">
+                  <span class="current-price">$18.49</span>
+                  <span class="old-price">$23.49</span>
+                </div>
+                <button type="button" class="btn btn-hot btn-sm" 
+                        data-action="add-to-cart" 
+                        data-id="combo-wing-pop" 
+                        data-name="Wing & Popcorn Crunch Duo" 
+                        data-price="18.49" 
+                        data-img="images/home 1/Wing & Popcorn Crunch Duo.jpg">
+                  <i class="fa-solid fa-plus"></i> Order Combo
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Combo 3 -->
+          <div class="combo-card reveal-on-scroll">
+            <div class="combo-img-wrap">
+              <span class="combo-badge-save">Save $7.00</span>
+              <img src="images/home 1/Night Owl Crave Platter.webp" 
+                   alt="Loaded Fries and Fried Chicken Late Night Crave Pack">
+            </div>
+            <div class="combo-content">
+              <div class="combo-tagline">Late Night Special (After 9PM)</div>
+              <h3 class="card-title">Night Owl Crave Platter</h3>
+              <p class="card-desc">
+                6 Nashville Tenders, 6 Classic Drumsticks, 1 Giant Platter of Truffle Parmesan Crinkle Fries, and 3 dipping sauces.
+              </p>
+              <div class="combo-includes-chips">
+                <span class="combo-chip"><i class="fa-solid fa-moon"></i> 6 Tenders</span>
+                <span class="combo-chip"><i class="fa-solid fa-drumstick-bite"></i> 6 Drumsticks</span>
+                <span class="combo-chip"><i class="fa-solid fa-fire"></i> Truffle Fries</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-price">
+                  <span class="current-price">$22.99</span>
+                  <span class="old-price">$29.99</span>
+                </div>
+                <button type="button" class="btn btn-hot btn-sm" 
+                        data-action="add-to-cart" 
+                        data-id="combo-night-owl" 
+                        data-name="Night Owl Crave Platter" 
+                        data-price="22.99" 
+                        data-img="images/home 1/Night Owl Crave Platter.webp">
+                  <i class="fa-solid fa-plus"></i> Order Combo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: CUSTOMER REVIEWS & SOCIAL PROOF -->
+    <section class="section section-bg-secondary">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-subtitle-tag">
+            <i class="fa-solid fa-comments"></i> 18,000+ Happy Foodies
+          </div>
+          <h2 class="section-title">
+            What The <span class="highlight-orange">Crunch Community</span> Says
+          </h2>
+          <p class="section-description">
+            Real feedback from verified chicken lovers who made Crispster their go-to takeaway spot.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card reveal-on-scroll">
+            <div class="rating-stars" style="margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-quote">
+              "Hands down the crispiest fried chicken I've tasted in the entire city. That 24-hour marinade isn't just marketing hype; you actually taste the seasoning right into the bone. The Ghost Mayo is addictive!"
+            </p>
+            <div class="reviewer-meta">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" 
+                   alt="Sarah Jenkins Customer Avatar" class="reviewer-avatar">
+              <div>
+                <div class="reviewer-name">Sarah Jenkins</div>
+                <div class="reviewer-tag"><i class="fa-solid fa-circle-check" style="color: var(--color-success);"></i> Verified Takeaway Customer</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card reveal-on-scroll">
+            <div class="rating-stars" style="margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-quote">
+              "We ordered the 20-Piece Grand Feast for our football watch party. It arrived piping hot, stayed crunchy through the entire game, and everyone begged to know where we ordered from. Crispster is unbeatable."
+            </p>
+            <div class="reviewer-meta">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" 
+                   alt="Marcus Rodriguez Customer Avatar" class="reviewer-avatar">
+              <div>
+                <div class="reviewer-name">Marcus Rodriguez</div>
+                <div class="reviewer-tag"><i class="fa-solid fa-circle-check" style="color: var(--color-success);"></i> Downtown Regular</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card reveal-on-scroll">
+            <div class="rating-stars" style="margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-quote">
+              "The Nashville Fire Burger is on a completely different level than standard takeaway joints. Crispy breast fillet, generous crunchy pickles, and heat that builds without burning away the incredible flavor."
+            </p>
+            <div class="reviewer-meta">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" 
+                   alt="Elena Chen Customer Avatar" class="reviewer-avatar">
+              <div>
+                <div class="reviewer-name">Elena Chen</div>
+                <div class="reviewer-tag"><i class="fa-solid fa-circle-check" style="color: var(--color-success);"></i> Food Reviewer & Regular</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: FINAL ORDER CTA BANNER -->
+    <section class="cta-banner-section">
+      <div class="container cta-banner-box">
+        <div class="reveal-on-scroll">
+          <h2 class="cta-banner-headline">
+            Craving That Unstoppable <br>
+            <span>Golden Crunch?</span>
+          </h2>
+          <p class="cta-banner-desc">
+            Skip the waiting line. Build your order online right now for rapid curbside pickup or quick counter collection in as little as 12 minutes!
+          </p>
+          <div class="cta-banner-actions">
+            <a href="menu.html" class="btn btn-primary">
+              <i class="fa-solid fa-fire"></i> Order Takeaway Now
+            </a>
+            <a href="offers.html" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #FFF;">
+              <i class="fa-solid fa-tags"></i> View Today's Deals
+            </a>
+          </div>
+        </div>
+
+        <div class="cta-banner-perk-box reveal-on-scroll">
+          <div class="cta-perk-row">
+            <div class="cta-perk-icon"><i class="fa-solid fa-stopwatch"></i></div>
+            <div>
+              <strong style="display: block; font-size: 1.05rem;">12-Minute Express Pickup</strong>
+              <span style="font-size: 0.85rem; color: #A1A1AA;">Prepared fresh right upon order transmission</span>
+            </div>
+          </div>
+
+          <div class="cta-perk-row">
+            <div class="cta-perk-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <strong style="display: block; font-size: 1.05rem;">Hotline Call & Collect</strong>
+              <span style="font-size: 0.85rem; color: #A1A1AA;">Dial (555) 374-2747 for custom orders</span>
+            </div>
+          </div>
+
+          <div class="cta-perk-row">
+            <div class="cta-perk-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <strong style="display: block; font-size: 1.05rem;">3 Convenient City Hubs</strong>
+              <span style="font-size: 0.85rem; color: #A1A1AA;">Downtown, Westside & Metro Food District</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       GLOBAL FOOTER (Identical across all pages)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand-info">
+          <a href="index.html" aria-label="Crispster Homepage">
+            <img src="images/logo.svg" alt="Crispster Logo" class="footer-logo-img">
+          </a>
+          <p class="footer-brand-desc">
+            Crispster is a premier fried chicken takeaway brand dedicated to the art of the perfect crunch. 24-hour marinated poultry, secret herb coatings, and mouthwatering homemade glazes.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <!-- Navigation Links -->
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Home 1 (Classic)</a></li>
+            <li><a href="home-2.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Home 2 (Late Night)</a></li>
+            <li><a href="about.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="menu.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Full Menu</a></li>
+            <li><a href="offers.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Special Offers</a></li>
+            <li><a href="blog.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Crunch Blog</a></li>
+            <li><a href="contact.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Contact &amp; Stores</a></li>
+          </ul>
+        </div>
+
+        <!-- Takeaway Links -->
+        <div>
+          <h4 class="footer-title">Takeaway Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="cart.html" class="footer-link"><i class="fa-solid fa-bag-shopping"></i> View Cart</a></li>
+            <li><a href="checkout.html" class="footer-link"><i class="fa-solid fa-credit-card"></i> Express Checkout</a></li>
+            <li><a href="maintenance.html" class="footer-link"><i class="fa-solid fa-wrench"></i> Maintenance Status</a></li>
+            <li><a href="404.html" class="footer-link"><i class="fa-solid fa-triangle-exclamation"></i> 404 Error Page</a></li>
+          </ul>
+        </div>
+
+        <!-- Store & Hours -->
+        <div>
+          <h4 class="footer-title">Kitchen Hours</h4>
+          <div class="footer-hours-item">
+            <span>Monday – Thursday:</span>
+            <span>11:00 AM – 11:30 PM</span>
+          </div>
+          <div class="footer-hours-item">
+            <span>Friday & Saturday:</span>
+            <span>11:00 AM – 2:00 AM</span>
+          </div>
+          <div class="footer-hours-item">
+            <span>Sunday:</span>
+            <span>12:00 PM – 11:00 PM</span>
+          </div>
+
+          <div style="margin-top: 1.25rem;">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>428 Crispy Boulevard, Flavor District, NY 10012</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>(555) 374-2747 (CRISPOST)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 Crispster Fried Chicken Takeaway. All Rights Reserved.
+        </div>
+        <div class="footer-bottom-badges">
+          <span class="footer-bottom-badge"><i class="fa-solid fa-shield-halved"></i> 100% Halal Certified</span>
+          <span class="footer-bottom-badge"><i class="fa-solid fa-seedling"></i> Zero Trans Fats</span>
+          <span class="footer-bottom-badge"><i class="fa-solid fa-fire"></i> 15-Min Fresh Guarantee</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to top of page">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Core JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+

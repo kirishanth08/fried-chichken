@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Express Takeaway Checkout — Crispster Fried Chicken</title>
+  <meta name="description" content="Complete your Crispster takeaway pickup order. Choose counter collection or curbside handover with 12-minute rapid kitchen preparation.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       GLOBAL NAVBAR
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand" aria-label="Crispster Homepage">
+        <img src="images/logo.svg" alt="Crispster Premium Fried Chicken Logo" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <div class="nav-item-dropdown">
+          <a href="index.html" class="nav-link dropdown-toggle" aria-expanded="false">
+            <span>Home</span> <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="dropdown-item">
+              <div class="dropdown-item-title"><i class="fa-solid fa-drumstick-bite"></i> Home 1 (Classic Crisp)</div>
+              <div class="dropdown-item-desc">Flagship takeaway & family feasts</div>
+            </a>
+            <a href="home-2.html" class="dropdown-item">
+              <div class="dropdown-item-title"><i class="fa-solid fa-fire"></i> Home 2 (Late-Night Flame)</div>
+              <div class="dropdown-item-desc">After-hours craves & fiery wings</div>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-controls">
+        <button type="button" class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button type="button" class="btn-icon-only direction-toggle-btn" aria-label="Toggle RTL/LTR direction" title="Toggle Direction">
+          <span style="font-weight: 800; font-size: 0.8rem;">RTL</span>
+        </button>
+
+        <!-- Cart Icon Just Before CTA -->
+        <a href="cart.html" class="cart-toggle-btn" aria-label="View takeaway cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Bag</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </a>
+
+        <a href="checkout.html" class="btn btn-hot btn-sm nav-order-btn active" style="box-shadow: 0 0 14px rgba(255, 95, 0, 0.5);">
+          <i class="fa-solid fa-bolt"></i> Order Now
+        </a>
+
+        <button type="button" class="mobile-menu-btn" aria-label="Open mobile menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-drawer-overlay"></div>
+
+    <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-drawer" aria-label="Mobile Menu">
+    <div class="mobile-drawer-header">
+      <img src="images/logo.svg" alt="Crispster Logo" class="drawer-logo-img">
+      <button type="button" class="drawer-close-btn" aria-label="Close mobile menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-nav-link">Home 1 (Classic Crisp)</a>
+      <a href="home-2.html" class="mobile-nav-link">Home 2 (Late-Night Flame)</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="menu.html" class="mobile-nav-link">Menu</a>
+      <a href="offers.html" class="mobile-nav-link">Offers</a>
+      <a href="blog.html" class="mobile-nav-link">Blog</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <div class="mobile-drawer-controls">
+      <div class="drawer-icon-row">
+        <button type="button" class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button type="button" class="btn-icon-only direction-toggle-btn" aria-label="Toggle RTL/LTR direction" title="Toggle Direction">
+          <span style="font-weight: 800; font-size: 0.8rem;">RTL</span>
+        </button>
+
+        <a href="cart.html" class="cart-toggle-btn" aria-label="View takeaway bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Bag</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </a>
+      </div>
+
+      <a href="checkout.html" class="btn btn-hot btn-sm nav-order-btn" style="width: 100%; justify-content: center; display: inline-flex;">
+        <i class="fa-solid fa-bolt"></i> Order Now
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN PAGE CONTENT (7 Substantial Sections)
+       ======================================================================== -->
+  <main>
+    <!-- SECTION 1: CHECKOUT HERO & PROGRESS -->
+    <section class="home-hero-section checkout-hero-section">
+      <div class="container">
+        <div class="hero-content-plaque reveal-on-scroll">
+          <div class="section-subtitle-tag"><i class="fa-solid fa-bolt"></i> Express Handover</div>
+          <h1 class="section-title">Complete Your <span class="highlight-orange">Takeaway Order</span></h1>
+
+          <div class="order-steps-bar">
+            <div class="order-step-item" id="step-node-1">
+              <span class="order-step-num"><i class="fa-solid fa-check"></i></span>
+              <span>1. Bag Reviewed</span>
+            </div>
+            <i class="fa-solid fa-arrow-right arrow-icon" style="color: var(--text-muted); font-size: 0.85rem;"></i>
+            <div class="order-step-item active" id="step-node-2">
+              <span class="order-step-num" id="step-num-2">2</span>
+              <span>2. Pickup &amp; Payment</span>
+            </div>
+            <i class="fa-solid fa-arrow-right arrow-icon" style="color: var(--text-muted); font-size: 0.85rem;"></i>
+            <div class="order-step-item" id="step-node-3">
+              <span class="order-step-num" id="step-num-3">3</span>
+              <span>3. Confirm Payment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CHECKOUT SPLIT FORM & SUMMARY -->
+    <section class="section" style="padding-block: 2rem 4rem;">
+      <div class="container">
+        <form id="crispster-checkout-form" onsubmit="event.preventDefault(); handleSummaryActionButton();">
+          <div class="cart-page-grid">
+            <!-- Left Column: Step 1 (Entry) OR Step 2 (Confirm Payment) -->
+            <div>
+              <!-- STEP 1: PICKUP DETAILS & PAYMENT METHOD ENTRY -->
+              <div id="checkout-entry-step">
+                <!-- Handover Method: Counter vs Curbside -->
+                <div class="why-card" style="margin-bottom: 2rem;">
+                  <h3 style="font-size: 1.35rem; margin-bottom: 1rem;"><i class="fa-solid fa-person-walking" style="color: var(--color-hot-orange);"></i> 1. Choose Collection Method</h3>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" id="handover-options">
+                    <label class="byob-option-card selected" style="cursor: pointer; text-align: left; align-items: flex-start; padding: 1.25rem;">
+                      <input type="radio" name="handover" value="counter" checked style="accent-color: var(--color-hot-orange); margin-bottom: 0.5rem;">
+                      <strong style="font-size: 1rem; display: block;">Express Counter Walk-Up</strong>
+                      <span style="font-size: 0.8rem; color: var(--text-secondary);">Pick up at designated rapid collection shelf.</span>
+                    </label>
+                    <label class="byob-option-card" style="cursor: pointer; text-align: left; align-items: flex-start; padding: 1.25rem;">
+                      <input type="radio" name="handover" value="curbside" style="accent-color: var(--color-hot-orange); margin-bottom: 0.5rem;">
+                      <strong style="font-size: 1rem; display: block;">Touchless Curbside Bay</strong>
+                      <span style="font-size: 0.8rem; color: var(--text-secondary);">Direct handover to your car window outside.</span>
+                    </label>
+                  </div>
+
+                  <!-- Curbside Extra Fields -->
+                  <div id="curbside-vehicle-fields" style="display: none; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px dashed var(--border-light);">
+                    <div class="form-group-row">
+                      <div class="form-group">
+                        <label class="form-label" for="curbside-vehicle">Vehicle Make &amp; Model</label>
+                        <input type="text" id="curbside-vehicle" class="form-control" placeholder="e.g. Silver Honda Civic">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label" for="curbside-plate">License Plate or Bay Number</label>
+                        <input type="text" id="curbside-plate" class="form-control" placeholder="e.g. 7XYZ908 (Bay 2)">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Customer Details -->
+                <div class="why-card" style="margin-bottom: 2rem;">
+                  <h3 style="font-size: 1.35rem; margin-bottom: 1rem;"><i class="fa-solid fa-address-card" style="color: var(--color-hot-orange);"></i> 2. Contact Information</h3>
+                  <div class="form-group-row">
+                    <div class="form-group">
+                      <label class="form-label" for="checkout-name">Full Name <span class="req">*</span></label>
+                      <input type="text" id="checkout-name" class="form-control" placeholder="e.g. Jordan Smith" pattern="[A-Za-z\s'-]{2,}" maxlength="60" title="Please enter letters only (at least 2 characters)" required>
+                      <span class="form-error-msg" id="checkout-name-error"></span>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="checkout-phone">Mobile Phone (For SMS Alert) <span class="req">*</span></label>
+                      <input type="tel" id="checkout-phone" class="form-control" placeholder="e.g. 5553456789" inputmode="numeric" pattern="[0-9]{7,15}" maxlength="15" title="Please enter numbers only (7 to 15 digits)" required>
+                      <span class="form-error-msg" id="checkout-phone-error"></span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="checkout-email">Email Address (For Digital Receipt) <span class="req">*</span></label>
+                    <input type="email" id="checkout-email" class="form-control" placeholder="jordan@example.com" required>
+                    <span class="form-error-msg" id="checkout-email-error"></span>
+                  </div>
+                </div>
+
+                <!-- Pickup Time -->
+                <div class="why-card" style="margin-bottom: 2rem;">
+                  <h3 style="font-size: 1.35rem; margin-bottom: 1rem;"><i class="fa-solid fa-clock" style="color: var(--color-hot-orange);"></i> 3. Collection Timing</h3>
+                  <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700; cursor: pointer;">
+                      <input type="radio" name="pickuptime" value="asap" checked style="accent-color: var(--color-hot-orange);">
+                      <span>ASAP (Ready in 12–15 Minutes)</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700; cursor: pointer;">
+                      <input type="radio" name="pickuptime" value="later" style="accent-color: var(--color-hot-orange);">
+                      <span>Schedule For Today (Pick Time Slot)</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Payment Method Selection -->
+                <div class="why-card" style="margin-bottom: 2rem;" id="checkout-payment-card">
+                  <h3 style="font-size: 1.35rem; margin-bottom: 1rem;"><i class="fa-solid fa-credit-card" style="color: var(--color-hot-orange);"></i> 4. Payment Method</h3>
+                  <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                    <label class="byob-option-card selected" id="paymethod-card-counter" style="cursor: pointer; padding: 1rem 1.25rem; display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+                      <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <input type="radio" name="paymethod" value="counter" checked style="accent-color: var(--color-hot-orange);">
+                        <div>
+                          <strong>Pay at Counter Pickup</strong>
+                          <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">Cash, Card, Apple Pay or Tap-to-Pay in person</span>
+                        </div>
+                      </div>
+                      <i class="fa-solid fa-cash-register" style="color: var(--color-hot-orange); font-size: 1.4rem;"></i>
+                    </label>
+
+                    <label class="byob-option-card" id="paymethod-card-online" style="cursor: pointer; padding: 1rem 1.25rem; display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+                      <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <input type="radio" name="paymethod" value="card" style="accent-color: var(--color-hot-orange);">
+                        <div>
+                          <strong>Credit / Debit Card</strong>
+                          <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">Secure online payment &amp; pre-authorization</span>
+                        </div>
+                      </div>
+                      <i class="fa-brands fa-cc-visa" style="color: var(--color-primary-yellow); font-size: 1.4rem;"></i>
+                    </label>
+                  </div>
+
+                  <!-- Online Card Fields (visible when card is selected) -->
+                  <div id="card-payment-fields" style="display: none; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px dashed var(--border-light);">
+                    <div class="form-group" style="margin-bottom: 1rem;">
+                      <label class="form-label" for="card-name">Name on Card <span class="req">*</span></label>
+                      <input type="text" id="card-name" class="form-control" placeholder="e.g. Jordan Smith" maxlength="60" pattern="[A-Za-z\s'-]{2,}">
+                      <span class="form-error-msg" id="card-name-error"></span>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1rem;">
+                      <label class="form-label" for="card-number">Card Number <span class="req">*</span></label>
+                      <div style="position: relative;">
+                        <input type="text" id="card-number" class="form-control" placeholder="4532 •••• •••• 8892" maxlength="19" inputmode="numeric">
+                        <span id="card-brand-icon" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--color-hot-orange); font-size: 1.25rem; pointer-events: none;">
+                          <i class="fa-solid fa-credit-card"></i>
+                        </span>
+                      </div>
+                      <span class="form-error-msg" id="card-number-error"></span>
+                    </div>
+                    <div class="form-group-row">
+                      <div class="form-group">
+                        <label class="form-label" for="card-expiry">Expires (MM/YY) <span class="req">*</span></label>
+                        <input type="text" id="card-expiry" class="form-control" placeholder="MM / YY" maxlength="5" inputmode="numeric">
+                        <span class="form-error-msg" id="card-expiry-error"></span>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label" for="card-cvv">Security Code (CVV) <span class="req">*</span></label>
+                        <input type="password" id="card-cvv" class="form-control" placeholder="CVC" maxlength="4" inputmode="numeric">
+                        <span class="form-error-msg" id="card-cvv-error"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Proceed to Confirm Payment Button (Immediately below Payment Method) -->
+                  <div style="margin-top: 1.75rem;">
+                    <button type="button" id="btn-proceed-to-confirm" class="btn btn-hot" style="width: 100%; font-size: 1.05rem; padding-block: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.65rem;" onclick="goToConfirmPayment()">
+                      <span>Proceed to Confirm Payment</span>
+                      <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 2: CONFIRM PAYMENT PART (Triggered after entering payment method) -->
+              <div id="checkout-confirm-step" style="display: none; animation: fadeIn 0.35s ease;">
+                <!-- Header Banner -->
+                <div class="why-card" style="margin-bottom: 1.5rem; border-left: 5px solid var(--color-hot-orange);">
+                  <div class="section-subtitle-tag" style="margin-bottom: 0.35rem;">
+                    <i class="fa-solid fa-shield-check"></i> Step 3: Final Confirmation
+                  </div>
+                  <h3 style="font-size: 1.55rem; margin-bottom: 0.35rem;">Review &amp; Confirm Payment</h3>
+                  <p style="font-size: 0.92rem; color: var(--text-secondary); margin: 0;">
+                    Please verify your takeaway pickup and payment details below before finalizing your order.
+                  </p>
+                </div>
+
+                <!-- Review Section 1: Collection & Timing -->
+                <div class="why-card" style="margin-bottom: 1.5rem;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; border-bottom: 1px solid var(--border-light); padding-bottom: 0.65rem;">
+                    <h4 style="font-size: 1.15rem; margin: 0;"><i class="fa-solid fa-person-walking" style="color: var(--color-hot-orange);"></i> Collection &amp; Timing</h4>
+                    <button type="button" class="btn btn-sm btn-outline" onclick="goToDetailsStep()" style="font-size: 0.78rem; padding: 0.25rem 0.65rem;">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.92rem;">
+                    <div><span style="color: var(--text-muted);">Collection Mode:</span> <strong id="review-collection-mode">Express Counter Walk-Up</strong></div>
+                    <div id="review-curbside-row" style="display: none;"><span style="color: var(--text-muted);">Curbside Vehicle:</span> <strong id="review-curbside-info">Silver Honda Civic (Bay 2)</strong></div>
+                    <div><span style="color: var(--text-muted);">Pickup Timing:</span> <strong id="review-timing-mode" style="color: var(--color-hot-orange);">ASAP (Ready in 12–15 Minutes)</strong></div>
+                    <div><span style="color: var(--text-muted);">Pickup Location:</span> <strong>Downtown Flagship Hub (428 Crispy Blvd, NY)</strong></div>
+                  </div>
+                </div>
+
+                <!-- Review Section 2: Customer Contact -->
+                <div class="why-card" style="margin-bottom: 1.5rem;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; border-bottom: 1px solid var(--border-light); padding-bottom: 0.65rem;">
+                    <h4 style="font-size: 1.15rem; margin: 0;"><i class="fa-solid fa-address-card" style="color: var(--color-hot-orange);"></i> Customer Information</h4>
+                    <button type="button" class="btn btn-sm btn-outline" onclick="goToDetailsStep()" style="font-size: 0.78rem; padding: 0.25rem 0.65rem;">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.92rem;">
+                    <div><span style="color: var(--text-muted);">Full Name:</span> <strong id="review-customer-name">Jordan Smith</strong></div>
+                    <div><span style="color: var(--text-muted);">SMS Alert Phone:</span> <strong id="review-customer-phone">(555) 345-6789</strong></div>
+                    <div><span style="color: var(--text-muted);">Digital Receipt:</span> <strong id="review-customer-email">jordan@example.com</strong></div>
+                  </div>
+                </div>
+
+                <!-- Review Section 3: Payment Method Details -->
+                <div class="why-card" style="margin-bottom: 2rem;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; border-bottom: 1px solid var(--border-light); padding-bottom: 0.65rem;">
+                    <h4 style="font-size: 1.15rem; margin: 0;"><i class="fa-solid fa-credit-card" style="color: var(--color-hot-orange);"></i> Payment Method</h4>
+                    <button type="button" class="btn btn-sm btn-outline" onclick="goToDetailsStep()" style="font-size: 0.78rem; padding: 0.25rem 0.65rem;">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                  </div>
+                  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; font-size: 0.92rem;">
+                    <div>
+                      <div id="review-payment-mode" style="font-weight: 800; font-size: 1rem;">Pay at Counter Pickup</div>
+                      <div id="review-payment-subtext" style="font-size: 0.8rem; color: var(--text-muted);">Cash, Card, Apple Pay or Tap-to-Pay in person</div>
+                    </div>
+                    <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(16, 185, 129, 0.12); color: #059669; padding: 0.35rem 0.75rem; border-radius: var(--radius-full); font-weight: 800; font-size: 0.82rem;">
+                      <i class="fa-solid fa-shield-halved"></i> SSL Secured
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Confirm & Pay Actions -->
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                  <button type="button" class="btn btn-outline" style="flex: 1; min-width: 170px; justify-content: center; padding-block: 1.05rem;" onclick="goToDetailsStep()">
+                    <i class="fa-solid fa-arrow-left arrow-icon"></i> Back to Details
+                  </button>
+                  <button type="button" class="btn btn-hot" style="flex: 2; min-width: 230px; justify-content: center; font-size: 1.1rem; padding-block: 1.05rem;" onclick="processFinalTakeawayOrder()">
+                    <i class="fa-solid fa-lock"></i> Confirm &amp; Pay (<span class="confirm-total-val">$36.48</span>)
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Order Review Box -->
+            <div>
+              <div class="cart-order-summary-card" style="position: sticky; top: 100px;">
+                <h3 style="font-size: 1.5rem; border-bottom: 1px solid var(--border-light); padding-bottom: 1rem;">
+                  Takeaway Summary
+                </h3>
+
+                <div id="checkout-items-list" style="display: flex; flex-direction: column; gap: 0.75rem; max-height: 240px; overflow-y: auto; padding-right: 0.5rem;">
+                  <!-- Populated via script -->
+                </div>
+
+                <div class="cart-summary-line" style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-light);">
+                  <span>Subtotal:</span>
+                  <strong id="checkout-subtotal">$36.48</strong>
+                </div>
+
+                <div class="cart-summary-line">
+                  <span>Curbside Packaging:</span>
+                  <strong style="color: var(--color-success);">FREE</strong>
+                </div>
+
+                <div class="cart-summary-line total">
+                  <span>Total Amount Due:</span>
+                  <span class="total-amount" id="checkout-total">$36.48</span>
+                </div>
+
+                <div style="background: var(--bg-secondary); border-radius: var(--radius-md); padding: 1rem; font-size: 0.85rem; border: 1px dashed var(--border-medium);">
+                  <div style="font-weight: 800; color: var(--color-hot-orange); margin-bottom: 0.25rem;"><i class="fa-solid fa-clock"></i> Pickup Window:</div>
+                  <div>Downtown Flagship Hub: <strong>Ready in 12–15 Mins</strong></div>
+                </div>
+
+                <button type="button" id="btn-summary-action" class="btn btn-hot" style="width: 100%; font-size: 1.05rem; padding-block: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 0.65rem;" onclick="handleSummaryActionButton()">
+                  <i class="fa-solid fa-arrow-right arrow-icon" id="summary-btn-icon"></i>
+                  <span id="summary-btn-text">Proceed to Confirm Payment</span>
+                </button>
+
+                <div style="text-align: center; font-size: 0.75rem; color: var(--text-muted);">
+                  <i class="fa-solid fa-lock"></i> 256-Bit SSL Bank-Grade Encryption
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       GLOBAL FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-info">
+          <a href="index.html" aria-label="Crispster Homepage"><img src="images/logo.svg" alt="Crispster Logo" class="footer-logo-img"></a>
+          <p class="footer-brand-desc">Crispster is a premier fried chicken takeaway brand dedicated to the art of the perfect crunch. 24-hour marinated poultry, secret herb coatings, and mouthwatering homemade glazes.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Crispster on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Home 1 (Classic)</a></li>
+            <li><a href="home-2.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Home 2 (Late Night)</a></li>
+            <li><a href="about.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="menu.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Full Menu</a></li>
+            <li><a href="offers.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Special Offers</a></li>
+            <li><a href="blog.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Crunch Blog</a></li>
+            <li><a href="contact.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Contact & Stores</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Takeaway Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="cart.html" class="footer-link"><i class="fa-solid fa-bag-shopping"></i> View Cart</a></li>
+            <li><a href="checkout.html" class="footer-link"><i class="fa-solid fa-credit-card"></i> Express Checkout</a></li>
+            <li><a href="maintenance.html" class="footer-link"><i class="fa-solid fa-wrench"></i> Maintenance Status</a></li>
+            <li><a href="404.html" class="footer-link"><i class="fa-solid fa-triangle-exclamation"></i> 404 Error Page</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kitchen Hours</h4>
+          <div class="footer-hours-item"><span>Mon – Thu:</span><span>11:00 AM – 11:30 PM</span></div>
+          <div class="footer-hours-item"><span>Fri & Sat:</span><span>11:00 AM – 2:00 AM</span></div>
+          <div class="footer-hours-item"><span>Sunday:</span><span>12:00 PM – 11:00 PM</span></div>
+          <div style="margin-top: 1.25rem;">
+            <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>428 Crispy Blvd, NY 10012</span></div>
+            <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>(555) 374-2747</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 Crispster Fried Chicken Takeaway. All Rights Reserved.</div>
+        <div class="footer-bottom-badges">
+          <span class="footer-bottom-badge"><i class="fa-solid fa-shield-halved"></i> 100% Halal Certified</span>
+          <span class="footer-bottom-badge"><i class="fa-solid fa-seedling"></i> Zero Trans Fats</span>
+          <span class="footer-bottom-badge"><i class="fa-solid fa-fire"></i> 15-Min Fresh Guarantee</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top of page"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+  <script>
+    // State management for 2-step checkout flow
+    let currentCheckoutStep = 1;
+    let checkoutSubtotalAmount = 0;
+    let checkoutTotalAmount = 0;
+
+    // Load and render items on checkout
+    document.addEventListener('DOMContentLoaded', () => {
+      let cart = JSON.parse(localStorage.getItem('crispster_cart') || '[]');
+      if (!cart || cart.length === 0) {
+        cart = [
+          { id: 'sample-1', name: '12-Pc Golden Crunch Bucket', price: 24.99, qty: 1 },
+          { id: 'sample-2', name: 'Nashville Fire Burger', price: 11.49, qty: 1 }
+        ];
+      }
+
+      const listContainer = document.getElementById('checkout-items-list');
+      let subtotal = 0;
+      if (listContainer) {
+        listContainer.innerHTML = cart.map(item => {
+          subtotal += item.price * item.qty;
+          return `
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
+              <span>${item.qty}x ${item.name}</span>
+              <strong>$${(item.price * item.qty).toFixed(2)}</strong>
+            </div>
+          `;
+        }).join('');
+      }
+
+      const discountPercent = window.activeDiscountPercent || 0;
+      const discount = subtotal * (discountPercent / 100);
+      const total = Math.max(0, subtotal - discount);
+
+      checkoutSubtotalAmount = subtotal;
+      checkoutTotalAmount = total;
+
+      const subtotalFormatted = `$${subtotal.toFixed(2)}`;
+      const totalFormatted = `$${total.toFixed(2)}`;
+
+      const subtotalEl = document.getElementById('checkout-subtotal');
+      const totalEl = document.getElementById('checkout-total');
+      if (subtotalEl) subtotalEl.textContent = subtotalFormatted;
+      if (totalEl) totalEl.textContent = totalFormatted;
+
+      document.querySelectorAll('.confirm-total-val').forEach(el => el.textContent = totalFormatted);
+
+      // Handover option toggling
+      const handoverRadios = document.querySelectorAll('input[name="handover"]');
+      const vehicleFields = document.getElementById('curbside-vehicle-fields');
+      const handoverCards = document.querySelectorAll('#handover-options .byob-option-card');
+      handoverRadios.forEach((radio, index) => {
+        radio.addEventListener('change', () => {
+          handoverCards.forEach(c => c.classList.remove('selected'));
+          radio.closest('.byob-option-card')?.classList.add('selected');
+          if (radio.value === 'curbside') {
+            vehicleFields.style.display = 'block';
+          } else {
+            vehicleFields.style.display = 'none';
+          }
+        });
+      });
+
+      // Payment method toggling
+      const paymethodRadios = document.querySelectorAll('input[name="paymethod"]');
+      const cardFields = document.getElementById('card-payment-fields');
+      const payCounterCard = document.getElementById('paymethod-card-counter');
+      const payOnlineCard = document.getElementById('paymethod-card-online');
+
+      paymethodRadios.forEach(radio => {
+        radio.addEventListener('change', () => {
+          if (radio.value === 'card') {
+            payOnlineCard?.classList.add('selected');
+            payCounterCard?.classList.remove('selected');
+            if (cardFields) cardFields.style.display = 'block';
+          } else {
+            payCounterCard?.classList.add('selected');
+            payOnlineCard?.classList.remove('selected');
+            if (cardFields) cardFields.style.display = 'none';
+          }
+        });
+      });
+
+      // Name and Phone live input constraints & validation
+      const nameInput = document.getElementById('checkout-name');
+      const phoneInput = document.getElementById('checkout-phone');
+      const emailInput = document.getElementById('checkout-email');
+
+      // Restrict Name to letters only
+      nameInput?.addEventListener('keydown', (e) => {
+        if (['Backspace', 'Delete', 'Tab', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Enter', 'Home', 'End'].includes(e.key)) return;
+        if (e.ctrlKey || e.metaKey || e.altKey) return;
+        if (!/^[a-zA-Z\s'-]$/.test(e.key)) {
+          e.preventDefault();
+        }
+      });
+      nameInput?.addEventListener('input', () => {
+        nameInput.value = nameInput.value.replace(/[^a-zA-Z\s'-]/g, '');
+        validateCheckoutName();
+      });
+      nameInput?.addEventListener('blur', validateCheckoutName);
+
+      // Restrict Phone to numbers only
+      phoneInput?.addEventListener('keydown', (e) => {
+        if (['Backspace', 'Delete', 'Tab', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Enter', 'Home', 'End'].includes(e.key)) return;
+        if (e.ctrlKey || e.metaKey || e.altKey) return;
+        if (!/^[0-9]$/.test(e.key)) {
+          e.preventDefault();
+        }
+      });
+      phoneInput?.addEventListener('input', () => {
+        phoneInput.value = phoneInput.value.replace(/\D/g, '');
+        validateCheckoutPhone();
+      });
+      phoneInput?.addEventListener('blur', validateCheckoutPhone);
+
+      emailInput?.addEventListener('blur', validateCheckoutEmail);
+
+      // Online card fields validation & auto-formatting
+      const cardNameInput = document.getElementById('card-name');
+      const cardNumberInput = document.getElementById('card-number');
+      const cardExpiryInput = document.getElementById('card-expiry');
+      const cardCvvInput = document.getElementById('card-cvv');
+      const cardBrandIcon = document.getElementById('card-brand-icon');
+
+      cardNameInput?.addEventListener('input', () => {
+        cardNameInput.value = cardNameInput.value.replace(/[^a-zA-Z\s'-]/g, '');
+      });
+
+      cardNumberInput?.addEventListener('input', () => {
+        let v = cardNumberInput.value.replace(/\D/g, '').substring(0, 16);
+        let formatted = v.match(/.{1,4}/g)?.join(' ') || v;
+        cardNumberInput.value = formatted;
+
+        // Brand icon detection
+        if (cardBrandIcon) {
+          if (v.startsWith('4')) {
+            cardBrandIcon.innerHTML = '<i class="fa-brands fa-cc-visa" style="color: #1A1F71;"></i>';
+          } else if (/^(5[1-5]|2[2-7])/.test(v)) {
+            cardBrandIcon.innerHTML = '<i class="fa-brands fa-cc-mastercard" style="color: #EB001B;"></i>';
+          } else if (/^3[47]/.test(v)) {
+            cardBrandIcon.innerHTML = '<i class="fa-brands fa-cc-amex" style="color: #007CC3;"></i>';
+          } else if (/^6011/.test(v)) {
+            cardBrandIcon.innerHTML = '<i class="fa-brands fa-cc-discover" style="color: #FF6000;"></i>';
+          } else {
+            cardBrandIcon.innerHTML = '<i class="fa-solid fa-credit-card"></i>';
+          }
+        }
+      });
+
+      cardExpiryInput?.addEventListener('input', () => {
+        let v = cardExpiryInput.value.replace(/\D/g, '').substring(0, 4);
+        if (v.length >= 2) {
+          cardExpiryInput.value = v.substring(0, 2) + ' / ' + v.substring(2);
+        } else {
+          cardExpiryInput.value = v;
+        }
+      });
+
+      cardCvvInput?.addEventListener('input', () => {
+        cardCvvInput.value = cardCvvInput.value.replace(/\D/g, '').substring(0, 4);
+      });
+    });
+
+    function validateCheckoutName() {
+      const nameInput = document.getElementById('checkout-name');
+      const errEl = document.getElementById('checkout-name-error');
+      if (!nameInput) return true;
+      const val = nameInput.value.trim();
+      const valid = /^[a-zA-Z\s'-]{2,}$/.test(val);
+      if (!valid) {
+        nameInput.classList.add('error');
+        nameInput.classList.remove('valid');
+        if (errEl) {
+          errEl.textContent = val.length === 0 ? 'Full name is required.' : 'Please enter letters only (minimum 2 characters).';
+          errEl.style.display = 'block';
+        }
+        return false;
+      } else {
+        nameInput.classList.remove('error');
+        nameInput.classList.add('valid');
+        if (errEl) errEl.style.display = 'none';
+        return true;
+      }
+    }
+
+    function validateCheckoutPhone() {
+      const phoneInput = document.getElementById('checkout-phone');
+      const errEl = document.getElementById('checkout-phone-error');
+      if (!phoneInput) return true;
+      const val = phoneInput.value.trim();
+      const valid = /^[0-9]{7,15}$/.test(val);
+      if (!valid) {
+        phoneInput.classList.add('error');
+        phoneInput.classList.remove('valid');
+        if (errEl) {
+          errEl.textContent = val.length === 0 ? 'Phone number is required.' : 'Please enter numbers only (7 to 15 digits).';
+          errEl.style.display = 'block';
+        }
+        return false;
+      } else {
+        phoneInput.classList.remove('error');
+        phoneInput.classList.add('valid');
+        if (errEl) errEl.style.display = 'none';
+        return true;
+      }
+    }
+
+    function validateCheckoutEmail() {
+      const emailInput = document.getElementById('checkout-email');
+      const errEl = document.getElementById('checkout-email-error');
+      if (!emailInput) return true;
+      const val = emailInput.value.trim();
+      const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+      if (!valid) {
+        emailInput.classList.add('error');
+        emailInput.classList.remove('valid');
+        if (errEl) {
+          errEl.textContent = val.length === 0 ? 'Email address is required.' : 'Please provide a valid email address.';
+          errEl.style.display = 'block';
+        }
+        return false;
+      } else {
+        emailInput.classList.remove('error');
+        emailInput.classList.add('valid');
+        if (errEl) errEl.style.display = 'none';
+        return true;
+      }
+    }
+
+    function validateCardFields() {
+      const paymethod = document.querySelector('input[name="paymethod"]:checked')?.value || 'counter';
+      if (paymethod !== 'card') return true;
+
+      let isValid = true;
+      const cardName = document.getElementById('card-name');
+      const cardNumber = document.getElementById('card-number');
+      const cardExpiry = document.getElementById('card-expiry');
+      const cardCvv = document.getElementById('card-cvv');
+
+      const cardNameErr = document.getElementById('card-name-error');
+      const cardNumberErr = document.getElementById('card-number-error');
+      const cardExpiryErr = document.getElementById('card-expiry-error');
+      const cardCvvErr = document.getElementById('card-cvv-error');
+
+      // Card Name
+      if (!cardName || cardName.value.trim().length < 2) {
+        if (cardNameErr) { cardNameErr.textContent = 'Please enter the name on your card.'; cardNameErr.style.display = 'block'; }
+        cardName?.classList.add('error');
+        isValid = false;
+      } else {
+        if (cardNameErr) cardNameErr.style.display = 'none';
+        cardName?.classList.remove('error');
+      }
+
+      // Card Number (15-16 digits)
+      const digits = cardNumber?.value.replace(/\D/g, '') || '';
+      if (digits.length < 15) {
+        if (cardNumberErr) { cardNumberErr.textContent = 'Please enter a valid 16-digit card number.'; cardNumberErr.style.display = 'block'; }
+        cardNumber?.classList.add('error');
+        isValid = false;
+      } else {
+        if (cardNumberErr) cardNumberErr.style.display = 'none';
+        cardNumber?.classList.remove('error');
+      }
+
+      // Expiry (MM/YY)
+      const expiryClean = cardExpiry?.value.replace(/\s|\//g, '') || '';
+      const month = parseInt(expiryClean.substring(0, 2), 10);
+      if (expiryClean.length < 4 || isNaN(month) || month < 1 || month > 12) {
+        if (cardExpiryErr) { cardExpiryErr.textContent = 'Enter valid MM/YY expiration date.'; cardExpiryErr.style.display = 'block'; }
+        cardExpiry?.classList.add('error');
+        isValid = false;
+      } else {
+        if (cardExpiryErr) cardExpiryErr.style.display = 'none';
+        cardExpiry?.classList.remove('error');
+      }
+
+      // CVV (3-4 digits)
+      const cvvDigits = cardCvv?.value.replace(/\D/g, '') || '';
+      if (cvvDigits.length < 3) {
+        if (cardCvvErr) { cardCvvErr.textContent = 'Enter 3 or 4-digit security code.'; cardCvvErr.style.display = 'block'; }
+        cardCvv?.classList.add('error');
+        isValid = false;
+      } else {
+        if (cardCvvErr) cardCvvErr.style.display = 'none';
+        cardCvv?.classList.remove('error');
+      }
+
+      return isValid;
+    }
+
+    // Navigation: Take user from Payment Method to Confirm Payment Part
+    function goToConfirmPayment() {
+      const isNameValid = validateCheckoutName();
+      const isPhoneValid = validateCheckoutPhone();
+      const isEmailValid = validateCheckoutEmail();
+      const isCardValid = validateCardFields();
+
+      if (!isNameValid || !isPhoneValid || !isEmailValid || !isCardValid) {
+        window.showToast?.('Validation Required', 'Please complete all highlighted fields to proceed.', 'fa-solid fa-triangle-exclamation');
+        const firstError = document.querySelector('#crispster-checkout-form .form-control.error');
+        firstError?.focus();
+        firstError?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      // Extract user entered values
+      const name = document.getElementById('checkout-name').value.trim();
+      const phone = document.getElementById('checkout-phone').value.trim();
+      const email = document.getElementById('checkout-email').value.trim();
+      const handover = document.querySelector('input[name="handover"]:checked')?.value || 'counter';
+      const pickuptime = document.querySelector('input[name="pickuptime"]:checked')?.value || 'asap';
+      const paymethod = document.querySelector('input[name="paymethod"]:checked')?.value || 'counter';
+
+      // Update Review Displays
+      document.getElementById('review-customer-name').textContent = name;
+      document.getElementById('review-customer-phone').textContent = phone;
+      document.getElementById('review-customer-email').textContent = email;
+
+      const reviewCollectionEl = document.getElementById('review-collection-mode');
+      const reviewCurbsideRow = document.getElementById('review-curbside-row');
+      const reviewCurbsideInfo = document.getElementById('review-curbside-info');
+
+      if (handover === 'curbside') {
+        reviewCollectionEl.textContent = 'Touchless Curbside Bay';
+        const veh = document.getElementById('curbside-vehicle')?.value.trim();
+        const plt = document.getElementById('curbside-plate')?.value.trim();
+        const vehText = [veh, plt].filter(Boolean).join(' • ') || 'Vehicle details provided on arrival';
+        reviewCurbsideInfo.textContent = vehText;
+        reviewCurbsideRow.style.display = 'block';
+      } else {
+        reviewCollectionEl.textContent = 'Express Counter Walk-Up';
+        reviewCurbsideRow.style.display = 'none';
+      }
+
+      const reviewTimingEl = document.getElementById('review-timing-mode');
+      if (pickuptime === 'asap') {
+        reviewTimingEl.textContent = 'ASAP (Ready in 12–15 Minutes)';
+      } else {
+        reviewTimingEl.textContent = 'Scheduled Today (Reserved Kitchen Slot)';
+      }
+
+      const reviewPayModeEl = document.getElementById('review-payment-mode');
+      const reviewPaySubtext = document.getElementById('review-payment-subtext');
+
+      if (paymethod === 'card') {
+        const rawDigits = document.getElementById('card-number')?.value.replace(/\D/g, '') || '8892';
+        const last4 = rawDigits.slice(-4) || '8892';
+        reviewPayModeEl.innerHTML = `<i class="fa-solid fa-credit-card" style="color: var(--color-hot-orange);"></i> Credit / Debit Card (•••• ${last4})`;
+        reviewPaySubtext.textContent = 'Authorized online pre-payment • Instant processing';
+      } else {
+        reviewPayModeEl.innerHTML = `<i class="fa-solid fa-cash-register" style="color: var(--color-hot-orange);"></i> Pay at Counter Pickup`;
+        reviewPaySubtext.textContent = 'Cash, Card, Apple Pay or Tap-to-Pay in person upon collection';
+      }
+
+      // Hide Entry Step, Reveal Confirm Payment Step
+      const entryStep = document.getElementById('checkout-entry-step');
+      const confirmStep = document.getElementById('checkout-confirm-step');
+
+      entryStep.style.display = 'none';
+      confirmStep.style.display = 'block';
+
+      // Update Top Step Progress Indicator
+      const step2Node = document.getElementById('step-node-2');
+      const step2Num = document.getElementById('step-num-2');
+      const step3Node = document.getElementById('step-node-3');
+
+      if (step2Num) step2Num.innerHTML = '<i class="fa-solid fa-check"></i>';
+      if (step3Node) step3Node.classList.add('active');
+
+      // Update Right Summary Button
+      const summaryBtnText = document.getElementById('summary-btn-text');
+      const summaryBtnIcon = document.getElementById('summary-btn-icon');
+      if (summaryBtnText) summaryBtnText.textContent = `Confirm & Pay ($${checkoutTotalAmount.toFixed(2)})`;
+      if (summaryBtnIcon) summaryBtnIcon.className = 'fa-solid fa-lock';
+
+      currentCheckoutStep = 2;
+
+      // Smooth scroll to Confirm Payment Section
+      confirmStep.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.showToast?.('Payment Method Entered', 'Review your details below and confirm takeaway.', 'fa-solid fa-circle-check');
+    }
+
+    // Return to Step 1 to edit
+    function goToDetailsStep() {
+      const entryStep = document.getElementById('checkout-entry-step');
+      const confirmStep = document.getElementById('checkout-confirm-step');
+
+      confirmStep.style.display = 'none';
+      entryStep.style.display = 'block';
+
+      // Revert Top Step Indicator
+      const step2Num = document.getElementById('step-num-2');
+      const step3Node = document.getElementById('step-node-3');
+
+      if (step2Num) step2Num.textContent = '2';
+      if (step3Node) step3Node.classList.remove('active');
+
+      // Revert Right Summary Button
+      const summaryBtnText = document.getElementById('summary-btn-text');
+      const summaryBtnIcon = document.getElementById('summary-btn-icon');
+      if (summaryBtnText) summaryBtnText.textContent = 'Proceed to Confirm Payment';
+      if (summaryBtnIcon) summaryBtnIcon.className = 'fa-solid fa-arrow-right arrow-icon';
+
+      currentCheckoutStep = 1;
+      entryStep.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Unified action handler for the summary button
+    function handleSummaryActionButton() {
+      if (currentCheckoutStep === 1) {
+        goToConfirmPayment();
+      } else {
+        processFinalTakeawayOrder();
+      }
+    }
+
+    // Final Order Confirmation & Ticket Generation
+    function processFinalTakeawayOrder() {
+      const name = document.getElementById('checkout-name')?.value.trim() || 'Foodie';
+      const phone = document.getElementById('checkout-phone')?.value.trim() || '(555) 374-2747';
+      const handover = document.querySelector('input[name="handover"]:checked')?.value || 'counter';
+      const paymethod = document.querySelector('input[name="paymethod"]:checked')?.value || 'counter';
+
+      // Clear cart
+      localStorage.removeItem('crispster_cart');
+
+      // Create modal receipt overlay
+      const orderNumber = 'CRISP-' + Math.floor(100000 + Math.random() * 900000);
+      let overlay = document.querySelector('.demo-modal-overlay');
+      if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'demo-modal-overlay';
+        document.body.appendChild(overlay);
+      }
+
+      const collectionLabel = handover === 'curbside' ? 'Touchless Curbside Bay' : 'Downtown Flagship Shelf';
+      const payLabel = paymethod === 'card' ? 'Online Card Authorized' : 'Pay Upon Counter Pickup';
+
+      overlay.innerHTML = `
+        <div class="demo-modal">
+          <div class="modal-icon-badge" style="background: linear-gradient(135deg, #10B981, #059669); color: #FFF;">
+            <i class="fa-solid fa-drumstick-bite"></i>
+          </div>
+          <h3 class="modal-title">Takeaway Order Confirmed!</h3>
+          <p class="modal-desc">
+            Thank you <strong>${name}</strong>! Your ticket <strong>#${orderNumber}</strong> has been transmitted to our kitchen fryers.
+          </p>
+          <div class="modal-receipt-box">
+            <div class="receipt-row"><span>Collection Mode:</span><strong>${collectionLabel}</strong></div>
+            <div class="receipt-row"><span>Estimated Ready Time:</span><strong style="color: var(--color-success);">12 Minutes</strong></div>
+            <div class="receipt-row"><span>Payment Status:</span><strong>${payLabel}</strong></div>
+            <div class="receipt-row"><span>SMS Notification:</span><span>Sent to ${phone}</span></div>
+            <div class="receipt-row" style="border-top: 1px dashed var(--border-medium); margin-top: 0.5rem; padding-top: 0.5rem;">
+              <span>Total Paid:</span><strong style="color: var(--color-hot-orange);">$${checkoutTotalAmount.toFixed(2)}</strong>
+            </div>
+          </div>
+          <a href="index.html" class="btn btn-hot" style="width: 100%;">Return to Home</a>
+        </div>
+      `;
+      overlay.classList.add('active');
+      window.showToast?.('Order Confirmed!', `Ticket #${orderNumber} sent to kitchen fryers!`, 'fa-solid fa-circle-check');
+    }
+  </script>
+</body>
+</html>
+
