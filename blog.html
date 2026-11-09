@@ -83,25 +83,45 @@
   <!-- Mobile Drawer Overlay -->
   <div class="mobile-drawer-overlay"></div>
 
-    <!-- Mobile Navigation Drawer -->
+      <!-- Mobile Navigation Drawer -->
   <aside class="mobile-drawer" aria-label="Mobile Menu">
     <div class="mobile-drawer-header">
-      <img src="images/logo.svg" alt="Crispster Logo" class="drawer-logo-img">
+      <a href="index.html" aria-label="Crispster Homepage">
+        <img src="images/logo.svg" alt="Crispster Logo" class="drawer-logo-img">
+      </a>
       <button type="button" class="drawer-close-btn" aria-label="Close mobile menu">
         <i class="fa-solid fa-xmark"></i>
       </button>
     </div>
 
+    <!-- Exact Navigation Links matching Desktop Navbar -->
     <div class="mobile-drawer-links">
-      <a href="index.html" class="mobile-nav-link">Home 1 (Classic Crisp)</a>
-      <a href="home-2.html" class="mobile-nav-link">Home 2 (Late-Night Flame)</a>
-      <a href="about.html" class="mobile-nav-link">About</a>
-      <a href="menu.html" class="mobile-nav-link">Menu</a>
-      <a href="offers.html" class="mobile-nav-link">Offers</a>
+      <!-- Home Dropdown (matching desktop navbar Home dropdown) -->
+      <div class="mobile-nav-dropdown ">
+        <button type="button" class="mobile-nav-link mobile-dropdown-toggle " aria-expanded="false">
+          <span>Home</span>
+          <i class="fa-solid fa-chevron-down mobile-dropdown-arrow"></i>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="index.html" class="mobile-sub-link ">
+            <i class="fa-solid fa-drumstick-bite"></i>
+            <span>Home 1 (Classic Crisp)</span>
+          </a>
+          <a href="home-2.html" class="mobile-sub-link ">
+            <i class="fa-solid fa-fire"></i>
+            <span>Home 2 (Late-Night Flame)</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="about.html" class="mobile-nav-link ">About</a>
+      <a href="menu.html" class="mobile-nav-link ">Menu</a>
+      <a href="offers.html" class="mobile-nav-link ">Offers</a>
       <a href="blog.html" class="mobile-nav-link active">Blog</a>
-      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="contact.html" class="mobile-nav-link ">Contact</a>
     </div>
 
+    <!-- Exact Navigation Controls & Icons matching Desktop Navbar -->
     <div class="mobile-drawer-controls">
       <div class="drawer-icon-row">
         <button type="button" class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">

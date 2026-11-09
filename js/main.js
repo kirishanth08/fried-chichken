@@ -140,6 +140,20 @@
 
     drawerCloseBtn?.addEventListener('click', closeMobileMenu);
     mobileOverlay?.addEventListener('click', closeMobileMenu);
+
+    // Mobile dropdown accordion toggles (e.g. Home)
+    const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+    mobileDropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = toggle.closest('.mobile-nav-dropdown');
+        if (parent) {
+          parent.classList.toggle('open');
+          const isExpanded = parent.classList.contains('open');
+          toggle.setAttribute('aria-expanded', isExpanded);
+        }
+      });
+    });
   }
 
   // --------------------------------------------------------------------------
