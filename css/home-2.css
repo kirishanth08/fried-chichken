@@ -10,15 +10,48 @@
 .flame-hero-section {
   position: relative;
   padding-block: clamp(4rem, 6vw, 6rem);
-  background: linear-gradient(90deg, rgba(255, 253, 248, 0.95) 0%, rgba(255, 253, 248, 0.88) 45%, rgba(255, 253, 248, 0.35) 80%, rgba(255, 253, 248, 0.15) 100%),
+  background: linear-gradient(90deg, rgba(255, 253, 248, 0.72) 0%, rgba(255, 253, 248, 0.46) 46%, rgba(255, 253, 248, 0.14) 82%, rgba(255, 253, 248, 0.04) 100%),
               url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat !important;
   border-bottom: 1px solid var(--border-light);
   overflow: hidden;
 }
 
-[data-theme="dark"] .flame-hero-section {
-  background: linear-gradient(90deg, rgba(16, 16, 19, 0.95) 0%, rgba(16, 16, 19, 0.88) 45%, rgba(16, 16, 19, 0.45) 80%, rgba(16, 16, 19, 0.20) 100%),
+[dir="rtl"] .flame-hero-section {
+  background: linear-gradient(270deg, rgba(255, 253, 248, 0.72) 0%, rgba(255, 253, 248, 0.46) 46%, rgba(255, 253, 248, 0.14) 82%, rgba(255, 253, 248, 0.04) 100%),
               url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat !important;
+}
+
+[data-theme="dark"] .flame-hero-section {
+  background: linear-gradient(90deg, rgba(16, 16, 19, 0.68) 0%, rgba(16, 16, 19, 0.45) 48%, rgba(16, 16, 19, 0.18) 84%, rgba(16, 16, 19, 0.08) 100%),
+              url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat !important;
+}
+
+[data-theme="dark"][dir="rtl"] .flame-hero-section {
+  background: linear-gradient(270deg, rgba(16, 16, 19, 0.68) 0%, rgba(16, 16, 19, 0.45) 48%, rgba(16, 16, 19, 0.18) 84%, rgba(16, 16, 19, 0.08) 100%),
+              url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat !important;
+}
+
+.flame-hero-section .hero-top-badge {
+  background: rgba(255, 243, 225, 0.96);
+  border-color: var(--color-hot-orange);
+  color: #C2410C;
+}
+
+[data-theme="dark"] .flame-hero-section .hero-top-badge {
+  background: rgba(24, 24, 28, 0.92);
+  border-color: var(--color-hot-orange);
+  color: #FF8C00;
+}
+
+.sauce-pairing-note {
+  background: var(--bg-surface);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--badge-text);
+  border: 1px solid var(--border-brand);
+  margin-bottom: var(--space-4);
 }
 
 .flame-hero-section .hero-grid {
